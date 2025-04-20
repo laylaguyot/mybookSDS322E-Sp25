@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Missing Data Extreme | Spring 2025 Semester</title>
+  <meta name="description" content="Missing Data Extreme | Spring 2025 Semester" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Missing Data Extreme | Spring 2025 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Missing Data Extreme | Spring 2025 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr. Layla Guyot" />
+
+
+<meta name="date" content="2025-04-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="WS13_Recoding_Key.html"/>
+<link rel="next" href="WS15_WebScraping_Key.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 322E Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to SDS 322E</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html"><i class="fa fa-check"></i>getstaRted</a>
+<ul>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#learning-objectives"><i class="fa fa-check"></i>Learning Objectives:</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#recommended-resources"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html"><i class="fa fa-check"></i>RMarkdown</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#learning-objectives-1"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#basic-markdown-editing"><i class="fa fa-check"></i>1. Basic Markdown editing</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-headers"><i class="fa fa-check"></i>a. Headers</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-text-formatting"><i class="fa fa-check"></i>b. Text formatting</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-lists-and-bullet-points"><i class="fa fa-check"></i>c. Lists and bullet points</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#d.-html-hyperlinks-images-tables-etc."><i class="fa fa-check"></i>d. HTML hyperlinks, images, tables, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#embedded-r-code"><i class="fa fa-check"></i>2. Embedded R code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-code-chunks"><i class="fa fa-check"></i>a. Code chunks</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-more-base-r-built-in-datasets"><i class="fa fa-check"></i>b. More base R: built-in datasets</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-more-base-r-basic-plots"><i class="fa fa-check"></i>c. More base R: basic plots</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#packages"><i class="fa fa-check"></i>3. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#recommended-resources-1"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html"><i class="fa fa-check"></i>Datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#learning-objectives-2"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#set-up"><i class="fa fa-check"></i>1. Set up</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#a.-packages"><i class="fa fa-check"></i>a. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#b.-importing-datasets"><i class="fa fa-check"></i>b. Importing datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#city-of-austin-open-data-portal"><i class="fa fa-check"></i>2. City of Austin Open Data Portal</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#other-data-sources"><i class="fa fa-check"></i>3. Other data sources</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#recommended-resources-2"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html"><i class="fa fa-check"></i>Basic Data Manipulation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#learning-objectives-3"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#making-sense-of-a-dataset"><i class="fa fa-check"></i>1. Making sense of a dataset</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#setting-conditions"><i class="fa fa-check"></i>2. Setting conditions</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#a.-conditional-statements"><i class="fa fa-check"></i>a. Conditional statements</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#b.-connectors"><i class="fa fa-check"></i>b. Connectors</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#subsetting-data"><i class="fa fa-check"></i>3. Subsetting data</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#creating-new-variables"><i class="fa fa-check"></i>4. Creating new variables</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#recommended-resources-3"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html"><i class="fa fa-check"></i>Grammar Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#learning-objectives-4"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#the-pipe"><i class="fa fa-check"></i>1. The pipe</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#create-a-ggplot"><i class="fa fa-check"></i>2. Create a <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-define-a-plot"><i class="fa fa-check"></i>a. Define a plot</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-add-a-geometric-object"><i class="fa fa-check"></i>b. Add a geometric object</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-map-to-color-shape-size"><i class="fa fa-check"></i>c. Map to color, shape, size</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-map-variables-to-color-shape-size"><i class="fa fa-check"></i>d. Map variables to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#layering"><i class="fa fa-check"></i>3. Layering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-add-labels-and-controlling-scales"><i class="fa fa-check"></i>a. Add labels and controlling scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-control-scales"><i class="fa fa-check"></i>b. Control scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-facet"><i class="fa fa-check"></i>c. Facet</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-color-palettes-and-themes"><i class="fa fa-check"></i>d. Color palettes and themes</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#e.-themes"><i class="fa fa-check"></i>e. Themes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#recommended-resources-4"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html"><i class="fa fa-check"></i>Describing1Variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#learning-objectives-5"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-numeric-variable"><i class="fa fa-check"></i>1. Describing 1 numeric variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-histogram"><i class="fa fa-check"></i>a. Histogram</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-boxplot"><i class="fa fa-check"></i>b. Boxplot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#c.-density-and-violin-plots"><i class="fa fa-check"></i>c. Density and Violin plots</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#d.-reporting-summary-statistics"><i class="fa fa-check"></i>d. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-categorical-variable"><i class="fa fa-check"></i>2. Describing 1 categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-bar-plot"><i class="fa fa-check"></i>a. Bar plot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-reporting-summary-statistics"><i class="fa fa-check"></i>b. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#your-turn"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#recommended-resources-5"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html"><i class="fa fa-check"></i>Describing Relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#learning-objectives-6"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-numeric-variables"><i class="fa fa-check"></i>1. Comparing two numeric variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-scatterplot"><i class="fa fa-check"></i>a. Using a scatterplot</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-reporting-correlation"><i class="fa fa-check"></i>b. Reporting correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-a-numeric-variable-and-a-categorical-variable"><i class="fa fa-check"></i>2. Comparing a numeric variable and a categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-grouped-boxplots"><i class="fa fa-check"></i>a. Using grouped boxplots</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-grouped-histograms"><i class="fa fa-check"></i>b. Using grouped histograms</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-center-and-spread-for-each-category"><i class="fa fa-check"></i>c. Reporting center and spread for each category</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#d.-using-a-special-case-of-bar-graph"><i class="fa fa-check"></i>d. Using a special case of bar graph</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-categorical-variables"><i class="fa fa-check"></i>3. Comparing two categorical variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-stacked-plot-not-usually-recommended"><i class="fa fa-check"></i>a. Using a stacked plot (not usually recommended)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-a-segmented-bar-plot-usually-preferred"><i class="fa fa-check"></i>b. Using a segmented bar plot (usually preferred)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-frequencies-and-relative-frequencies"><i class="fa fa-check"></i>c. Reporting frequencies and relative frequencies</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#relationships-with-more-than-2-variables"><i class="fa fa-check"></i>4. Relationships with more than 2 variables</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#recommended-resources-6"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html"><i class="fa fa-check"></i>Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#learning-objectives-7"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#gather-some-background-information"><i class="fa fa-check"></i>1. Gather some background information</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-context"><i class="fa fa-check"></i>a. Context</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-structure"><i class="fa fa-check"></i>b. Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#formulate-some-research-questions"><i class="fa fa-check"></i>2. Formulate some research questions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#investigate-trends-and-relationships"><i class="fa fa-check"></i>3. Investigate trends and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-first-look-at-univariate-distributions"><i class="fa fa-check"></i>a. First look at univariate distributions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-then-look-at-relationships"><i class="fa fa-check"></i>b. Then look at relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#answer-the-questions-and-be-critical"><i class="fa fa-check"></i>4. Answer the questions and be critical</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#your-turn-1"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#recommended-resources-7"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html"><i class="fa fa-check"></i>Grammar Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#learning-objectives-8"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-rowsobservations"><i class="fa fa-check"></i>1. Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-filter"><i class="fa fa-check"></i>a. Filter</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-arrange"><i class="fa fa-check"></i>b. Arrange</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#c.-minimummaximum-values"><i class="fa fa-check"></i>c. Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-columns"><i class="fa fa-check"></i>2. Operations on columns</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-select"><i class="fa fa-check"></i>a. Select</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-mutate"><i class="fa fa-check"></i>b. Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#create-summaries"><i class="fa fa-check"></i>3. Create summaries</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-summarize"><i class="fa fa-check"></i>a. Summarize</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-group-by"><i class="fa fa-check"></i>b. Group by</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#recommended-resources-8"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html"><i class="fa fa-check"></i>Joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#learning-objectives-9"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#joining-datasets"><i class="fa fa-check"></i>1. Joining datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-inner-join"><i class="fa fa-check"></i>a. Inner join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-left-join"><i class="fa fa-check"></i>b. Left join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-right-join"><i class="fa fa-check"></i>c. Right join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-full-join"><i class="fa fa-check"></i>d. Full join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#e.-anti-join"><i class="fa fa-check"></i>e. Anti join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#f.-semi-join"><i class="fa fa-check"></i>f. Semi join</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#considering-other-options-when-joining"><i class="fa fa-check"></i>2. Considering other options when joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-no-matching-key"><i class="fa fa-check"></i>a. No matching key</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-auto-suffixing"><i class="fa fa-check"></i>b. Auto-suffixing</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-duplicates"><i class="fa fa-check"></i>c. Duplicates</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-several-key-variables"><i class="fa fa-check"></i>d. Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#recommended-resources-9"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html"><i class="fa fa-check"></i>Tidying</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#learning-objectives-10"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#pivoting"><i class="fa fa-check"></i>1. Pivoting</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-wide-to-long"><i class="fa fa-check"></i>a. Wide to long</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-long-to-wide"><i class="fa fa-check"></i>b. Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#separating-or-uniting-variables"><i class="fa fa-check"></i>2. Separating or uniting variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-separate"><i class="fa fa-check"></i>a. Separate</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-unite"><i class="fa fa-check"></i>b. Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#your-turn-2"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#recommended-resources-10"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html"><i class="fa fa-check"></i>Strings Reg Ex</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#learning-objectives-11"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#strings"><i class="fa fa-check"></i>1. Strings</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-calculating-length"><i class="fa fa-check"></i>a. Calculating length</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-combining-strings"><i class="fa fa-check"></i>b. Combining strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-changing-cases"><i class="fa fa-check"></i>c. Changing cases</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-subsetting-strings"><i class="fa fa-check"></i>d. Subsetting strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#e.-finding-exact-matches-in-strings"><i class="fa fa-check"></i>e. Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#regular-expressions-regex"><i class="fa fa-check"></i>2. Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-wildcards"><i class="fa fa-check"></i>a. Wildcards</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-anchors"><i class="fa fa-check"></i>b. Anchors</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-flexible-patterns"><i class="fa fa-check"></i>c. Flexible patterns</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-special-characters"><i class="fa fa-check"></i>d. Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#recommended-resources-11"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html"><i class="fa fa-check"></i>Dates Times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#learning-objectives-12"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#parsing-dates-and-times"><i class="fa fa-check"></i>1. Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-r-formats"><i class="fa fa-check"></i>a. R formats</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-combining-datetime-components"><i class="fa fa-check"></i>b. Combining date/time components</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-extracting-parts-of-the-date"><i class="fa fa-check"></i>c. Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#manipulating-dates-and-times"><i class="fa fa-check"></i>2. Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-finding-differences-between-dates-and-times"><i class="fa fa-check"></i>a. Finding differences between dates and times</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-summarizing-datetime-data"><i class="fa fa-check"></i>b. Summarizing date/time data</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-a-few-remarks"><i class="fa fa-check"></i>c. A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#recommended-resources-12"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html"><i class="fa fa-check"></i>Recoding</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#learning-objectives-13"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-numeric-variables-as-categorical-variables"><i class="fa fa-check"></i>1. Consider numeric variables as categorical variables</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-a-log-transformations-for-numeric-variables-that-are-highly-skewed"><i class="fa fa-check"></i>2. Consider a log-transformations for numeric variables that are highly skewed</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recoding-categories"><i class="fa fa-check"></i>3. Recoding categories</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#your-turn-3"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recommended-resources-13"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html"><i class="fa fa-check"></i>Missing Data Extreme</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#learning-objectives-14"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#missing-data"><i class="fa fa-check"></i>1. Missing data</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-r-messages"><i class="fa fa-check"></i>a. R messages</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-making-sense-of-the-structure"><i class="fa fa-check"></i>b. Making sense of the structure</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-missing-values"><i class="fa fa-check"></i>c. Handling missing values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#extreme-values"><i class="fa fa-check"></i>2. Extreme values</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-checking-extreme-values"><i class="fa fa-check"></i>a. Checking extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-representing-extreme-values"><i class="fa fa-check"></i>b. Representing extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-extreme-values"><i class="fa fa-check"></i>c. Handling extreme values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#recommended-resources-14"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html"><i class="fa fa-check"></i>Web Scraping</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#learning-objectives-15"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-data-with-code"><i class="fa fa-check"></i>1. Web scraping data with code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#a.-using-element-tags"><i class="fa fa-check"></i>a. Using element tags</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#b.-using-element-types"><i class="fa fa-check"></i>b. Using element types</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-and-ethics"><i class="fa fa-check"></i>2. Web scraping and ethics</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#recommended-resources-15"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html"><i class="fa fa-check"></i>Text Mining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#learning-objectives-16"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#text-data"><i class="fa fa-check"></i>1. Text data</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#stop-words"><i class="fa fa-check"></i>2. Stop words</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#word-clouds"><i class="fa fa-check"></i>3. Word Clouds</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#sentiment-analysis"><i class="fa fa-check"></i>4. Sentiment analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#a.-positivenegative-sentiments"><i class="fa fa-check"></i>a. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#b.-scoring-sentiments"><i class="fa fa-check"></i>b. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#c.-using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>c. Using a wide range of sentiments</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#recommended-resources-16"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html"><i class="fa fa-check"></i>Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#learning-objectives-17"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#positivenegative-sentiments"><i class="fa fa-check"></i>1. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#scoring-sentiments"><i class="fa fa-check"></i>2. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>3. Using a wide range of sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#recommended-resources-17"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html"><i class="fa fa-check"></i>Supervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#learning-objectives-18"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#defining-a-model"><i class="fa fa-check"></i>1. Defining a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#a.-a-model-with-no-predictor"><i class="fa fa-check"></i>a. A model with no predictor</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#b.-some-models-with-one-predictor"><i class="fa fa-check"></i>b. Some models with one predictor</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#comparing-models"><i class="fa fa-check"></i>2. Comparing models</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#recommended-resources-18"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html"><i class="fa fa-check"></i>Linear Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#learning-objectives-19"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#predicting-a-numeric-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a numeric response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#a.-visualizing-the-model"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#b.-fitting-a-model"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#c.-predicting-values"><i class="fa fa-check"></i>c. Predicting values</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#d.-residuals"><i class="fa fa-check"></i>d. Residuals</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#e.-performance"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-a-categorical-predictor"><i class="fa fa-check"></i>2. Using a categorical predictor</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-multiple-predictors"><i class="fa fa-check"></i>3. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#recommended-resources-19"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html"><i class="fa fa-check"></i>Model Selection</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#learning-objectives-20"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#choosing-predictors"><i class="fa fa-check"></i>1. Choosing predictors</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-predictors-that-do-not-make-sense"><i class="fa fa-check"></i>a. Predictors that do not make sense</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-exploring-relationships"><i class="fa fa-check"></i>b. Exploring relationships</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#c.-model-fit-and-predictions"><i class="fa fa-check"></i>c. Model fit and predictions</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#d.-performance"><i class="fa fa-check"></i>d. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#comparing-models-1"><i class="fa fa-check"></i>2. Comparing models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-using-multiple-predictors"><i class="fa fa-check"></i>a. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-testing-for-new-data"><i class="fa fa-check"></i>b. Testing for “new” data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#recommended-resources-20"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html"><i class="fa fa-check"></i>Introduction Classification</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#learning-objectives-21"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#basic-classifications"><i class="fa fa-check"></i>1. Basic classifications</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-random-classification"><i class="fa fa-check"></i>a. Random classification</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-classification-based-on-1-variable"><i class="fa fa-check"></i>b. Classification based on 1 variable</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#c.-classification-based-on-any-cutoff-value"><i class="fa fa-check"></i>c. Classification based on any cutoff value</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#metrics"><i class="fa fa-check"></i>2. Metrics</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#rocauc"><i class="fa fa-check"></i>3. ROC/AUC</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-receiver-operating-characteristics-roc-curve"><i class="fa fa-check"></i>a. Receiver Operating Characteristics (ROC) curve</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-area-under-the-curve-auc"><i class="fa fa-check"></i>b. Area under the curve (AUC)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#recommended-resources-21"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html"><i class="fa fa-check"></i>Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#learning-objectives-22"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#predicting-a-binary-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a binary response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#a.-visualizing-the-model-1"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#b.-fitting-a-model-1"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#c.-making-predictions"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#d.-error-in-predicted-values"><i class="fa fa-check"></i>d. Error in predicted values</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#e.-performance-1"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#using-multiple-predictors-1"><i class="fa fa-check"></i>2. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#recommended-resources-22"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html"><i class="fa fa-check"></i>Other Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#learning-objectives-23"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-numeric-outcome"><i class="fa fa-check"></i>1. Decision trees for a numeric outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-1"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-categorical-outcome"><i class="fa fa-check"></i>2. Decision trees for a categorical outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model-1"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model-1"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-2"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance-1"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#e.-predicting-more-than-2-outcomes"><i class="fa fa-check"></i>e. Predicting more than 2 outcomes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#recommended-resources-23"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html"><i class="fa fa-check"></i>Cross Validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#learning-objectives-24"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#fit-a-model-on-the-entire-dataset"><i class="fa fa-check"></i>1. Fit a model on the entire dataset</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#train-and-test-a-model"><i class="fa fa-check"></i>2. Train and Test a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-train-the-model-on-the-train-set"><i class="fa fa-check"></i>a. Train the model on the train set</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-test-the-model-on-the-test-set"><i class="fa fa-check"></i>b. Test the model on the test set</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#k-fold-cross-validation"><i class="fa fa-check"></i>3. k-fold cross-validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-define-algorithm"><i class="fa fa-check"></i>a. Define algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-create-folds"><i class="fa fa-check"></i>b. Create folds</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#c.-repeat-the-process"><i class="fa fa-check"></i>c. Repeat the process</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#d.-evaluate-average-performance"><i class="fa fa-check"></i>d. Evaluate average performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#recommended-resources-24"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html"><i class="fa fa-check"></i>Unsupervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#learning-objectives-25"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#distances"><i class="fa fa-check"></i>1. Distances</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-euclidean-distance"><i class="fa fa-check"></i>a. Euclidean distance</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-scaling"><i class="fa fa-check"></i>b. Scaling</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#correlation"><i class="fa fa-check"></i>2. Correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-correlation-coefficient"><i class="fa fa-check"></i>a. Correlation Coefficient</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-correlation-matrix"><i class="fa fa-check"></i>b. Correlation Matrix</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#c.-combining-variables"><i class="fa fa-check"></i>c. Combining variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#recommended-resources-25"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html"><i class="fa fa-check"></i>Dimension Reduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#learning-objectives-26"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#principal-component-analysis"><i class="fa fa-check"></i>1. Principal Component Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#a.-prepare-the-dataset-and-explore-correlations"><i class="fa fa-check"></i>a. Prepare the dataset and explore correlations</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#b.-perform-pca"><i class="fa fa-check"></i>b. Perform PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#c.-choose-the-number-of-principal-components"><i class="fa fa-check"></i>c. Choose the number of principal components</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#d.-interpret-componentsdimensions"><i class="fa fa-check"></i>d. Interpret components/dimensions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#some-considerations-for-using-pca"><i class="fa fa-check"></i>2. Some considerations for using PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#recommended-resources-26"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html"><i class="fa fa-check"></i>Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#learning-objectives-27"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#clustering-1"><i class="fa fa-check"></i>1. Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#a.-prepare-the-data"><i class="fa fa-check"></i>a. Prepare the data</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#b.-apply-the-algorithm"><i class="fa fa-check"></i>b. Apply the algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#c.-visualize-and-interpret-the-clusters"><i class="fa fa-check"></i>c. Visualize and interpret the clusters</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#d.-choose-the-number-of-clusters"><i class="fa fa-check"></i>d. Choose the number of clusters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#include-more-variables-in-clustering"><i class="fa fa-check"></i>2. Include more variables in clustering</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#your-turn-4"><i class="fa fa-check"></i><strong>Your turn!</strong></a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#recommended-resources-27"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Spring 2025 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="missing-data-extreme" class="section level1 hasAnchor">
+<h1>Missing Data Extreme<a href="WS14_MissingDataExtreme_Key.html#missing-data-extreme" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="learning-objectives-14" class="section level2 hasAnchor">
+<h2>Learning objectives<a href="WS14_MissingDataExtreme_Key.html#learning-objectives-14" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Identify missing data in a dataset and understand its potential impact on analysis.</li>
+<li>Handle missing data using different approaches (removal, imputation, and alternative calculations).</li>
+<li>Evaluate whether extreme values are meaningful or erroneous.</li>
+</ol>
+<hr />
+<p>Start your workflow by uploading the <code>tidyverse</code> package for data wrangling:</p>
+<div class="sourceCode" id="cb488"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb488-1"><a href="WS14_MissingDataExtreme_Key.html#cb488-1" tabindex="-1"></a><span class="co"># Load packages</span></span>
+<span id="cb488-2"><a href="WS14_MissingDataExtreme_Key.html#cb488-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<p>We will investigate a dataset that was retrieved from the National Centers for Environmental Information <a href="https://www.ncei.noaa.gov/" class="uri">https://www.ncei.noaa.gov/</a> about various daily weather parameters recorded in Austin, Texas, between January 1st, 2000 and December 31st, 2015.</p>
+<div class="sourceCode" id="cb489"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb489-1"><a href="WS14_MissingDataExtreme_Key.html#cb489-1" tabindex="-1"></a><span class="co"># Upload the weather dataset from my GitHub to your environment</span></span>
+<span id="cb489-2"><a href="WS14_MissingDataExtreme_Key.html#cb489-2" tabindex="-1"></a>daily_atxweather <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/laylaguyot/datasets/main//atx_weather.csv&quot;</span>)</span>
+<span id="cb489-3"><a href="WS14_MissingDataExtreme_Key.html#cb489-3" tabindex="-1"></a></span>
+<span id="cb489-4"><a href="WS14_MissingDataExtreme_Key.html#cb489-4" tabindex="-1"></a><span class="co"># Take a look!</span></span>
+<span id="cb489-5"><a href="WS14_MissingDataExtreme_Key.html#cb489-5" tabindex="-1"></a><span class="fu">head</span>(daily_atxweather)</span></code></pre></div>
+<p>Here is a description of the variables included in this dataset:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Variables</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>date</code></td>
+<td>date in</td>
+</tr>
+<tr class="even">
+<td><code>AWND</code></td>
+<td>average daily wind speed (mph)</td>
+</tr>
+<tr class="odd">
+<td><code>PRCP</code></td>
+<td>total precipitation (in)</td>
+</tr>
+<tr class="even">
+<td><code>SNOW</code></td>
+<td>total snowfall (in)</td>
+</tr>
+<tr class="odd">
+<td><code>TAVG</code></td>
+<td>average of hourly temperature (°F)</td>
+</tr>
+<tr class="even">
+<td><code>TMAX</code></td>
+<td>max temperature (°F)</td>
+</tr>
+<tr class="odd">
+<td><code>TMIN</code></td>
+<td>min temperature (°F)</td>
+</tr>
+<tr class="even">
+<td><code>TSUN</code></td>
+<td>total sunshine (minutes)</td>
+</tr>
+</tbody>
+</table>
+<p>Visit the following page for the documentation of how the data is collected and recorded: <a href="https://www.ncei.noaa.gov/data/daily-summaries/doc/GHCND_documentation.pdf" class="uri">https://www.ncei.noaa.gov/data/daily-summaries/doc/GHCND_documentation.pdf</a>. In a perfect world, this type of documentation would exist for all datasets!</p>
+</div>
+<div id="missing-data" class="section level2 hasAnchor">
+<h2>1. Missing data<a href="WS14_MissingDataExtreme_Key.html#missing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is pretty common to have missing data. We need to check for any underlying reasons and consider those when deciding how to handle missing values.</p>
+<div id="a.-r-messages" class="section level3 hasAnchor">
+<h3>a. R messages<a href="WS14_MissingDataExtreme_Key.html#a.-r-messages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In R, the philosophy is that missing values should never silently go missing. Check the number of missing values for each variable:</p>
+<div class="sourceCode" id="cb490"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb490-1"><a href="WS14_MissingDataExtreme_Key.html#cb490-1" tabindex="-1"></a><span class="co"># Summary of the data shows the number of NA values for numeric variables</span></span>
+<span id="cb490-2"><a href="WS14_MissingDataExtreme_Key.html#cb490-2" tabindex="-1"></a><span class="fu">summary</span>(daily_atxweather)</span></code></pre></div>
+<pre><code>##    station              date                AWND       
+##  Length:5844        Length:5844        Min.   : 0.220  
+##  Class :character   Class :character   1st Qu.: 5.140  
+##  Mode  :character   Mode  :character   Median : 7.380  
+##                                        Mean   : 7.999  
+##                                        3rd Qu.:10.290  
+##       PRCP               SNOW                TAVG      
+##  Min.   : 0.00000   Min.   :0.0000000   Min.   : 0.00  
+##  1st Qu.: 0.00000   1st Qu.:0.0000000   1st Qu.:57.00  
+##  Median : 0.00000   Median :0.0000000   Median :71.00  
+##  Mean   : 0.09191   Mean   :0.0001712   Mean   :67.95  
+##  3rd Qu.: 0.00000   3rd Qu.:0.0000000   3rd Qu.:81.00  
+##       TMAX            TMIN            TSUN       
+##  Min.   : 28.0   Min.   :10.00   Min.   :   0.0  
+##  1st Qu.: 71.0   1st Qu.:43.00   1st Qu.: 210.0  
+##  Median : 83.0   Median :59.00   Median : 518.0  
+##  Mean   : 80.5   Mean   :55.67   Mean   : 548.4  
+##  3rd Qu.: 93.0   3rd Qu.:70.00   3rd Qu.: 662.0  
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 2 rows ]</code></pre>
+<p>That’s why if there is any missing value in the input, the output will be a missing value.</p>
+<p>For example, we have come across that issue many times by now, what happens if we calculate the mean of a variable with some missing values?</p>
+<div class="sourceCode" id="cb492"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb492-1"><a href="WS14_MissingDataExtreme_Key.html#cb492-1" tabindex="-1"></a><span class="fu">mean</span>(daily_atxweather<span class="sc">$</span>TAVG)</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>We discussed how to compute the mean, ignoring missing values, with the argument <code>na.rm = TRUE</code>.</p>
+<div class="sourceCode" id="cb494"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb494-1"><a href="WS14_MissingDataExtreme_Key.html#cb494-1" tabindex="-1"></a><span class="fu">mean</span>(daily_atxweather<span class="sc">$</span>TAVG, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 67.94998</code></pre>
+<p>What happens when there are missing values in a <code>ggplot</code>?</p>
+<div class="sourceCode" id="cb496"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb496-1"><a href="WS14_MissingDataExtreme_Key.html#cb496-1" tabindex="-1"></a><span class="co"># How do missing values appear in a boxplot?</span></span>
+<span id="cb496-2"><a href="WS14_MissingDataExtreme_Key.html#cb496-2" tabindex="-1"></a><span class="fu">ggplot</span>(daily_atxweather) <span class="sc">+</span></span>
+<span id="cb496-3"><a href="WS14_MissingDataExtreme_Key.html#cb496-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> TAVG))</span></code></pre></div>
+<pre><code>## Warning: Removed 2805 rows containing non-finite outside the scale range
+## (`stat_boxplot()`).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-263-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The warning message indicates that there was an issue with 2 values (the missing values).</p>
+<div id="try-it-create-a-new-variable-freezing-to-keep-track-of-freezing-average-temperatures-less-than-32-degrees-fahrenheit.-then-represent-this-new-variable-in-a-bar-plot.-how-does-r-let-you-know-about-missing-values" class="section level4 hasAnchor">
+<h4><strong>Try it! Create a new variable, <code>freezing</code>, to keep track of freezing average temperatures (less than 32 degrees Fahrenheit). Then represent this new variable in a bar plot. How does R let you know about missing values?</strong><a href="WS14_MissingDataExtreme_Key.html#try-it-create-a-new-variable-freezing-to-keep-track-of-freezing-average-temperatures-less-than-32-degrees-fahrenheit.-then-represent-this-new-variable-in-a-bar-plot.-how-does-r-let-you-know-about-missing-values" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb498"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb498-1"><a href="WS14_MissingDataExtreme_Key.html#cb498-1" tabindex="-1"></a><span class="co"># How do missing values appear in a bar plot</span></span>
+<span id="cb498-2"><a href="WS14_MissingDataExtreme_Key.html#cb498-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb498-3"><a href="WS14_MissingDataExtreme_Key.html#cb498-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">freezing =</span> <span class="fu">ifelse</span>(TAVG <span class="sc">&lt;</span> <span class="dv">32</span>, <span class="st">&quot;freezing&quot;</span>, <span class="st">&quot;not freezing&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb498-4"><a href="WS14_MissingDataExtreme_Key.html#cb498-4" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb498-5"><a href="WS14_MissingDataExtreme_Key.html#cb498-5" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> freezing))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-264-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>R shows how many values were missing within the bar plot.</strong></p>
+</div>
+</div>
+<div id="b.-making-sense-of-the-structure" class="section level3 hasAnchor">
+<h3>b. Making sense of the structure<a href="WS14_MissingDataExtreme_Key.html#b.-making-sense-of-the-structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>It’s always a good idea to check the number of rows and columns that we expect.</p>
+<div id="try-it-if-the-weather-data-is-recorded-daily-from-january-1st-2000-to-december-31st-2015-how-many-rows-do-we-expect-does-it-match-the-actual-number-of-rows-in-daily_atxweather" class="section level4 hasAnchor">
+<h4><strong>Try it! If the weather data is recorded daily from January 1st, 2000 to December 31st, 2015, how many rows do we expect? Does it match the actual number of rows in <code>daily_atxweather</code>?</strong><a href="WS14_MissingDataExtreme_Key.html#try-it-if-the-weather-data-is-recorded-daily-from-january-1st-2000-to-december-31st-2015-how-many-rows-do-we-expect-does-it-match-the-actual-number-of-rows-in-daily_atxweather" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb499"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb499-1"><a href="WS14_MissingDataExtreme_Key.html#cb499-1" tabindex="-1"></a><span class="co"># Check if there is a match: 16 years of 365 days + 4 extra days (leap years)</span></span>
+<span id="cb499-2"><a href="WS14_MissingDataExtreme_Key.html#cb499-2" tabindex="-1"></a><span class="dv">16</span><span class="sc">*</span><span class="dv">365</span> <span class="sc">+</span> <span class="dv">4</span> <span class="sc">==</span> <span class="fu">nrow</span>(daily_atxweather)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb501"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb501-1"><a href="WS14_MissingDataExtreme_Key.html#cb501-1" tabindex="-1"></a><span class="co"># or using difftime</span></span>
+<span id="cb501-2"><a href="WS14_MissingDataExtreme_Key.html#cb501-2" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">mdy</span>(<span class="st">&quot;12-31-2015&quot;</span>), <span class="fu">mdy</span>(<span class="st">&quot;01-01-2000&quot;</span>), <span class="at">units =</span> <span class="st">&quot;days&quot;</span>) <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
+<pre><code>## Time difference of 5844 days</code></pre>
+<p><strong>There is a match!</strong></p>
+<p>Is there any reason why some average temperatures are missing? Let’s check for patterns:</p>
+<div class="sourceCode" id="cb503"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb503-1"><a href="WS14_MissingDataExtreme_Key.html#cb503-1" tabindex="-1"></a><span class="co"># Check for missing values per year</span></span>
+<span id="cb503-2"><a href="WS14_MissingDataExtreme_Key.html#cb503-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb503-3"><a href="WS14_MissingDataExtreme_Key.html#cb503-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(<span class="fu">mdy</span>(date))) <span class="sc">|&gt;</span></span>
+<span id="cb503-4"><a href="WS14_MissingDataExtreme_Key.html#cb503-4" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">|&gt;</span></span>
+<span id="cb503-5"><a href="WS14_MissingDataExtreme_Key.html#cb503-5" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">missing =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(TAVG)))</span></code></pre></div>
+<p>It looks like there was an issue with reporting average temperatures between 2005 and 2013.</p>
+</div>
+</div>
+<div id="c.-handling-missing-values" class="section level3 hasAnchor">
+<h3>c. Handling missing values<a href="WS14_MissingDataExtreme_Key.html#c.-handling-missing-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There is no perfect way of handling missing values. But we should always keep the context in consideration.</p>
+<p>How would removing missing values from the dataset potentially affect our data analysis?</p>
+<p><strong>Removing missing data would remove some part of our data. For example, the average of hourly temperatures, <code>TAVG</code>, has many values missing for some years and is only partially available for other years. Calculating a maximum value over a year with partial data available is probably going to report something inaccurate.</strong></p>
+<p>We could just decide not using a variable if it has many values missing or we could find a way around!</p>
+<p>Let’s consider a daily average temperature as the average of the minimum temperature and maximum temperature instead:</p>
+<div class="sourceCode" id="cb504"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb504-1"><a href="WS14_MissingDataExtreme_Key.html#cb504-1" tabindex="-1"></a><span class="co"># Create a new variable in daily_atxweather</span></span>
+<span id="cb504-2"><a href="WS14_MissingDataExtreme_Key.html#cb504-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb504-3"><a href="WS14_MissingDataExtreme_Key.html#cb504-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">TAVG_calc =</span> (TMIN <span class="sc">+</span> TMAX)<span class="sc">/</span><span class="dv">2</span>) <span class="sc">|&gt;</span></span>
+<span id="cb504-4"><a href="WS14_MissingDataExtreme_Key.html#cb504-4" tabindex="-1"></a><span class="co"># Double check it worked!</span></span>
+<span id="cb504-5"><a href="WS14_MissingDataExtreme_Key.html#cb504-5" tabindex="-1"></a>  <span class="fu">select</span>(date,TAVG,TMIN,TMAX,TAVG_calc)</span></code></pre></div>
+<p>The calculated values seem pretty close to the hourly average! But no missing values for that new variable!</p>
+<div id="try-it-there-are-2-values-of-snowfall-that-are-missing-take-a-look-at-these-values.-is-there-a-value-that-would-be-reasonable-to-replace-these-missing-values-if-so-replace-the-missing-values-in-a-new-variable-called-snow_recoded." class="section level4 hasAnchor">
+<h4><strong>Try it! There are 2 values of snowfall that are missing, take a look at these values. Is there a value that would be reasonable to replace these missing values? If so, replace the missing values in a new variable called <code>SNOW_recoded</code>.</strong><a href="WS14_MissingDataExtreme_Key.html#try-it-there-are-2-values-of-snowfall-that-are-missing-take-a-look-at-these-values.-is-there-a-value-that-would-be-reasonable-to-replace-these-missing-values-if-so-replace-the-missing-values-in-a-new-variable-called-snow_recoded." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb505"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb505-1"><a href="WS14_MissingDataExtreme_Key.html#cb505-1" tabindex="-1"></a><span class="co"># Check the missing values of SNOW</span></span>
+<span id="cb505-2"><a href="WS14_MissingDataExtreme_Key.html#cb505-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb505-3"><a href="WS14_MissingDataExtreme_Key.html#cb505-3" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(SNOW))</span>
+<span id="cb505-4"><a href="WS14_MissingDataExtreme_Key.html#cb505-4" tabindex="-1"></a></span>
+<span id="cb505-5"><a href="WS14_MissingDataExtreme_Key.html#cb505-5" tabindex="-1"></a><span class="co"># Replace the missing values of SNOW with 0</span></span>
+<span id="cb505-6"><a href="WS14_MissingDataExtreme_Key.html#cb505-6" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb505-7"><a href="WS14_MissingDataExtreme_Key.html#cb505-7" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SNOW_recoded =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(SNOW), <span class="dv">0</span>, SNOW)) <span class="sc">|&gt;</span></span>
+<span id="cb505-8"><a href="WS14_MissingDataExtreme_Key.html#cb505-8" tabindex="-1"></a><span class="co"># Double check it worked!</span></span>
+<span id="cb505-9"><a href="WS14_MissingDataExtreme_Key.html#cb505-9" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(SNOW)) <span class="sc">|&gt;</span></span>
+<span id="cb505-10"><a href="WS14_MissingDataExtreme_Key.html#cb505-10" tabindex="-1"></a>  <span class="fu">select</span>(date,SNOW,SNOW_recoded)</span></code></pre></div>
+<p><strong>It is reasonable to assume the snowfall was 0 in on these days because those occurred in the summer.</strong></p>
+<p>If it makes sense to remove missing values, we could choose to remove all rows containing any missing values (for any variable):</p>
+<div class="sourceCode" id="cb506"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb506-1"><a href="WS14_MissingDataExtreme_Key.html#cb506-1" tabindex="-1"></a><span class="co"># Using na.omit()</span></span>
+<span id="cb506-2"><a href="WS14_MissingDataExtreme_Key.html#cb506-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span> <span class="fu">na.omit</span>()</span>
+<span id="cb506-3"><a href="WS14_MissingDataExtreme_Key.html#cb506-3" tabindex="-1"></a></span>
+<span id="cb506-4"><a href="WS14_MissingDataExtreme_Key.html#cb506-4" tabindex="-1"></a><span class="co"># Using drop_na()</span></span>
+<span id="cb506-5"><a href="WS14_MissingDataExtreme_Key.html#cb506-5" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span> <span class="fu">drop_na</span>()</span></code></pre></div>
+<p>Just be careful that it makes sense and that we are not omitting important information!</p>
+</div>
+</div>
+</div>
+<div id="extreme-values" class="section level2 hasAnchor">
+<h2>2. Extreme values<a href="WS14_MissingDataExtreme_Key.html#extreme-values" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="a.-checking-extreme-values" class="section level3 hasAnchor">
+<h3>a. Checking extreme values<a href="WS14_MissingDataExtreme_Key.html#a.-checking-extreme-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>It’s always a good idea to check basic summary statistics to see if there is any values that may seem surprising:</p>
+<div class="sourceCode" id="cb507"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb507-1"><a href="WS14_MissingDataExtreme_Key.html#cb507-1" tabindex="-1"></a><span class="co"># Generate basic summary statistics</span></span>
+<span id="cb507-2"><a href="WS14_MissingDataExtreme_Key.html#cb507-2" tabindex="-1"></a><span class="fu">summary</span>(daily_atxweather)</span></code></pre></div>
+<pre><code>##    station              date                AWND       
+##  Length:5844        Length:5844        Min.   : 0.220  
+##  Class :character   Class :character   1st Qu.: 5.140  
+##  Mode  :character   Mode  :character   Median : 7.380  
+##                                        Mean   : 7.999  
+##                                        3rd Qu.:10.290  
+##       PRCP               SNOW                TAVG      
+##  Min.   : 0.00000   Min.   :0.0000000   Min.   : 0.00  
+##  1st Qu.: 0.00000   1st Qu.:0.0000000   1st Qu.:57.00  
+##  Median : 0.00000   Median :0.0000000   Median :71.00  
+##  Mean   : 0.09191   Mean   :0.0001712   Mean   :67.95  
+##  3rd Qu.: 0.00000   3rd Qu.:0.0000000   3rd Qu.:81.00  
+##       TMAX            TMIN            TSUN       
+##  Min.   : 28.0   Min.   :10.00   Min.   :   0.0  
+##  1st Qu.: 71.0   1st Qu.:43.00   1st Qu.: 210.0  
+##  Median : 83.0   Median :59.00   Median : 518.0  
+##  Mean   : 80.5   Mean   :55.67   Mean   : 548.4  
+##  3rd Qu.: 93.0   3rd Qu.:70.00   3rd Qu.: 662.0  
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 2 rows ]</code></pre>
+<p>Notice anything surprising?</p>
+<p><strong>Some extremely high values for precipitation and sunshine compared to the rest of the values.</strong></p>
+<p>Let’s investigate variables that may have some extreme values.</p>
+<div id="try-it-take-a-look-at-the-10-highest-values-for-prcp.-does-the-maximum-value-seem-reasonable" class="section level4 hasAnchor">
+<h4><strong>Try it! Take a look at the 10 highest values for <code>PRCP</code>. Does the maximum value seem reasonable?</strong><a href="WS14_MissingDataExtreme_Key.html#try-it-take-a-look-at-the-10-highest-values-for-prcp.-does-the-maximum-value-seem-reasonable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb509"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb509-1"><a href="WS14_MissingDataExtreme_Key.html#cb509-1" tabindex="-1"></a><span class="co"># Check high values of PRCP</span></span>
+<span id="cb509-2"><a href="WS14_MissingDataExtreme_Key.html#cb509-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb509-3"><a href="WS14_MissingDataExtreme_Key.html#cb509-3" tabindex="-1"></a>  <span class="fu">slice_max</span>(<span class="at">n =</span> <span class="dv">10</span>, PRCP)</span></code></pre></div>
+<p><strong>It might seem surprising but there was actually a flood that day! See <a href="https://data.austintexas.gov/stories/s/2015-Halloween-Flood/m4yz-eydu/" class="uri">https://data.austintexas.gov/stories/s/2015-Halloween-Flood/m4yz-eydu/</a></strong></p>
+<p>Then consider the maximum value for the daily amount of sunshine. Since it was recorded in minutes and knowing that the longest day is about 17 hours long in Austin, what would be the maximum value that is plausible?</p>
+<div class="sourceCode" id="cb510"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb510-1"><a href="WS14_MissingDataExtreme_Key.html#cb510-1" tabindex="-1"></a><span class="co"># Maximum value of sunshine to expect</span></span>
+<span id="cb510-2"><a href="WS14_MissingDataExtreme_Key.html#cb510-2" tabindex="-1"></a><span class="dv">17</span><span class="sc">*</span><span class="dv">60</span></span></code></pre></div>
+<pre><code>## [1] 1020</code></pre>
+<div class="sourceCode" id="cb512"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb512-1"><a href="WS14_MissingDataExtreme_Key.html#cb512-1" tabindex="-1"></a><span class="co"># Maximum value of sunshine in weather data</span></span>
+<span id="cb512-2"><a href="WS14_MissingDataExtreme_Key.html#cb512-2" tabindex="-1"></a><span class="fu">max</span>(daily_atxweather<span class="sc">$</span>TSUN, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 9916</code></pre>
+<p>That’s not possible to observe such a high value!</p>
+<div class="sourceCode" id="cb514"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb514-1"><a href="WS14_MissingDataExtreme_Key.html#cb514-1" tabindex="-1"></a><span class="co"># Check the rows with more than 17 hours of sunshine (or more than 1020 minutes)</span></span>
+<span id="cb514-2"><a href="WS14_MissingDataExtreme_Key.html#cb514-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb514-3"><a href="WS14_MissingDataExtreme_Key.html#cb514-3" tabindex="-1"></a>  <span class="fu">filter</span>(TSUN <span class="sc">&gt;</span> <span class="dv">1020</span>) <span class="sc">|&gt;</span></span>
+<span id="cb514-4"><a href="WS14_MissingDataExtreme_Key.html#cb514-4" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(TSUN)) <span class="sc">|&gt;</span></span>
+<span id="cb514-5"><a href="WS14_MissingDataExtreme_Key.html#cb514-5" tabindex="-1"></a>  <span class="fu">select</span>(date, TSUN)</span></code></pre></div>
+<p>Some of the highest observations are even reported in winter time…</p>
+<p>Do you think it is reasonable to drop the values for <code>TSUN</code> that are less than 1020? Why or why not?</p>
+<p><strong>If we can’t explain why these values do not make sense, it is probably not a variable that is well defined and we should not rely on this variable in our analysis.</strong></p>
+</div>
+</div>
+<div id="b.-representing-extreme-values" class="section level3 hasAnchor">
+<h3>b. Representing extreme values<a href="WS14_MissingDataExtreme_Key.html#b.-representing-extreme-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Take a look at the distribution of a variable with some extreme values:</p>
+<div class="sourceCode" id="cb515"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb515-1"><a href="WS14_MissingDataExtreme_Key.html#cb515-1" tabindex="-1"></a><span class="co"># Check distribution of PRCP</span></span>
+<span id="cb515-2"><a href="WS14_MissingDataExtreme_Key.html#cb515-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb515-3"><a href="WS14_MissingDataExtreme_Key.html#cb515-3" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb515-4"><a href="WS14_MissingDataExtreme_Key.html#cb515-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> PRCP))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-274-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Let’s transform the distribution of this variable:</p>
+<div class="sourceCode" id="cb516"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb516-1"><a href="WS14_MissingDataExtreme_Key.html#cb516-1" tabindex="-1"></a><span class="co"># Check distribution of PRCP</span></span>
+<span id="cb516-2"><a href="WS14_MissingDataExtreme_Key.html#cb516-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb516-3"><a href="WS14_MissingDataExtreme_Key.html#cb516-3" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb516-4"><a href="WS14_MissingDataExtreme_Key.html#cb516-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log</span>(PRCP<span class="sc">+</span><span class="dv">1</span>)))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-275-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Still not great because there are many days without rain. What if we only focus on the days with precipitation:</p>
+<div class="sourceCode" id="cb517"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb517-1"><a href="WS14_MissingDataExtreme_Key.html#cb517-1" tabindex="-1"></a><span class="co"># Check distribution of PRCP when greater than 0</span></span>
+<span id="cb517-2"><a href="WS14_MissingDataExtreme_Key.html#cb517-2" tabindex="-1"></a>daily_atxweather <span class="sc">|&gt;</span></span>
+<span id="cb517-3"><a href="WS14_MissingDataExtreme_Key.html#cb517-3" tabindex="-1"></a>  <span class="fu">filter</span>(PRCP <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
+<span id="cb517-4"><a href="WS14_MissingDataExtreme_Key.html#cb517-4" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb517-5"><a href="WS14_MissingDataExtreme_Key.html#cb517-5" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> PRCP))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-276-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb518"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb518-1"><a href="WS14_MissingDataExtreme_Key.html#cb518-1" tabindex="-1"></a>  <span class="co">#geom_boxplot(aes(x = log(PRCP))) # with transformation</span></span></code></pre></div>
+</div>
+<div id="c.-handling-extreme-values" class="section level3 hasAnchor">
+<h3>c. Handling extreme values<a href="WS14_MissingDataExtreme_Key.html#c.-handling-extreme-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Again, handling extreme values should rely on the context of our data.</p>
+<p>Always check that extreme values make sense. If they don’t, we can choose to remove them from the analysis. Because some extreme values can refer to exceptional conditions we might not be interested in, we could choose to remove them but we need to justify why we remove them.</p>
+<hr />
+</div>
+</div>
+<div id="recommended-resources-14" class="section level2 hasAnchor">
+<h2>Recommended Resources<a href="WS14_MissingDataExtreme_Key.html#recommended-resources-14" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Worksheet keys are posted at the end of the week on Canvas under <strong>Programming Tools</strong>.</li>
+<li>Recommended readings: <a href="https://naniar.njtierney.com/articles/naniar-visualisation.html">Gallery of Missing Data Visualisations</a></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="WS13_Recoding_Key.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="WS15_WebScraping_Key.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

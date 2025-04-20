@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Grammar Graphics | Spring 2025 Semester</title>
+  <meta name="description" content="Grammar Graphics | Spring 2025 Semester" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Grammar Graphics | Spring 2025 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Grammar Graphics | Spring 2025 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr. Layla Guyot" />
+
+
+<meta name="date" content="2025-04-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="WS3_BasicDataManipulation_Key.html"/>
+<link rel="next" href="WS5_Describing1Variable_Key.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 322E Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to SDS 322E</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html"><i class="fa fa-check"></i>getstaRted</a>
+<ul>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#learning-objectives"><i class="fa fa-check"></i>Learning Objectives:</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#recommended-resources"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html"><i class="fa fa-check"></i>RMarkdown</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#learning-objectives-1"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#basic-markdown-editing"><i class="fa fa-check"></i>1. Basic Markdown editing</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-headers"><i class="fa fa-check"></i>a. Headers</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-text-formatting"><i class="fa fa-check"></i>b. Text formatting</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-lists-and-bullet-points"><i class="fa fa-check"></i>c. Lists and bullet points</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#d.-html-hyperlinks-images-tables-etc."><i class="fa fa-check"></i>d. HTML hyperlinks, images, tables, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#embedded-r-code"><i class="fa fa-check"></i>2. Embedded R code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-code-chunks"><i class="fa fa-check"></i>a. Code chunks</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-more-base-r-built-in-datasets"><i class="fa fa-check"></i>b. More base R: built-in datasets</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-more-base-r-basic-plots"><i class="fa fa-check"></i>c. More base R: basic plots</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#packages"><i class="fa fa-check"></i>3. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#recommended-resources-1"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html"><i class="fa fa-check"></i>Datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#learning-objectives-2"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#set-up"><i class="fa fa-check"></i>1. Set up</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#a.-packages"><i class="fa fa-check"></i>a. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#b.-importing-datasets"><i class="fa fa-check"></i>b. Importing datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#city-of-austin-open-data-portal"><i class="fa fa-check"></i>2. City of Austin Open Data Portal</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#other-data-sources"><i class="fa fa-check"></i>3. Other data sources</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#recommended-resources-2"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html"><i class="fa fa-check"></i>Basic Data Manipulation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#learning-objectives-3"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#making-sense-of-a-dataset"><i class="fa fa-check"></i>1. Making sense of a dataset</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#setting-conditions"><i class="fa fa-check"></i>2. Setting conditions</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#a.-conditional-statements"><i class="fa fa-check"></i>a. Conditional statements</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#b.-connectors"><i class="fa fa-check"></i>b. Connectors</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#subsetting-data"><i class="fa fa-check"></i>3. Subsetting data</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#creating-new-variables"><i class="fa fa-check"></i>4. Creating new variables</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#recommended-resources-3"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html"><i class="fa fa-check"></i>Grammar Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#learning-objectives-4"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#the-pipe"><i class="fa fa-check"></i>1. The pipe</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#create-a-ggplot"><i class="fa fa-check"></i>2. Create a <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-define-a-plot"><i class="fa fa-check"></i>a. Define a plot</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-add-a-geometric-object"><i class="fa fa-check"></i>b. Add a geometric object</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-map-to-color-shape-size"><i class="fa fa-check"></i>c. Map to color, shape, size</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-map-variables-to-color-shape-size"><i class="fa fa-check"></i>d. Map variables to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#layering"><i class="fa fa-check"></i>3. Layering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-add-labels-and-controlling-scales"><i class="fa fa-check"></i>a. Add labels and controlling scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-control-scales"><i class="fa fa-check"></i>b. Control scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-facet"><i class="fa fa-check"></i>c. Facet</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-color-palettes-and-themes"><i class="fa fa-check"></i>d. Color palettes and themes</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#e.-themes"><i class="fa fa-check"></i>e. Themes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#recommended-resources-4"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html"><i class="fa fa-check"></i>Describing1Variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#learning-objectives-5"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-numeric-variable"><i class="fa fa-check"></i>1. Describing 1 numeric variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-histogram"><i class="fa fa-check"></i>a. Histogram</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-boxplot"><i class="fa fa-check"></i>b. Boxplot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#c.-density-and-violin-plots"><i class="fa fa-check"></i>c. Density and Violin plots</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#d.-reporting-summary-statistics"><i class="fa fa-check"></i>d. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-categorical-variable"><i class="fa fa-check"></i>2. Describing 1 categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-bar-plot"><i class="fa fa-check"></i>a. Bar plot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-reporting-summary-statistics"><i class="fa fa-check"></i>b. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#your-turn"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#recommended-resources-5"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html"><i class="fa fa-check"></i>Describing Relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#learning-objectives-6"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-numeric-variables"><i class="fa fa-check"></i>1. Comparing two numeric variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-scatterplot"><i class="fa fa-check"></i>a. Using a scatterplot</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-reporting-correlation"><i class="fa fa-check"></i>b. Reporting correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-a-numeric-variable-and-a-categorical-variable"><i class="fa fa-check"></i>2. Comparing a numeric variable and a categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-grouped-boxplots"><i class="fa fa-check"></i>a. Using grouped boxplots</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-grouped-histograms"><i class="fa fa-check"></i>b. Using grouped histograms</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-center-and-spread-for-each-category"><i class="fa fa-check"></i>c. Reporting center and spread for each category</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#d.-using-a-special-case-of-bar-graph"><i class="fa fa-check"></i>d. Using a special case of bar graph</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-categorical-variables"><i class="fa fa-check"></i>3. Comparing two categorical variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-stacked-plot-not-usually-recommended"><i class="fa fa-check"></i>a. Using a stacked plot (not usually recommended)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-a-segmented-bar-plot-usually-preferred"><i class="fa fa-check"></i>b. Using a segmented bar plot (usually preferred)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-frequencies-and-relative-frequencies"><i class="fa fa-check"></i>c. Reporting frequencies and relative frequencies</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#relationships-with-more-than-2-variables"><i class="fa fa-check"></i>4. Relationships with more than 2 variables</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#recommended-resources-6"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html"><i class="fa fa-check"></i>Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#learning-objectives-7"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#gather-some-background-information"><i class="fa fa-check"></i>1. Gather some background information</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-context"><i class="fa fa-check"></i>a. Context</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-structure"><i class="fa fa-check"></i>b. Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#formulate-some-research-questions"><i class="fa fa-check"></i>2. Formulate some research questions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#investigate-trends-and-relationships"><i class="fa fa-check"></i>3. Investigate trends and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-first-look-at-univariate-distributions"><i class="fa fa-check"></i>a. First look at univariate distributions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-then-look-at-relationships"><i class="fa fa-check"></i>b. Then look at relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#answer-the-questions-and-be-critical"><i class="fa fa-check"></i>4. Answer the questions and be critical</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#your-turn-1"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#recommended-resources-7"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html"><i class="fa fa-check"></i>Grammar Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#learning-objectives-8"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-rowsobservations"><i class="fa fa-check"></i>1. Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-filter"><i class="fa fa-check"></i>a. Filter</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-arrange"><i class="fa fa-check"></i>b. Arrange</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#c.-minimummaximum-values"><i class="fa fa-check"></i>c. Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-columns"><i class="fa fa-check"></i>2. Operations on columns</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-select"><i class="fa fa-check"></i>a. Select</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-mutate"><i class="fa fa-check"></i>b. Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#create-summaries"><i class="fa fa-check"></i>3. Create summaries</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-summarize"><i class="fa fa-check"></i>a. Summarize</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-group-by"><i class="fa fa-check"></i>b. Group by</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#recommended-resources-8"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html"><i class="fa fa-check"></i>Joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#learning-objectives-9"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#joining-datasets"><i class="fa fa-check"></i>1. Joining datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-inner-join"><i class="fa fa-check"></i>a. Inner join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-left-join"><i class="fa fa-check"></i>b. Left join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-right-join"><i class="fa fa-check"></i>c. Right join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-full-join"><i class="fa fa-check"></i>d. Full join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#e.-anti-join"><i class="fa fa-check"></i>e. Anti join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#f.-semi-join"><i class="fa fa-check"></i>f. Semi join</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#considering-other-options-when-joining"><i class="fa fa-check"></i>2. Considering other options when joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-no-matching-key"><i class="fa fa-check"></i>a. No matching key</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-auto-suffixing"><i class="fa fa-check"></i>b. Auto-suffixing</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-duplicates"><i class="fa fa-check"></i>c. Duplicates</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-several-key-variables"><i class="fa fa-check"></i>d. Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#recommended-resources-9"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html"><i class="fa fa-check"></i>Tidying</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#learning-objectives-10"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#pivoting"><i class="fa fa-check"></i>1. Pivoting</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-wide-to-long"><i class="fa fa-check"></i>a. Wide to long</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-long-to-wide"><i class="fa fa-check"></i>b. Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#separating-or-uniting-variables"><i class="fa fa-check"></i>2. Separating or uniting variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-separate"><i class="fa fa-check"></i>a. Separate</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-unite"><i class="fa fa-check"></i>b. Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#your-turn-2"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#recommended-resources-10"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html"><i class="fa fa-check"></i>Strings Reg Ex</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#learning-objectives-11"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#strings"><i class="fa fa-check"></i>1. Strings</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-calculating-length"><i class="fa fa-check"></i>a. Calculating length</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-combining-strings"><i class="fa fa-check"></i>b. Combining strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-changing-cases"><i class="fa fa-check"></i>c. Changing cases</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-subsetting-strings"><i class="fa fa-check"></i>d. Subsetting strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#e.-finding-exact-matches-in-strings"><i class="fa fa-check"></i>e. Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#regular-expressions-regex"><i class="fa fa-check"></i>2. Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-wildcards"><i class="fa fa-check"></i>a. Wildcards</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-anchors"><i class="fa fa-check"></i>b. Anchors</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-flexible-patterns"><i class="fa fa-check"></i>c. Flexible patterns</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-special-characters"><i class="fa fa-check"></i>d. Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#recommended-resources-11"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html"><i class="fa fa-check"></i>Dates Times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#learning-objectives-12"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#parsing-dates-and-times"><i class="fa fa-check"></i>1. Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-r-formats"><i class="fa fa-check"></i>a. R formats</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-combining-datetime-components"><i class="fa fa-check"></i>b. Combining date/time components</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-extracting-parts-of-the-date"><i class="fa fa-check"></i>c. Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#manipulating-dates-and-times"><i class="fa fa-check"></i>2. Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-finding-differences-between-dates-and-times"><i class="fa fa-check"></i>a. Finding differences between dates and times</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-summarizing-datetime-data"><i class="fa fa-check"></i>b. Summarizing date/time data</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-a-few-remarks"><i class="fa fa-check"></i>c. A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#recommended-resources-12"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html"><i class="fa fa-check"></i>Recoding</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#learning-objectives-13"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-numeric-variables-as-categorical-variables"><i class="fa fa-check"></i>1. Consider numeric variables as categorical variables</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-a-log-transformations-for-numeric-variables-that-are-highly-skewed"><i class="fa fa-check"></i>2. Consider a log-transformations for numeric variables that are highly skewed</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recoding-categories"><i class="fa fa-check"></i>3. Recoding categories</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#your-turn-3"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recommended-resources-13"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html"><i class="fa fa-check"></i>Missing Data Extreme</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#learning-objectives-14"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#missing-data"><i class="fa fa-check"></i>1. Missing data</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-r-messages"><i class="fa fa-check"></i>a. R messages</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-making-sense-of-the-structure"><i class="fa fa-check"></i>b. Making sense of the structure</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-missing-values"><i class="fa fa-check"></i>c. Handling missing values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#extreme-values"><i class="fa fa-check"></i>2. Extreme values</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-checking-extreme-values"><i class="fa fa-check"></i>a. Checking extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-representing-extreme-values"><i class="fa fa-check"></i>b. Representing extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-extreme-values"><i class="fa fa-check"></i>c. Handling extreme values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#recommended-resources-14"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html"><i class="fa fa-check"></i>Web Scraping</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#learning-objectives-15"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-data-with-code"><i class="fa fa-check"></i>1. Web scraping data with code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#a.-using-element-tags"><i class="fa fa-check"></i>a. Using element tags</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#b.-using-element-types"><i class="fa fa-check"></i>b. Using element types</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-and-ethics"><i class="fa fa-check"></i>2. Web scraping and ethics</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#recommended-resources-15"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html"><i class="fa fa-check"></i>Text Mining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#learning-objectives-16"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#text-data"><i class="fa fa-check"></i>1. Text data</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#stop-words"><i class="fa fa-check"></i>2. Stop words</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#word-clouds"><i class="fa fa-check"></i>3. Word Clouds</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#sentiment-analysis"><i class="fa fa-check"></i>4. Sentiment analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#a.-positivenegative-sentiments"><i class="fa fa-check"></i>a. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#b.-scoring-sentiments"><i class="fa fa-check"></i>b. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#c.-using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>c. Using a wide range of sentiments</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#recommended-resources-16"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html"><i class="fa fa-check"></i>Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#learning-objectives-17"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#positivenegative-sentiments"><i class="fa fa-check"></i>1. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#scoring-sentiments"><i class="fa fa-check"></i>2. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>3. Using a wide range of sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#recommended-resources-17"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html"><i class="fa fa-check"></i>Supervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#learning-objectives-18"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#defining-a-model"><i class="fa fa-check"></i>1. Defining a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#a.-a-model-with-no-predictor"><i class="fa fa-check"></i>a. A model with no predictor</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#b.-some-models-with-one-predictor"><i class="fa fa-check"></i>b. Some models with one predictor</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#comparing-models"><i class="fa fa-check"></i>2. Comparing models</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#recommended-resources-18"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html"><i class="fa fa-check"></i>Linear Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#learning-objectives-19"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#predicting-a-numeric-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a numeric response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#a.-visualizing-the-model"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#b.-fitting-a-model"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#c.-predicting-values"><i class="fa fa-check"></i>c. Predicting values</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#d.-residuals"><i class="fa fa-check"></i>d. Residuals</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#e.-performance"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-a-categorical-predictor"><i class="fa fa-check"></i>2. Using a categorical predictor</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-multiple-predictors"><i class="fa fa-check"></i>3. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#recommended-resources-19"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html"><i class="fa fa-check"></i>Model Selection</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#learning-objectives-20"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#choosing-predictors"><i class="fa fa-check"></i>1. Choosing predictors</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-predictors-that-do-not-make-sense"><i class="fa fa-check"></i>a. Predictors that do not make sense</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-exploring-relationships"><i class="fa fa-check"></i>b. Exploring relationships</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#c.-model-fit-and-predictions"><i class="fa fa-check"></i>c. Model fit and predictions</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#d.-performance"><i class="fa fa-check"></i>d. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#comparing-models-1"><i class="fa fa-check"></i>2. Comparing models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-using-multiple-predictors"><i class="fa fa-check"></i>a. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-testing-for-new-data"><i class="fa fa-check"></i>b. Testing for “new” data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#recommended-resources-20"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html"><i class="fa fa-check"></i>Introduction Classification</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#learning-objectives-21"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#basic-classifications"><i class="fa fa-check"></i>1. Basic classifications</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-random-classification"><i class="fa fa-check"></i>a. Random classification</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-classification-based-on-1-variable"><i class="fa fa-check"></i>b. Classification based on 1 variable</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#c.-classification-based-on-any-cutoff-value"><i class="fa fa-check"></i>c. Classification based on any cutoff value</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#metrics"><i class="fa fa-check"></i>2. Metrics</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#rocauc"><i class="fa fa-check"></i>3. ROC/AUC</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-receiver-operating-characteristics-roc-curve"><i class="fa fa-check"></i>a. Receiver Operating Characteristics (ROC) curve</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-area-under-the-curve-auc"><i class="fa fa-check"></i>b. Area under the curve (AUC)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#recommended-resources-21"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html"><i class="fa fa-check"></i>Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#learning-objectives-22"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#predicting-a-binary-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a binary response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#a.-visualizing-the-model-1"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#b.-fitting-a-model-1"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#c.-making-predictions"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#d.-error-in-predicted-values"><i class="fa fa-check"></i>d. Error in predicted values</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#e.-performance-1"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#using-multiple-predictors-1"><i class="fa fa-check"></i>2. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#recommended-resources-22"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html"><i class="fa fa-check"></i>Other Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#learning-objectives-23"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-numeric-outcome"><i class="fa fa-check"></i>1. Decision trees for a numeric outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-1"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-categorical-outcome"><i class="fa fa-check"></i>2. Decision trees for a categorical outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model-1"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model-1"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-2"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance-1"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#e.-predicting-more-than-2-outcomes"><i class="fa fa-check"></i>e. Predicting more than 2 outcomes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#recommended-resources-23"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html"><i class="fa fa-check"></i>Cross Validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#learning-objectives-24"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#fit-a-model-on-the-entire-dataset"><i class="fa fa-check"></i>1. Fit a model on the entire dataset</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#train-and-test-a-model"><i class="fa fa-check"></i>2. Train and Test a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-train-the-model-on-the-train-set"><i class="fa fa-check"></i>a. Train the model on the train set</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-test-the-model-on-the-test-set"><i class="fa fa-check"></i>b. Test the model on the test set</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#k-fold-cross-validation"><i class="fa fa-check"></i>3. k-fold cross-validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-define-algorithm"><i class="fa fa-check"></i>a. Define algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-create-folds"><i class="fa fa-check"></i>b. Create folds</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#c.-repeat-the-process"><i class="fa fa-check"></i>c. Repeat the process</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#d.-evaluate-average-performance"><i class="fa fa-check"></i>d. Evaluate average performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#recommended-resources-24"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html"><i class="fa fa-check"></i>Unsupervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#learning-objectives-25"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#distances"><i class="fa fa-check"></i>1. Distances</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-euclidean-distance"><i class="fa fa-check"></i>a. Euclidean distance</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-scaling"><i class="fa fa-check"></i>b. Scaling</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#correlation"><i class="fa fa-check"></i>2. Correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-correlation-coefficient"><i class="fa fa-check"></i>a. Correlation Coefficient</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-correlation-matrix"><i class="fa fa-check"></i>b. Correlation Matrix</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#c.-combining-variables"><i class="fa fa-check"></i>c. Combining variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#recommended-resources-25"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html"><i class="fa fa-check"></i>Dimension Reduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#learning-objectives-26"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#principal-component-analysis"><i class="fa fa-check"></i>1. Principal Component Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#a.-prepare-the-dataset-and-explore-correlations"><i class="fa fa-check"></i>a. Prepare the dataset and explore correlations</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#b.-perform-pca"><i class="fa fa-check"></i>b. Perform PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#c.-choose-the-number-of-principal-components"><i class="fa fa-check"></i>c. Choose the number of principal components</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#d.-interpret-componentsdimensions"><i class="fa fa-check"></i>d. Interpret components/dimensions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#some-considerations-for-using-pca"><i class="fa fa-check"></i>2. Some considerations for using PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#recommended-resources-26"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html"><i class="fa fa-check"></i>Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#learning-objectives-27"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#clustering-1"><i class="fa fa-check"></i>1. Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#a.-prepare-the-data"><i class="fa fa-check"></i>a. Prepare the data</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#b.-apply-the-algorithm"><i class="fa fa-check"></i>b. Apply the algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#c.-visualize-and-interpret-the-clusters"><i class="fa fa-check"></i>c. Visualize and interpret the clusters</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#d.-choose-the-number-of-clusters"><i class="fa fa-check"></i>d. Choose the number of clusters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#include-more-variables-in-clustering"><i class="fa fa-check"></i>2. Include more variables in clustering</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#your-turn-4"><i class="fa fa-check"></i><strong>Your turn!</strong></a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#recommended-resources-27"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Spring 2025 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="grammar-graphics" class="section level1 hasAnchor">
+<h1>Grammar Graphics<a href="WS4_GrammarGraphics_Key.html#grammar-graphics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="learning-objectives-4" class="section level2 hasAnchor">
+<h2>Learning objectives<a href="WS4_GrammarGraphics_Key.html#learning-objectives-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Incorporate the pipe operator (|&gt;) to streamline data manipulation and plotting workflows.</li>
+<li>Explore the principles of the Grammar of Graphics with the <code>ggplot2</code> package.</li>
+<li>Utilize the <code>ggplot()</code> function to create visualizations, defining the dataset, mapping variables to aesthetics, and defining geometric objects.</li>
+<li>Improve visualizations with labels, scales, color palettes.</li>
+</ol>
+<hr />
+<p>This semester we will learn how to make different types of visualizations to explore our data.</p>
+<p>Start your workflow by uploading the <code>tidyverse</code> package which contains the <code>ggplot</code> functions:</p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="WS4_GrammarGraphics_Key.html#cb120-1" tabindex="-1"></a><span class="co"># Upload package</span></span>
+<span id="cb120-2"><a href="WS4_GrammarGraphics_Key.html#cb120-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<p>We will consider the built-in dataset <code>quakes</code> again. It contains information about earthquakes occurring near Fiji islands since 1964. To refresh our memory, let’s take a look:</p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="WS4_GrammarGraphics_Key.html#cb121-1" tabindex="-1"></a><span class="co"># Take a look at the dataset</span></span>
+<span id="cb121-2"><a href="WS4_GrammarGraphics_Key.html#cb121-2" tabindex="-1"></a><span class="fu">head</span>(quakes)</span></code></pre></div>
+</div>
+<div id="the-pipe" class="section level2 hasAnchor">
+<h2>1. The pipe<a href="WS4_GrammarGraphics_Key.html#the-pipe" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The pipe <code>|&gt;</code> is a very important operator to build on code:</p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="WS4_GrammarGraphics_Key.html#cb122-1" tabindex="-1"></a><span class="co"># Filter a dataframe</span></span>
+<span id="cb122-2"><a href="WS4_GrammarGraphics_Key.html#cb122-2" tabindex="-1"></a><span class="fu">filter</span>(quakes, depth <span class="sc">&gt;</span> <span class="dv">300</span>)</span>
+<span id="cb122-3"><a href="WS4_GrammarGraphics_Key.html#cb122-3" tabindex="-1"></a></span>
+<span id="cb122-4"><a href="WS4_GrammarGraphics_Key.html#cb122-4" tabindex="-1"></a><span class="co"># Equivalent to piping quakes into filter()</span></span>
+<span id="cb122-5"><a href="WS4_GrammarGraphics_Key.html#cb122-5" tabindex="-1"></a>quakes <span class="sc">|&gt;</span> </span>
+<span id="cb122-6"><a href="WS4_GrammarGraphics_Key.html#cb122-6" tabindex="-1"></a>  <span class="fu">filter</span>(depth <span class="sc">&gt;</span> <span class="dv">300</span>)</span></code></pre></div>
+<p>We will use the pipe constantly for different reasons:</p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="WS4_GrammarGraphics_Key.html#cb123-1" tabindex="-1"></a><span class="co"># Create a new variable in a dataframe</span></span>
+<span id="cb123-2"><a href="WS4_GrammarGraphics_Key.html#cb123-2" tabindex="-1"></a><span class="fu">mutate</span>(quakes, <span class="at">depth_cat =</span> <span class="fu">ifelse</span>(depth <span class="sc">&gt;</span> <span class="dv">300</span>, <span class="st">&quot;Deep&quot;</span>, <span class="st">&quot;Not deep&quot;</span>))</span>
+<span id="cb123-3"><a href="WS4_GrammarGraphics_Key.html#cb123-3" tabindex="-1"></a></span>
+<span id="cb123-4"><a href="WS4_GrammarGraphics_Key.html#cb123-4" tabindex="-1"></a><span class="co"># Equivalent to piping quakes into mutate()</span></span>
+<span id="cb123-5"><a href="WS4_GrammarGraphics_Key.html#cb123-5" tabindex="-1"></a>quakes <span class="sc">|&gt;</span> </span>
+<span id="cb123-6"><a href="WS4_GrammarGraphics_Key.html#cb123-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">depth_cat =</span> <span class="fu">ifelse</span>(depth <span class="sc">&gt;</span> <span class="dv">300</span>, <span class="st">&quot;Deep&quot;</span>, <span class="st">&quot;Not deep&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb123-7"><a href="WS4_GrammarGraphics_Key.html#cb123-7" tabindex="-1"></a>  <span class="co"># Then we can use that new variable!</span></span>
+<span id="cb123-8"><a href="WS4_GrammarGraphics_Key.html#cb123-8" tabindex="-1"></a>  <span class="fu">filter</span>(depth_cat <span class="sc">==</span> <span class="st">&quot;Deep&quot;</span>)</span></code></pre></div>
+</div>
+<div id="create-a-ggplot" class="section level2 hasAnchor">
+<h2>2. Create a <code>ggplot</code><a href="WS4_GrammarGraphics_Key.html#create-a-ggplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="a.-define-a-plot" class="section level3 hasAnchor">
+<h3>a. Define a plot<a href="WS4_GrammarGraphics_Key.html#a.-define-a-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>ggplot()</code> function helps us build a graph. Within this function, we specify the dataframe to explore:</p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="WS4_GrammarGraphics_Key.html#cb124-1" tabindex="-1"></a><span class="co"># Create a ggplot</span></span>
+<span id="cb124-2"><a href="WS4_GrammarGraphics_Key.html#cb124-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-47-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Well, it’s empty because we haven’t specified how to represent the variables in the <code>quakes</code> object…</p>
+</div>
+<div id="b.-add-a-geometric-object" class="section level3 hasAnchor">
+<h3>b. Add a geometric object<a href="WS4_GrammarGraphics_Key.html#b.-add-a-geometric-object" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>geom_...()</code> functions helps us define how to represent the variables with geometric objects (points, lines, bars, etc.). For example, <code>geom_point()</code> can represent our data with points:</p>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="WS4_GrammarGraphics_Key.html#cb125-1" tabindex="-1"></a><span class="co"># Create a ggplot with a geometric object</span></span>
+<span id="cb125-2"><a href="WS4_GrammarGraphics_Key.html#cb125-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes) <span class="sc">+</span></span>
+<span id="cb125-3"><a href="WS4_GrammarGraphics_Key.html#cb125-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p>Well, it does not work because we haven’t specified which variables to represent… Using <code>aes()</code>, aesthetics, we can define the mapping of the variables to each aesthetic of the plot. We can either define the aesthetics for each geometric object or for the whole plot:</p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="WS4_GrammarGraphics_Key.html#cb126-1" tabindex="-1"></a><span class="co"># Create a ggplot with mapping variables to a geometric object</span></span>
+<span id="cb126-2"><a href="WS4_GrammarGraphics_Key.html#cb126-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes) <span class="sc">+</span></span>
+<span id="cb126-3"><a href="WS4_GrammarGraphics_Key.html#cb126-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="WS4_GrammarGraphics_Key.html#cb127-1" tabindex="-1"></a><span class="co"># which here is equivalent to:</span></span>
+<span id="cb127-2"><a href="WS4_GrammarGraphics_Key.html#cb127-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat)) <span class="sc">+</span></span>
+<span id="cb127-3"><a href="WS4_GrammarGraphics_Key.html#cb127-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="WS4_GrammarGraphics_Key.html#cb128-1" tabindex="-1"></a><span class="co"># Note the importance of placing &quot;+&quot; correctly</span></span></code></pre></div>
+<p>In the next worksheet, we will explore additional types of <code>geom</code> (<code>geom_histogram</code>, <code>geom_boxplot</code>, <code>geom_bar</code>, …) and discuss which ones are appropriate for different types of variables.</p>
+</div>
+<div id="c.-map-to-color-shape-size" class="section level3 hasAnchor">
+<h3>c. Map to color, shape, size<a href="WS4_GrammarGraphics_Key.html#c.-map-to-color-shape-size" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can change the appearance of some characteristics of the geometric object.</p>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="WS4_GrammarGraphics_Key.html#cb129-1" tabindex="-1"></a><span class="co"># Coloring points, making them bigger</span></span>
+<span id="cb129-2"><a href="WS4_GrammarGraphics_Key.html#cb129-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat)) <span class="sc">+</span></span>
+<span id="cb129-3"><a href="WS4_GrammarGraphics_Key.html#cb129-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">size =</span> <span class="dv">4</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-50-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Other common options include <code>fill</code>, <code>shape</code>, and <code>alpha</code>.</p>
+<div id="try-it-in-the-code-below-input-different-values-between-0-and-10-for-shape-and-alpha.-what-do-these-options-control" class="section level4 hasAnchor">
+<h4><strong>Try it! In the code below, input different values between 0 and 10 for <code>shape</code> and <code>alpha</code>. What do these options control?</strong><a href="WS4_GrammarGraphics_Key.html#try-it-in-the-code-below-input-different-values-between-0-and-10-for-shape-and-alpha.-what-do-these-options-control" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="WS4_GrammarGraphics_Key.html#cb130-1" tabindex="-1"></a><span class="co"># What does shape vs size vs alpha do?</span></span>
+<span id="cb130-2"><a href="WS4_GrammarGraphics_Key.html#cb130-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat)) <span class="sc">+</span></span>
+<span id="cb130-3"><a href="WS4_GrammarGraphics_Key.html#cb130-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-51-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>The option of <code>shape</code> controls the shape of the points while <code>alpha</code> controls the transparency and only varies between 0 and 1.</strong></p>
+</div>
+</div>
+<div id="d.-map-variables-to-color-shape-size" class="section level3 hasAnchor">
+<h3>d. Map variables to color, shape, size<a href="WS4_GrammarGraphics_Key.html#d.-map-variables-to-color-shape-size" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>More importantly, we can change the appearance of some characteristics of the geometric object <strong>depending on the values of some variables</strong>, inside the <strong>aesthetics</strong>. For example, let’s control the size of the points by the magnitude of the earthquake:</p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="WS4_GrammarGraphics_Key.html#cb131-1" tabindex="-1"></a><span class="co"># Map the size to the mag variable </span></span>
+<span id="cb131-2"><a href="WS4_GrammarGraphics_Key.html#cb131-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">size =</span> mag)) <span class="sc">+</span></span>
+<span id="cb131-3"><a href="WS4_GrammarGraphics_Key.html#cb131-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-52-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="WS4_GrammarGraphics_Key.html#cb132-1" tabindex="-1"></a><span class="co"># Note that the option for size is now within the aes() function</span></span></code></pre></div>
+<div id="try-it-instead-of-differentiating-the-earthquakes-based-on-the-size-of-the-magnitude-change-the-color-of-the-points-based-on-depth.-anything-you-notice-in-this-graph" class="section level4 hasAnchor">
+<h4><strong>Try it! Instead of differentiating the earthquakes based on the size of the magnitude, change the <code>color</code> of the points based on depth. Anything you notice in this graph?</strong><a href="WS4_GrammarGraphics_Key.html#try-it-instead-of-differentiating-the-earthquakes-based-on-the-size-of-the-magnitude-change-the-color-of-the-points-based-on-depth.-anything-you-notice-in-this-graph" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="WS4_GrammarGraphics_Key.html#cb133-1" tabindex="-1"></a><span class="co"># Map the color to the depth variable </span></span>
+<span id="cb133-2"><a href="WS4_GrammarGraphics_Key.html#cb133-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> depth)) <span class="sc">+</span></span>
+<span id="cb133-3"><a href="WS4_GrammarGraphics_Key.html#cb133-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-53-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Earthquakes with similar depth tend to be at similar locations.</strong></p>
+<p>Compare your plot to the following plot that considers <code>depth</code> as a categorical variable instead:</p>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="WS4_GrammarGraphics_Key.html#cb134-1" tabindex="-1"></a><span class="co"># Use a pipe to apply a function to the object quakes</span></span>
+<span id="cb134-2"><a href="WS4_GrammarGraphics_Key.html#cb134-2" tabindex="-1"></a>quakes <span class="sc">|&gt;</span> </span>
+<span id="cb134-3"><a href="WS4_GrammarGraphics_Key.html#cb134-3" tabindex="-1"></a>  <span class="co"># Pipe into mutate: no need to repeat the name of the dataframe</span></span>
+<span id="cb134-4"><a href="WS4_GrammarGraphics_Key.html#cb134-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">depth_cat =</span> <span class="fu">ifelse</span>(depth <span class="sc">&gt;</span> <span class="dv">300</span>, <span class="st">&quot;Deep&quot;</span>, <span class="st">&quot;Not deep&quot;</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb134-5"><a href="WS4_GrammarGraphics_Key.html#cb134-5" tabindex="-1"></a>  <span class="co"># Pipe into ggplot: no need to repeat the name of the dataframe</span></span>
+<span id="cb134-6"><a href="WS4_GrammarGraphics_Key.html#cb134-6" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb134-7"><a href="WS4_GrammarGraphics_Key.html#cb134-7" tabindex="-1"></a>  <span class="co"># Define geom and aesthetics</span></span>
+<span id="cb134-8"><a href="WS4_GrammarGraphics_Key.html#cb134-8" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> depth_cat))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-54-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>How does the legend of color differ from before?</p>
+<p><strong>When the depth is a numeric variable, the scale is called continuous with a gradient of blue colors. When the depth is a categorical variable, the scaled is called discrete with distinct colors for each category. </strong></p>
+</div>
+</div>
+</div>
+<div id="layering" class="section level2 hasAnchor">
+<h2>3. Layering<a href="WS4_GrammarGraphics_Key.html#layering" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can add many layers to the <code>ggplot</code> and it is a good practice to put the new layers on a new line (be sure to end a line with <code>+</code>).</p>
+<div id="a.-add-labels-and-controlling-scales" class="section level3 hasAnchor">
+<h3>a. Add labels and controlling scales<a href="WS4_GrammarGraphics_Key.html#a.-add-labels-and-controlling-scales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Plots should be easy to interpret and informative labels are a key element in achieving this goal. The <code>labs()</code> function provides customized labels for titles, axes, legends, etc.:</p>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="WS4_GrammarGraphics_Key.html#cb135-1" tabindex="-1"></a><span class="co"># Build a plot...</span></span>
+<span id="cb135-2"><a href="WS4_GrammarGraphics_Key.html#cb135-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> depth)) <span class="sc">+</span> </span>
+<span id="cb135-3"><a href="WS4_GrammarGraphics_Key.html#cb135-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb135-4"><a href="WS4_GrammarGraphics_Key.html#cb135-4" tabindex="-1"></a>  <span class="co"># ...and add labels</span></span>
+<span id="cb135-5"><a href="WS4_GrammarGraphics_Key.html#cb135-5" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb135-6"><a href="WS4_GrammarGraphics_Key.html#cb135-6" tabindex="-1"></a>    <span class="co"># Title</span></span>
+<span id="cb135-7"><a href="WS4_GrammarGraphics_Key.html#cb135-7" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Distribution of the depth across the trenches&quot;</span>,</span>
+<span id="cb135-8"><a href="WS4_GrammarGraphics_Key.html#cb135-8" tabindex="-1"></a>    <span class="co"># Subtitle</span></span>
+<span id="cb135-9"><a href="WS4_GrammarGraphics_Key.html#cb135-9" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;For eathrquakes that occurred near the Fiji Islands since 1964&quot;</span>,</span>
+<span id="cb135-10"><a href="WS4_GrammarGraphics_Key.html#cb135-10" tabindex="-1"></a>    <span class="co"># Caption with source of data</span></span>
+<span id="cb135-11"><a href="WS4_GrammarGraphics_Key.html#cb135-11" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">&quot;Data obtained from Dr. John Woodhouse, Dept. of Geophysics, Harvard University&quot;</span>,</span>
+<span id="cb135-12"><a href="WS4_GrammarGraphics_Key.html#cb135-12" tabindex="-1"></a>    <span class="co"># Label x-axis and y-axis</span></span>
+<span id="cb135-13"><a href="WS4_GrammarGraphics_Key.html#cb135-13" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Longitude&quot;</span>,</span>
+<span id="cb135-14"><a href="WS4_GrammarGraphics_Key.html#cb135-14" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Latitude&quot;</span>,</span>
+<span id="cb135-15"><a href="WS4_GrammarGraphics_Key.html#cb135-15" tabindex="-1"></a>    <span class="co"># Legend of color</span></span>
+<span id="cb135-16"><a href="WS4_GrammarGraphics_Key.html#cb135-16" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;Depth (km)&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-55-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="b.-control-scales" class="section level3 hasAnchor">
+<h3>b. Control scales<a href="WS4_GrammarGraphics_Key.html#b.-control-scales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can also change the scales (tick marks) for a better readability with functions starting with <code>scale_</code>:</p>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="WS4_GrammarGraphics_Key.html#cb136-1" tabindex="-1"></a><span class="co"># Build a plot...</span></span>
+<span id="cb136-2"><a href="WS4_GrammarGraphics_Key.html#cb136-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> depth)) <span class="sc">+</span> </span>
+<span id="cb136-3"><a href="WS4_GrammarGraphics_Key.html#cb136-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb136-4"><a href="WS4_GrammarGraphics_Key.html#cb136-4" tabindex="-1"></a>  <span class="co"># ...and adjust scales</span></span>
+<span id="cb136-5"><a href="WS4_GrammarGraphics_Key.html#cb136-5" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">160</span>,<span class="dv">190</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">160</span>, <span class="dv">190</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="co"># enforce limits between 160 and 190, show tick marks every 2 degrees</span></span>
+<span id="cb136-6"><a href="WS4_GrammarGraphics_Key.html#cb136-6" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">40</span>,<span class="sc">-</span><span class="dv">10</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">40</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">5</span>)) <span class="co"># enforce limits between -40 and -10, show tick marks every 5 degrees</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-56-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="c.-facet" class="section level3 hasAnchor">
+<h3>c. Facet<a href="WS4_GrammarGraphics_Key.html#c.-facet" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Faceting reproduce a graph for each level of another variable (or combination of variables). Let’s take a look at the map for three categories of depths:</p>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="WS4_GrammarGraphics_Key.html#cb137-1" tabindex="-1"></a>quakes <span class="sc">|&gt;</span> </span>
+<span id="cb137-2"><a href="WS4_GrammarGraphics_Key.html#cb137-2" tabindex="-1"></a>  <span class="co"># Create a variable called depth_cat</span></span>
+<span id="cb137-3"><a href="WS4_GrammarGraphics_Key.html#cb137-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">depth_cat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb137-4"><a href="WS4_GrammarGraphics_Key.html#cb137-4" tabindex="-1"></a>    depth <span class="sc">&lt;=</span> <span class="dv">70</span> <span class="sc">~</span> <span class="st">&quot;Shallow&quot;</span>,</span>
+<span id="cb137-5"><a href="WS4_GrammarGraphics_Key.html#cb137-5" tabindex="-1"></a>    depth <span class="sc">&gt;</span> <span class="dv">70</span> <span class="sc">&amp;</span> depth <span class="sc">&lt;=</span> <span class="dv">300</span> <span class="sc">~</span> <span class="st">&quot;Intermediate&quot;</span>,</span>
+<span id="cb137-6"><a href="WS4_GrammarGraphics_Key.html#cb137-6" tabindex="-1"></a>    depth <span class="sc">&gt;</span> <span class="dv">300</span> <span class="sc">~</span> <span class="st">&quot;Deep&quot;</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb137-7"><a href="WS4_GrammarGraphics_Key.html#cb137-7" tabindex="-1"></a>  <span class="co"># Create a plot</span></span>
+<span id="cb137-8"><a href="WS4_GrammarGraphics_Key.html#cb137-8" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb137-9"><a href="WS4_GrammarGraphics_Key.html#cb137-9" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> depth_cat)) <span class="sc">+</span></span>
+<span id="cb137-10"><a href="WS4_GrammarGraphics_Key.html#cb137-10" tabindex="-1"></a>  <span class="co"># Facet by depth category</span></span>
+<span id="cb137-11"><a href="WS4_GrammarGraphics_Key.html#cb137-11" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>depth_cat)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-57-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="d.-color-palettes-and-themes" class="section level3 hasAnchor">
+<h3>d. Color palettes and themes<a href="WS4_GrammarGraphics_Key.html#d.-color-palettes-and-themes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can customize many aspects of our graphs by hand (colors, scales, background color, grid, …) or we can use some themes or palettes other than the defaults.</p>
+<p>To define our own palette of colors for numeric values, we can use <code>scale_color_gradient()</code> with setting the color for <em>low</em> values and another color for <em>high</em> values:</p>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="WS4_GrammarGraphics_Key.html#cb138-1" tabindex="-1"></a><span class="co"># Compare values of magnitude (low: not too dangerous, high: more dangerous)</span></span>
+<span id="cb138-2"><a href="WS4_GrammarGraphics_Key.html#cb138-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> mag)) <span class="sc">+</span> </span>
+<span id="cb138-3"><a href="WS4_GrammarGraphics_Key.html#cb138-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb138-4"><a href="WS4_GrammarGraphics_Key.html#cb138-4" tabindex="-1"></a>  <span class="co"># Change the color palette</span></span>
+<span id="cb138-5"><a href="WS4_GrammarGraphics_Key.html#cb138-5" tabindex="-1"></a>  <span class="fu">scale_color_gradient</span>(<span class="at">low =</span> <span class="st">&quot;yellow&quot;</span>, <span class="at">high =</span> <span class="st">&quot;darkred&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-58-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="try-it-display-the-depth-of-earthquakes-depending-on-their-location-and-choosing-an-appropriate-color-palette." class="section level4 hasAnchor">
+<h4><strong>Try it! Display the depth of earthquakes depending on their location and choosing an appropriate color palette.</strong><a href="WS4_GrammarGraphics_Key.html#try-it-display-the-depth-of-earthquakes-depending-on-their-location-and-choosing-an-appropriate-color-palette." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="WS4_GrammarGraphics_Key.html#cb139-1" tabindex="-1"></a><span class="co"># Compare depth with small values represented in light color and high values in dark</span></span>
+<span id="cb139-2"><a href="WS4_GrammarGraphics_Key.html#cb139-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> depth)) <span class="sc">+</span> </span>
+<span id="cb139-3"><a href="WS4_GrammarGraphics_Key.html#cb139-3" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-59-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="WS4_GrammarGraphics_Key.html#cb140-1" tabindex="-1"></a><span class="co"># Compare depth with small values represented in light color and high values in dark</span></span>
+<span id="cb140-2"><a href="WS4_GrammarGraphics_Key.html#cb140-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> depth)) <span class="sc">+</span> </span>
+<span id="cb140-3"><a href="WS4_GrammarGraphics_Key.html#cb140-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb140-4"><a href="WS4_GrammarGraphics_Key.html#cb140-4" tabindex="-1"></a>  <span class="co"># Change the color palette</span></span>
+<span id="cb140-5"><a href="WS4_GrammarGraphics_Key.html#cb140-5" tabindex="-1"></a>  <span class="fu">scale_color_gradient</span>(<span class="at">low =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="at">high =</span> <span class="st">&quot;darkblue&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-59-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>The first visualization is not intuitive: small values of depth should be represented in light color and high values in dark to match our intuition.</strong></p>
+<p>Here is a list of some of the discrete palettes that are color-blind friendly:</p>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="WS4_GrammarGraphics_Key.html#cb141-1" tabindex="-1"></a>RColorBrewer<span class="sc">::</span><span class="fu">display.brewer.all</span>(<span class="at">colorblindFriendly =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-60-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>We can use <code>scale_color_brewer()</code> when we are mapping a categorical variable to the aesthetic <code>color =</code>:</p>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="WS4_GrammarGraphics_Key.html#cb142-1" tabindex="-1"></a>quakes <span class="sc">|&gt;</span> </span>
+<span id="cb142-2"><a href="WS4_GrammarGraphics_Key.html#cb142-2" tabindex="-1"></a>  <span class="co"># Create a variable called depth_cat</span></span>
+<span id="cb142-3"><a href="WS4_GrammarGraphics_Key.html#cb142-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">depth_cat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb142-4"><a href="WS4_GrammarGraphics_Key.html#cb142-4" tabindex="-1"></a>    depth <span class="sc">&lt;=</span> <span class="dv">70</span> <span class="sc">~</span> <span class="st">&quot;Shallow&quot;</span>,</span>
+<span id="cb142-5"><a href="WS4_GrammarGraphics_Key.html#cb142-5" tabindex="-1"></a>    depth <span class="sc">&gt;</span> <span class="dv">70</span> <span class="sc">&amp;</span> depth <span class="sc">&lt;=</span> <span class="dv">300</span> <span class="sc">~</span> <span class="st">&quot;Intermediate&quot;</span>,</span>
+<span id="cb142-6"><a href="WS4_GrammarGraphics_Key.html#cb142-6" tabindex="-1"></a>    depth <span class="sc">&gt;</span> <span class="dv">300</span> <span class="sc">~</span> <span class="st">&quot;Deep&quot;</span></span>
+<span id="cb142-7"><a href="WS4_GrammarGraphics_Key.html#cb142-7" tabindex="-1"></a>  )) <span class="sc">|&gt;</span> </span>
+<span id="cb142-8"><a href="WS4_GrammarGraphics_Key.html#cb142-8" tabindex="-1"></a>  <span class="co"># Compare categories of depth</span></span>
+<span id="cb142-9"><a href="WS4_GrammarGraphics_Key.html#cb142-9" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> depth_cat)) <span class="sc">+</span> </span>
+<span id="cb142-10"><a href="WS4_GrammarGraphics_Key.html#cb142-10" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb142-11"><a href="WS4_GrammarGraphics_Key.html#cb142-11" tabindex="-1"></a>  <span class="co"># Change the color palette</span></span>
+<span id="cb142-12"><a href="WS4_GrammarGraphics_Key.html#cb142-12" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Set2&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-61-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Explore and choose color palettes for categorical data using this website: <a href="https://colorbrewer2.org/" class="uri">https://colorbrewer2.org/</a></p>
+</div>
+</div>
+<div id="e.-themes" class="section level3 hasAnchor">
+<h3>e. Themes<a href="WS4_GrammarGraphics_Key.html#e.-themes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are so many adjustments we can make to our <code>ggplot</code> (change background color, color of axis, color of font, …) and sometimes it is easier to use some predefined themes:</p>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="WS4_GrammarGraphics_Key.html#cb143-1" tabindex="-1"></a><span class="co"># Still same plot</span></span>
+<span id="cb143-2"><a href="WS4_GrammarGraphics_Key.html#cb143-2" tabindex="-1"></a>  <span class="fu">ggplot</span>(quakes, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">color =</span> depth)) <span class="sc">+</span> </span>
+<span id="cb143-3"><a href="WS4_GrammarGraphics_Key.html#cb143-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb143-4"><a href="WS4_GrammarGraphics_Key.html#cb143-4" tabindex="-1"></a>  <span class="co"># Use the default theme_minimal()</span></span>
+<span id="cb143-5"><a href="WS4_GrammarGraphics_Key.html#cb143-5" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-62-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Visit this website to find a list of all themes available: <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="uri">https://ggplot2.tidyverse.org/reference/ggtheme.html</a></p>
+<p>Next, we will learn different geometric objects to represent different types of data!</p>
+<hr />
+</div>
+</div>
+<div id="recommended-resources-4" class="section level2 hasAnchor">
+<h2>Recommended Resources<a href="WS4_GrammarGraphics_Key.html#recommended-resources-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Worksheet keys are posted at the end of the week on Canvas under <strong>Programming Tools</strong>.</li>
+<li>Recommended readings: <a href="https://rafalab.dfci.harvard.edu/dsbook/introduction-to-data-visualization.html">Introduction to data visualization</a>, <a href="https://rafalab.dfci.harvard.edu/dsbook/ggplot2.html">ggplot2</a></li>
+<li><a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*xbfv9u*_ga*NzAwNjA2MjE2LjE2OTQ5NjA5MTg.*_ga_2C0WZ1JHG0*MTczNzkzNjQ1OS4zMi4wLjE3Mzc5MzY0NTkuMC4wLjA.">Data visualization with ggplot2 :: Cheat Sheet</a></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="WS3_BasicDataManipulation_Key.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="WS5_Describing1Variable_Key.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

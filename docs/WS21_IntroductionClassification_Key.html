@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Introduction Classification | Spring 2025 Semester</title>
+  <meta name="description" content="Introduction Classification | Spring 2025 Semester" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Introduction Classification | Spring 2025 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduction Classification | Spring 2025 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr. Layla Guyot" />
+
+
+<meta name="date" content="2025-04-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="WS20_ModelSelection_Key.html"/>
+<link rel="next" href="WS22_LogisticRegression_Key.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 322E Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to SDS 322E</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html"><i class="fa fa-check"></i>getstaRted</a>
+<ul>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#learning-objectives"><i class="fa fa-check"></i>Learning Objectives:</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#recommended-resources"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html"><i class="fa fa-check"></i>RMarkdown</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#learning-objectives-1"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#basic-markdown-editing"><i class="fa fa-check"></i>1. Basic Markdown editing</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-headers"><i class="fa fa-check"></i>a. Headers</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-text-formatting"><i class="fa fa-check"></i>b. Text formatting</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-lists-and-bullet-points"><i class="fa fa-check"></i>c. Lists and bullet points</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#d.-html-hyperlinks-images-tables-etc."><i class="fa fa-check"></i>d. HTML hyperlinks, images, tables, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#embedded-r-code"><i class="fa fa-check"></i>2. Embedded R code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-code-chunks"><i class="fa fa-check"></i>a. Code chunks</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-more-base-r-built-in-datasets"><i class="fa fa-check"></i>b. More base R: built-in datasets</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-more-base-r-basic-plots"><i class="fa fa-check"></i>c. More base R: basic plots</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#packages"><i class="fa fa-check"></i>3. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#recommended-resources-1"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html"><i class="fa fa-check"></i>Datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#learning-objectives-2"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#set-up"><i class="fa fa-check"></i>1. Set up</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#a.-packages"><i class="fa fa-check"></i>a. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#b.-importing-datasets"><i class="fa fa-check"></i>b. Importing datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#city-of-austin-open-data-portal"><i class="fa fa-check"></i>2. City of Austin Open Data Portal</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#other-data-sources"><i class="fa fa-check"></i>3. Other data sources</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#recommended-resources-2"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html"><i class="fa fa-check"></i>Basic Data Manipulation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#learning-objectives-3"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#making-sense-of-a-dataset"><i class="fa fa-check"></i>1. Making sense of a dataset</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#setting-conditions"><i class="fa fa-check"></i>2. Setting conditions</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#a.-conditional-statements"><i class="fa fa-check"></i>a. Conditional statements</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#b.-connectors"><i class="fa fa-check"></i>b. Connectors</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#subsetting-data"><i class="fa fa-check"></i>3. Subsetting data</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#creating-new-variables"><i class="fa fa-check"></i>4. Creating new variables</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#recommended-resources-3"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html"><i class="fa fa-check"></i>Grammar Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#learning-objectives-4"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#the-pipe"><i class="fa fa-check"></i>1. The pipe</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#create-a-ggplot"><i class="fa fa-check"></i>2. Create a <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-define-a-plot"><i class="fa fa-check"></i>a. Define a plot</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-add-a-geometric-object"><i class="fa fa-check"></i>b. Add a geometric object</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-map-to-color-shape-size"><i class="fa fa-check"></i>c. Map to color, shape, size</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-map-variables-to-color-shape-size"><i class="fa fa-check"></i>d. Map variables to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#layering"><i class="fa fa-check"></i>3. Layering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-add-labels-and-controlling-scales"><i class="fa fa-check"></i>a. Add labels and controlling scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-control-scales"><i class="fa fa-check"></i>b. Control scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-facet"><i class="fa fa-check"></i>c. Facet</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-color-palettes-and-themes"><i class="fa fa-check"></i>d. Color palettes and themes</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#e.-themes"><i class="fa fa-check"></i>e. Themes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#recommended-resources-4"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html"><i class="fa fa-check"></i>Describing1Variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#learning-objectives-5"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-numeric-variable"><i class="fa fa-check"></i>1. Describing 1 numeric variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-histogram"><i class="fa fa-check"></i>a. Histogram</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-boxplot"><i class="fa fa-check"></i>b. Boxplot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#c.-density-and-violin-plots"><i class="fa fa-check"></i>c. Density and Violin plots</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#d.-reporting-summary-statistics"><i class="fa fa-check"></i>d. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-categorical-variable"><i class="fa fa-check"></i>2. Describing 1 categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-bar-plot"><i class="fa fa-check"></i>a. Bar plot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-reporting-summary-statistics"><i class="fa fa-check"></i>b. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#your-turn"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#recommended-resources-5"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html"><i class="fa fa-check"></i>Describing Relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#learning-objectives-6"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-numeric-variables"><i class="fa fa-check"></i>1. Comparing two numeric variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-scatterplot"><i class="fa fa-check"></i>a. Using a scatterplot</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-reporting-correlation"><i class="fa fa-check"></i>b. Reporting correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-a-numeric-variable-and-a-categorical-variable"><i class="fa fa-check"></i>2. Comparing a numeric variable and a categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-grouped-boxplots"><i class="fa fa-check"></i>a. Using grouped boxplots</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-grouped-histograms"><i class="fa fa-check"></i>b. Using grouped histograms</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-center-and-spread-for-each-category"><i class="fa fa-check"></i>c. Reporting center and spread for each category</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#d.-using-a-special-case-of-bar-graph"><i class="fa fa-check"></i>d. Using a special case of bar graph</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-categorical-variables"><i class="fa fa-check"></i>3. Comparing two categorical variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-stacked-plot-not-usually-recommended"><i class="fa fa-check"></i>a. Using a stacked plot (not usually recommended)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-a-segmented-bar-plot-usually-preferred"><i class="fa fa-check"></i>b. Using a segmented bar plot (usually preferred)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-frequencies-and-relative-frequencies"><i class="fa fa-check"></i>c. Reporting frequencies and relative frequencies</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#relationships-with-more-than-2-variables"><i class="fa fa-check"></i>4. Relationships with more than 2 variables</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#recommended-resources-6"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html"><i class="fa fa-check"></i>Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#learning-objectives-7"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#gather-some-background-information"><i class="fa fa-check"></i>1. Gather some background information</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-context"><i class="fa fa-check"></i>a. Context</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-structure"><i class="fa fa-check"></i>b. Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#formulate-some-research-questions"><i class="fa fa-check"></i>2. Formulate some research questions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#investigate-trends-and-relationships"><i class="fa fa-check"></i>3. Investigate trends and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-first-look-at-univariate-distributions"><i class="fa fa-check"></i>a. First look at univariate distributions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-then-look-at-relationships"><i class="fa fa-check"></i>b. Then look at relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#answer-the-questions-and-be-critical"><i class="fa fa-check"></i>4. Answer the questions and be critical</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#your-turn-1"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#recommended-resources-7"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html"><i class="fa fa-check"></i>Grammar Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#learning-objectives-8"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-rowsobservations"><i class="fa fa-check"></i>1. Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-filter"><i class="fa fa-check"></i>a. Filter</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-arrange"><i class="fa fa-check"></i>b. Arrange</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#c.-minimummaximum-values"><i class="fa fa-check"></i>c. Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-columns"><i class="fa fa-check"></i>2. Operations on columns</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-select"><i class="fa fa-check"></i>a. Select</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-mutate"><i class="fa fa-check"></i>b. Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#create-summaries"><i class="fa fa-check"></i>3. Create summaries</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-summarize"><i class="fa fa-check"></i>a. Summarize</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-group-by"><i class="fa fa-check"></i>b. Group by</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#recommended-resources-8"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html"><i class="fa fa-check"></i>Joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#learning-objectives-9"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#joining-datasets"><i class="fa fa-check"></i>1. Joining datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-inner-join"><i class="fa fa-check"></i>a. Inner join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-left-join"><i class="fa fa-check"></i>b. Left join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-right-join"><i class="fa fa-check"></i>c. Right join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-full-join"><i class="fa fa-check"></i>d. Full join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#e.-anti-join"><i class="fa fa-check"></i>e. Anti join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#f.-semi-join"><i class="fa fa-check"></i>f. Semi join</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#considering-other-options-when-joining"><i class="fa fa-check"></i>2. Considering other options when joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-no-matching-key"><i class="fa fa-check"></i>a. No matching key</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-auto-suffixing"><i class="fa fa-check"></i>b. Auto-suffixing</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-duplicates"><i class="fa fa-check"></i>c. Duplicates</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-several-key-variables"><i class="fa fa-check"></i>d. Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#recommended-resources-9"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html"><i class="fa fa-check"></i>Tidying</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#learning-objectives-10"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#pivoting"><i class="fa fa-check"></i>1. Pivoting</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-wide-to-long"><i class="fa fa-check"></i>a. Wide to long</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-long-to-wide"><i class="fa fa-check"></i>b. Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#separating-or-uniting-variables"><i class="fa fa-check"></i>2. Separating or uniting variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-separate"><i class="fa fa-check"></i>a. Separate</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-unite"><i class="fa fa-check"></i>b. Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#your-turn-2"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#recommended-resources-10"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html"><i class="fa fa-check"></i>Strings Reg Ex</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#learning-objectives-11"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#strings"><i class="fa fa-check"></i>1. Strings</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-calculating-length"><i class="fa fa-check"></i>a. Calculating length</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-combining-strings"><i class="fa fa-check"></i>b. Combining strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-changing-cases"><i class="fa fa-check"></i>c. Changing cases</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-subsetting-strings"><i class="fa fa-check"></i>d. Subsetting strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#e.-finding-exact-matches-in-strings"><i class="fa fa-check"></i>e. Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#regular-expressions-regex"><i class="fa fa-check"></i>2. Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-wildcards"><i class="fa fa-check"></i>a. Wildcards</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-anchors"><i class="fa fa-check"></i>b. Anchors</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-flexible-patterns"><i class="fa fa-check"></i>c. Flexible patterns</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-special-characters"><i class="fa fa-check"></i>d. Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#recommended-resources-11"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html"><i class="fa fa-check"></i>Dates Times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#learning-objectives-12"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#parsing-dates-and-times"><i class="fa fa-check"></i>1. Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-r-formats"><i class="fa fa-check"></i>a. R formats</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-combining-datetime-components"><i class="fa fa-check"></i>b. Combining date/time components</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-extracting-parts-of-the-date"><i class="fa fa-check"></i>c. Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#manipulating-dates-and-times"><i class="fa fa-check"></i>2. Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-finding-differences-between-dates-and-times"><i class="fa fa-check"></i>a. Finding differences between dates and times</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-summarizing-datetime-data"><i class="fa fa-check"></i>b. Summarizing date/time data</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-a-few-remarks"><i class="fa fa-check"></i>c. A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#recommended-resources-12"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html"><i class="fa fa-check"></i>Recoding</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#learning-objectives-13"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-numeric-variables-as-categorical-variables"><i class="fa fa-check"></i>1. Consider numeric variables as categorical variables</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-a-log-transformations-for-numeric-variables-that-are-highly-skewed"><i class="fa fa-check"></i>2. Consider a log-transformations for numeric variables that are highly skewed</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recoding-categories"><i class="fa fa-check"></i>3. Recoding categories</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#your-turn-3"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recommended-resources-13"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html"><i class="fa fa-check"></i>Missing Data Extreme</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#learning-objectives-14"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#missing-data"><i class="fa fa-check"></i>1. Missing data</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-r-messages"><i class="fa fa-check"></i>a. R messages</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-making-sense-of-the-structure"><i class="fa fa-check"></i>b. Making sense of the structure</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-missing-values"><i class="fa fa-check"></i>c. Handling missing values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#extreme-values"><i class="fa fa-check"></i>2. Extreme values</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-checking-extreme-values"><i class="fa fa-check"></i>a. Checking extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-representing-extreme-values"><i class="fa fa-check"></i>b. Representing extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-extreme-values"><i class="fa fa-check"></i>c. Handling extreme values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#recommended-resources-14"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html"><i class="fa fa-check"></i>Web Scraping</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#learning-objectives-15"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-data-with-code"><i class="fa fa-check"></i>1. Web scraping data with code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#a.-using-element-tags"><i class="fa fa-check"></i>a. Using element tags</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#b.-using-element-types"><i class="fa fa-check"></i>b. Using element types</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-and-ethics"><i class="fa fa-check"></i>2. Web scraping and ethics</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#recommended-resources-15"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html"><i class="fa fa-check"></i>Text Mining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#learning-objectives-16"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#text-data"><i class="fa fa-check"></i>1. Text data</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#stop-words"><i class="fa fa-check"></i>2. Stop words</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#word-clouds"><i class="fa fa-check"></i>3. Word Clouds</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#sentiment-analysis"><i class="fa fa-check"></i>4. Sentiment analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#a.-positivenegative-sentiments"><i class="fa fa-check"></i>a. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#b.-scoring-sentiments"><i class="fa fa-check"></i>b. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#c.-using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>c. Using a wide range of sentiments</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#recommended-resources-16"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html"><i class="fa fa-check"></i>Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#learning-objectives-17"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#positivenegative-sentiments"><i class="fa fa-check"></i>1. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#scoring-sentiments"><i class="fa fa-check"></i>2. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>3. Using a wide range of sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#recommended-resources-17"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html"><i class="fa fa-check"></i>Supervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#learning-objectives-18"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#defining-a-model"><i class="fa fa-check"></i>1. Defining a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#a.-a-model-with-no-predictor"><i class="fa fa-check"></i>a. A model with no predictor</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#b.-some-models-with-one-predictor"><i class="fa fa-check"></i>b. Some models with one predictor</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#comparing-models"><i class="fa fa-check"></i>2. Comparing models</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#recommended-resources-18"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html"><i class="fa fa-check"></i>Linear Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#learning-objectives-19"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#predicting-a-numeric-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a numeric response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#a.-visualizing-the-model"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#b.-fitting-a-model"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#c.-predicting-values"><i class="fa fa-check"></i>c. Predicting values</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#d.-residuals"><i class="fa fa-check"></i>d. Residuals</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#e.-performance"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-a-categorical-predictor"><i class="fa fa-check"></i>2. Using a categorical predictor</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-multiple-predictors"><i class="fa fa-check"></i>3. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#recommended-resources-19"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html"><i class="fa fa-check"></i>Model Selection</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#learning-objectives-20"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#choosing-predictors"><i class="fa fa-check"></i>1. Choosing predictors</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-predictors-that-do-not-make-sense"><i class="fa fa-check"></i>a. Predictors that do not make sense</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-exploring-relationships"><i class="fa fa-check"></i>b. Exploring relationships</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#c.-model-fit-and-predictions"><i class="fa fa-check"></i>c. Model fit and predictions</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#d.-performance"><i class="fa fa-check"></i>d. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#comparing-models-1"><i class="fa fa-check"></i>2. Comparing models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-using-multiple-predictors"><i class="fa fa-check"></i>a. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-testing-for-new-data"><i class="fa fa-check"></i>b. Testing for “new” data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#recommended-resources-20"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html"><i class="fa fa-check"></i>Introduction Classification</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#learning-objectives-21"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#basic-classifications"><i class="fa fa-check"></i>1. Basic classifications</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-random-classification"><i class="fa fa-check"></i>a. Random classification</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-classification-based-on-1-variable"><i class="fa fa-check"></i>b. Classification based on 1 variable</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#c.-classification-based-on-any-cutoff-value"><i class="fa fa-check"></i>c. Classification based on any cutoff value</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#metrics"><i class="fa fa-check"></i>2. Metrics</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#rocauc"><i class="fa fa-check"></i>3. ROC/AUC</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-receiver-operating-characteristics-roc-curve"><i class="fa fa-check"></i>a. Receiver Operating Characteristics (ROC) curve</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-area-under-the-curve-auc"><i class="fa fa-check"></i>b. Area under the curve (AUC)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#recommended-resources-21"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html"><i class="fa fa-check"></i>Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#learning-objectives-22"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#predicting-a-binary-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a binary response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#a.-visualizing-the-model-1"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#b.-fitting-a-model-1"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#c.-making-predictions"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#d.-error-in-predicted-values"><i class="fa fa-check"></i>d. Error in predicted values</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#e.-performance-1"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#using-multiple-predictors-1"><i class="fa fa-check"></i>2. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#recommended-resources-22"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html"><i class="fa fa-check"></i>Other Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#learning-objectives-23"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-numeric-outcome"><i class="fa fa-check"></i>1. Decision trees for a numeric outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-1"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-categorical-outcome"><i class="fa fa-check"></i>2. Decision trees for a categorical outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model-1"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model-1"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-2"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance-1"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#e.-predicting-more-than-2-outcomes"><i class="fa fa-check"></i>e. Predicting more than 2 outcomes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#recommended-resources-23"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html"><i class="fa fa-check"></i>Cross Validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#learning-objectives-24"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#fit-a-model-on-the-entire-dataset"><i class="fa fa-check"></i>1. Fit a model on the entire dataset</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#train-and-test-a-model"><i class="fa fa-check"></i>2. Train and Test a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-train-the-model-on-the-train-set"><i class="fa fa-check"></i>a. Train the model on the train set</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-test-the-model-on-the-test-set"><i class="fa fa-check"></i>b. Test the model on the test set</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#k-fold-cross-validation"><i class="fa fa-check"></i>3. k-fold cross-validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-define-algorithm"><i class="fa fa-check"></i>a. Define algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-create-folds"><i class="fa fa-check"></i>b. Create folds</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#c.-repeat-the-process"><i class="fa fa-check"></i>c. Repeat the process</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#d.-evaluate-average-performance"><i class="fa fa-check"></i>d. Evaluate average performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#recommended-resources-24"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html"><i class="fa fa-check"></i>Unsupervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#learning-objectives-25"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#distances"><i class="fa fa-check"></i>1. Distances</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-euclidean-distance"><i class="fa fa-check"></i>a. Euclidean distance</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-scaling"><i class="fa fa-check"></i>b. Scaling</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#correlation"><i class="fa fa-check"></i>2. Correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-correlation-coefficient"><i class="fa fa-check"></i>a. Correlation Coefficient</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-correlation-matrix"><i class="fa fa-check"></i>b. Correlation Matrix</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#c.-combining-variables"><i class="fa fa-check"></i>c. Combining variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#recommended-resources-25"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html"><i class="fa fa-check"></i>Dimension Reduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#learning-objectives-26"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#principal-component-analysis"><i class="fa fa-check"></i>1. Principal Component Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#a.-prepare-the-dataset-and-explore-correlations"><i class="fa fa-check"></i>a. Prepare the dataset and explore correlations</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#b.-perform-pca"><i class="fa fa-check"></i>b. Perform PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#c.-choose-the-number-of-principal-components"><i class="fa fa-check"></i>c. Choose the number of principal components</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#d.-interpret-componentsdimensions"><i class="fa fa-check"></i>d. Interpret components/dimensions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#some-considerations-for-using-pca"><i class="fa fa-check"></i>2. Some considerations for using PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#recommended-resources-26"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html"><i class="fa fa-check"></i>Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#learning-objectives-27"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#clustering-1"><i class="fa fa-check"></i>1. Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#a.-prepare-the-data"><i class="fa fa-check"></i>a. Prepare the data</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#b.-apply-the-algorithm"><i class="fa fa-check"></i>b. Apply the algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#c.-visualize-and-interpret-the-clusters"><i class="fa fa-check"></i>c. Visualize and interpret the clusters</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#d.-choose-the-number-of-clusters"><i class="fa fa-check"></i>d. Choose the number of clusters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#include-more-variables-in-clustering"><i class="fa fa-check"></i>2. Include more variables in clustering</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#your-turn-4"><i class="fa fa-check"></i><strong>Your turn!</strong></a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#recommended-resources-27"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Spring 2025 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-classification" class="section level1 hasAnchor">
+<h1>Introduction Classification<a href="WS21_IntroductionClassification_Key.html#introduction-classification" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="learning-objectives-21" class="section level2 hasAnchor">
+<h2>Learning objectives<a href="WS21_IntroductionClassification_Key.html#learning-objectives-21" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Understand the concept of classification and its applications.</li>
+<li>Evaluate classification models using accuracy, true positive rate (TPR), and false positive rate (TPR).</li>
+<li>Interpret Receiver Operating Characteristic (ROC) curves and Area Under the Curve (AUC).</li>
+</ol>
+<hr />
+<p>We will use the <code>plotROC</code> package. Install it if you are using it for the first time:</p>
+<div class="sourceCode" id="cb671"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb671-1"><a href="WS21_IntroductionClassification_Key.html#cb671-1" tabindex="-1"></a><span class="co"># Install new packages (only needed once!)</span></span>
+<span id="cb671-2"><a href="WS21_IntroductionClassification_Key.html#cb671-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;plotROC&quot;</span>)</span></code></pre></div>
+<p>Then load the necessary packages for today:</p>
+<div class="sourceCode" id="cb672"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb672-1"><a href="WS21_IntroductionClassification_Key.html#cb672-1" tabindex="-1"></a><span class="co"># Load packages </span></span>
+<span id="cb672-2"><a href="WS21_IntroductionClassification_Key.html#cb672-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb672-3"><a href="WS21_IntroductionClassification_Key.html#cb672-3" tabindex="-1"></a><span class="fu">library</span>(plotROC) </span></code></pre></div>
+<p>We will work with the <code>biopsy</code> dataset that contains information about tumor biopsy results. Nine features of the tumor were measured (on a 1-10 scale) as well as the <code>outcome</code> variable (malignant vs. benign).</p>
+<div class="sourceCode" id="cb673"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb673-1"><a href="WS21_IntroductionClassification_Key.html#cb673-1" tabindex="-1"></a><span class="co"># Upload the data from GitHub</span></span>
+<span id="cb673-2"><a href="WS21_IntroductionClassification_Key.html#cb673-2" tabindex="-1"></a>biopsy <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/laylaguyot/datasets/main//Biopsy.csv&quot;</span>)</span>
+<span id="cb673-3"><a href="WS21_IntroductionClassification_Key.html#cb673-3" tabindex="-1"></a></span>
+<span id="cb673-4"><a href="WS21_IntroductionClassification_Key.html#cb673-4" tabindex="-1"></a><span class="co"># Take a quick look at the first 10 rows</span></span>
+<span id="cb673-5"><a href="WS21_IntroductionClassification_Key.html#cb673-5" tabindex="-1"></a><span class="fu">head</span>(biopsy, <span class="dv">10</span>)</span></code></pre></div>
+<div id="try-it-how-many-outcomes-were-malignant-how-many-were-benign" class="section level4 hasAnchor">
+<h4><strong>Try it! How many outcomes were malignant? How many were benign?</strong><a href="WS21_IntroductionClassification_Key.html#try-it-how-many-outcomes-were-malignant-how-many-were-benign" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb674"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb674-1"><a href="WS21_IntroductionClassification_Key.html#cb674-1" tabindex="-1"></a><span class="co"># Find how many outcomes of each type</span></span>
+<span id="cb674-2"><a href="WS21_IntroductionClassification_Key.html#cb674-2" tabindex="-1"></a><span class="fu">table</span>(biopsy<span class="sc">$</span>outcome)</span></code></pre></div>
+<pre><code>## 
+##    benign malignant 
+##       444       239</code></pre>
+<p><strong>There are 444 benign outcomes and 239 malignant outcomes.</strong></p>
+</div>
+</div>
+<div id="basic-classifications" class="section level2 hasAnchor">
+<h2>1. Basic classifications<a href="WS21_IntroductionClassification_Key.html#basic-classifications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s try different ways to classify a tumor as malignant or benign.</p>
+<div id="a.-random-classification" class="section level3 hasAnchor">
+<h3>a. Random classification<a href="WS21_IntroductionClassification_Key.html#a.-random-classification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s first predict the outcome randomly.</p>
+<div class="sourceCode" id="cb676"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb676-1"><a href="WS21_IntroductionClassification_Key.html#cb676-1" tabindex="-1"></a><span class="co"># Create a new object</span></span>
+<span id="cb676-2"><a href="WS21_IntroductionClassification_Key.html#cb676-2" tabindex="-1"></a>biopsy_pred <span class="ot">&lt;-</span> biopsy <span class="sc">|&gt;</span></span>
+<span id="cb676-3"><a href="WS21_IntroductionClassification_Key.html#cb676-3" tabindex="-1"></a>  <span class="co"># Only keep variables of interest</span></span>
+<span id="cb676-4"><a href="WS21_IntroductionClassification_Key.html#cb676-4" tabindex="-1"></a>  <span class="fu">select</span>(clump_thickness, outcome) <span class="sc">|&gt;</span> </span>
+<span id="cb676-5"><a href="WS21_IntroductionClassification_Key.html#cb676-5" tabindex="-1"></a>  <span class="co"># Create a predicted variable: using the `sample()` function sample </span></span>
+<span id="cb676-6"><a href="WS21_IntroductionClassification_Key.html#cb676-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">predicted =</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="st">&quot;malignant&quot;</span>,<span class="st">&quot;benign&quot;</span>), <span class="co"># values to sample from</span></span>
+<span id="cb676-7"><a href="WS21_IntroductionClassification_Key.html#cb676-7" tabindex="-1"></a>                            <span class="at">size =</span> <span class="fu">length</span>(outcome), <span class="co"># how many values to sample</span></span>
+<span id="cb676-8"><a href="WS21_IntroductionClassification_Key.html#cb676-8" tabindex="-1"></a>                            <span class="at">replace =</span> <span class="cn">TRUE</span>)) <span class="co"># can use each value more than once</span></span>
+<span id="cb676-9"><a href="WS21_IntroductionClassification_Key.html#cb676-9" tabindex="-1"></a></span>
+<span id="cb676-10"><a href="WS21_IntroductionClassification_Key.html#cb676-10" tabindex="-1"></a><span class="co"># Take a look at the predicted variable</span></span>
+<span id="cb676-11"><a href="WS21_IntroductionClassification_Key.html#cb676-11" tabindex="-1"></a><span class="fu">head</span>(biopsy_pred, <span class="dv">10</span>)</span></code></pre></div>
+<p>Were our predicted values correct?</p>
+<div class="sourceCode" id="cb677"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb677-1"><a href="WS21_IntroductionClassification_Key.html#cb677-1" tabindex="-1"></a><span class="co"># How do the predicted values compare to the outcome values? </span></span>
+<span id="cb677-2"><a href="WS21_IntroductionClassification_Key.html#cb677-2" tabindex="-1"></a><span class="fu">table</span>(<span class="at">outcome =</span> biopsy_pred<span class="sc">$</span>outcome, <span class="at">predicted =</span> biopsy_pred<span class="sc">$</span>predicted) </span></code></pre></div>
+<pre><code>##            predicted
+## outcome     benign malignant
+##   benign       201       243
+##   malignant    114       125</code></pre>
+<p><strong>Sometimes the predicted values were correct, sometimes were not correct.</strong></p>
+<p>We can compute the accuracy of our predicted values: how many observations were correctly identified as malignant or benign?</p>
+<div class="sourceCode" id="cb679"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb679-1"><a href="WS21_IntroductionClassification_Key.html#cb679-1" tabindex="-1"></a><span class="co"># Accuracy</span></span>
+<span id="cb679-2"><a href="WS21_IntroductionClassification_Key.html#cb679-2" tabindex="-1"></a><span class="fu">mean</span>(biopsy_pred<span class="sc">$</span>outcome <span class="sc">==</span> biopsy_pred<span class="sc">$</span>predicted) </span></code></pre></div>
+<pre><code>## [1] 0.477306</code></pre>
+<p>Why does it make sense to get about 50% accuracy? Do we all get the same accuracy? Why/Why not?</p>
+<p><strong>Since we randomly predicted one out of 2 possible outcomes randomly, we are only correct about half the time. We don’t get the same accuracy because we all made different random predictions.</strong></p>
+</div>
+<div id="b.-classification-based-on-1-variable" class="section level3 hasAnchor">
+<h3>b. Classification based on 1 variable<a href="WS21_IntroductionClassification_Key.html#b.-classification-based-on-1-variable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We will focus on predicting the <code>outcome</code> based on <code>clump_thickness</code>.</p>
+<div id="try-it-use-ggplot-to-represent-the-distribution-of-clump_thickness-for-malignant-and-benign-tumors.-does-there-seem-to-be-a-relationship" class="section level4 hasAnchor">
+<h4><strong>Try it! Use <code>ggplot</code> to represent the distribution of <code>clump_thickness</code> for malignant and benign tumors. Does there seem to be a relationship?</strong><a href="WS21_IntroductionClassification_Key.html#try-it-use-ggplot-to-represent-the-distribution-of-clump_thickness-for-malignant-and-benign-tumors.-does-there-seem-to-be-a-relationship" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb681"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb681-1"><a href="WS21_IntroductionClassification_Key.html#cb681-1" tabindex="-1"></a><span class="co"># Best option: Using boxplots</span></span>
+<span id="cb681-2"><a href="WS21_IntroductionClassification_Key.html#cb681-2" tabindex="-1"></a><span class="fu">ggplot</span>(biopsy, <span class="fu">aes</span>(<span class="at">x =</span> clump_thickness, <span class="at">fill =</span> outcome)) <span class="sc">+</span> </span>
+<span id="cb681-3"><a href="WS21_IntroductionClassification_Key.html#cb681-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb681-4"><a href="WS21_IntroductionClassification_Key.html#cb681-4" tabindex="-1"></a>  <span class="fu">scale_y_discrete</span>() <span class="sc">+</span></span>
+<span id="cb681-5"><a href="WS21_IntroductionClassification_Key.html#cb681-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x  =</span> <span class="st">&quot;Clump thickness (scale 1-10)&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-372-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Tumors with a high clump thickness seem to be malignant (however, note that there is some overlap in clump thickness between the two outcomes).</strong></p>
+<p>Let’s classify all tumors with a high value of <code>clump_thickness</code> (greater than 9) as malignant, and benign otherwise.</p>
+<div class="sourceCode" id="cb682"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb682-1"><a href="WS21_IntroductionClassification_Key.html#cb682-1" tabindex="-1"></a><span class="co"># Update our new object</span></span>
+<span id="cb682-2"><a href="WS21_IntroductionClassification_Key.html#cb682-2" tabindex="-1"></a>biopsy_pred <span class="ot">&lt;-</span> biopsy <span class="sc">|&gt;</span></span>
+<span id="cb682-3"><a href="WS21_IntroductionClassification_Key.html#cb682-3" tabindex="-1"></a>  <span class="co"># Only keep variables of interest</span></span>
+<span id="cb682-4"><a href="WS21_IntroductionClassification_Key.html#cb682-4" tabindex="-1"></a>  <span class="fu">select</span>(clump_thickness, outcome) <span class="sc">|&gt;</span> </span>
+<span id="cb682-5"><a href="WS21_IntroductionClassification_Key.html#cb682-5" tabindex="-1"></a>  <span class="co"># Create another predicted variable based on clump_thickness &gt; 9 </span></span>
+<span id="cb682-6"><a href="WS21_IntroductionClassification_Key.html#cb682-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">predicted =</span> <span class="fu">ifelse</span>(clump_thickness <span class="sc">&gt;</span> <span class="dv">9</span>, </span>
+<span id="cb682-7"><a href="WS21_IntroductionClassification_Key.html#cb682-7" tabindex="-1"></a>                            <span class="st">&quot;malignant&quot;</span>, <span class="st">&quot;benign&quot;</span>)) </span>
+<span id="cb682-8"><a href="WS21_IntroductionClassification_Key.html#cb682-8" tabindex="-1"></a></span>
+<span id="cb682-9"><a href="WS21_IntroductionClassification_Key.html#cb682-9" tabindex="-1"></a><span class="co"># Take a look at the new predicted variable</span></span>
+<span id="cb682-10"><a href="WS21_IntroductionClassification_Key.html#cb682-10" tabindex="-1"></a><span class="fu">head</span>(biopsy_pred, <span class="dv">10</span>)</span></code></pre></div>
+<p>Were our predicted values correct?</p>
+<div class="sourceCode" id="cb683"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb683-1"><a href="WS21_IntroductionClassification_Key.html#cb683-1" tabindex="-1"></a><span class="co"># How do the predicted values compare to the outcome values? </span></span>
+<span id="cb683-2"><a href="WS21_IntroductionClassification_Key.html#cb683-2" tabindex="-1"></a><span class="fu">table</span>(<span class="at">outcome =</span> biopsy_pred<span class="sc">$</span>outcome, <span class="at">predicted =</span> biopsy_pred<span class="sc">$</span>predicted) </span></code></pre></div>
+<pre><code>##            predicted
+## outcome     benign malignant
+##   benign       444         0
+##   malignant    170        69</code></pre>
+<p>None of the benign cases were predicted as malignant. But the majority of malignant cases were predicted as benign. Does that mean the accuracy has improved?</p>
+<div class="sourceCode" id="cb685"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb685-1"><a href="WS21_IntroductionClassification_Key.html#cb685-1" tabindex="-1"></a><span class="co"># Accuracy</span></span>
+<span id="cb685-2"><a href="WS21_IntroductionClassification_Key.html#cb685-2" tabindex="-1"></a><span class="fu">mean</span>(biopsy_pred<span class="sc">$</span>outcome <span class="sc">==</span> biopsy_pred<span class="sc">$</span>predicted) </span></code></pre></div>
+<pre><code>## [1] 0.7510981</code></pre>
+<p><strong>It’s better than before!</strong></p>
+</div>
+</div>
+<div id="c.-classification-based-on-any-cutoff-value" class="section level3 hasAnchor">
+<h3>c. Classification based on any cutoff value<a href="WS21_IntroductionClassification_Key.html#c.-classification-based-on-any-cutoff-value" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We chose a cutoff value of 9 for <code>clump_thickness</code> in the previous section. But what if we had chosen a different value? Let’s calculate the accuracy of our prediction based on different cutoff values. We’ll use a <code>for</code>-loop to repeat the process.</p>
+<div class="sourceCode" id="cb687"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb687-1"><a href="WS21_IntroductionClassification_Key.html#cb687-1" tabindex="-1"></a><span class="co"># Initialize vector for accuracy values</span></span>
+<span id="cb687-2"><a href="WS21_IntroductionClassification_Key.html#cb687-2" tabindex="-1"></a>accuracy <span class="ot">&lt;-</span> <span class="fu">vector</span>()</span>
+<span id="cb687-3"><a href="WS21_IntroductionClassification_Key.html#cb687-3" tabindex="-1"></a></span>
+<span id="cb687-4"><a href="WS21_IntroductionClassification_Key.html#cb687-4" tabindex="-1"></a><span class="co"># Define possible cutoff values: from min to max clump thickness</span></span>
+<span id="cb687-5"><a href="WS21_IntroductionClassification_Key.html#cb687-5" tabindex="-1"></a>cutoff <span class="ot">&lt;-</span> <span class="fu">min</span>(biopsy<span class="sc">$</span>clump_thickness)<span class="sc">:</span><span class="fu">max</span>(biopsy<span class="sc">$</span>clump_thickness)</span>
+<span id="cb687-6"><a href="WS21_IntroductionClassification_Key.html#cb687-6" tabindex="-1"></a></span>
+<span id="cb687-7"><a href="WS21_IntroductionClassification_Key.html#cb687-7" tabindex="-1"></a><span class="co"># For each cutoff value:</span></span>
+<span id="cb687-8"><a href="WS21_IntroductionClassification_Key.html#cb687-8" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> cutoff){</span>
+<span id="cb687-9"><a href="WS21_IntroductionClassification_Key.html#cb687-9" tabindex="-1"></a>  biopsy_pred <span class="ot">&lt;-</span> biopsy <span class="sc">|&gt;</span> </span>
+<span id="cb687-10"><a href="WS21_IntroductionClassification_Key.html#cb687-10" tabindex="-1"></a>  <span class="co"># Create a predicted variable </span></span>
+<span id="cb687-11"><a href="WS21_IntroductionClassification_Key.html#cb687-11" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">predicted =</span> <span class="fu">ifelse</span>(clump_thickness <span class="sc">&gt;</span> i, <span class="co"># i takes values in cutoff</span></span>
+<span id="cb687-12"><a href="WS21_IntroductionClassification_Key.html#cb687-12" tabindex="-1"></a>                            <span class="st">&quot;malignant&quot;</span>, <span class="st">&quot;benign&quot;</span>)) </span>
+<span id="cb687-13"><a href="WS21_IntroductionClassification_Key.html#cb687-13" tabindex="-1"></a>  <span class="co"># Find the resulting accuracy and save it into a vector</span></span>
+<span id="cb687-14"><a href="WS21_IntroductionClassification_Key.html#cb687-14" tabindex="-1"></a>  accuracy[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(biopsy_pred<span class="sc">$</span>outcome <span class="sc">==</span> biopsy_pred<span class="sc">$</span>predicted) <span class="co"># add element i to accuracy object </span></span>
+<span id="cb687-15"><a href="WS21_IntroductionClassification_Key.html#cb687-15" tabindex="-1"></a>}</span>
+<span id="cb687-16"><a href="WS21_IntroductionClassification_Key.html#cb687-16" tabindex="-1"></a>accuracy</span></code></pre></div>
+<pre><code>##  [1] 0.5446559 0.6061493 0.7232796 0.8038067 0.8594436 0.8550512
+##  [7] 0.8243045 0.7715959 0.7510981 0.6500732</code></pre>
+<p>Which value of clump thickness seems to result in the highest accuracy for the predicted values?</p>
+<p><strong>We found a value of 5 for clump thickness optimized the accuracy: about 0.8594436%.</strong></p>
+</div>
+</div>
+<div id="metrics" class="section level2 hasAnchor">
+<h2>2. Metrics<a href="WS21_IntroductionClassification_Key.html#metrics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s consider the classifier based on clump thickness greater than 5.</p>
+<div class="sourceCode" id="cb689"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb689-1"><a href="WS21_IntroductionClassification_Key.html#cb689-1" tabindex="-1"></a><span class="co"># Make predictions when the cutoff value is 5 for clump_thickness</span></span>
+<span id="cb689-2"><a href="WS21_IntroductionClassification_Key.html#cb689-2" tabindex="-1"></a>biopsy_pred <span class="ot">&lt;-</span> biopsy <span class="sc">|&gt;</span></span>
+<span id="cb689-3"><a href="WS21_IntroductionClassification_Key.html#cb689-3" tabindex="-1"></a>  <span class="co"># Only keep variables of interest</span></span>
+<span id="cb689-4"><a href="WS21_IntroductionClassification_Key.html#cb689-4" tabindex="-1"></a>  <span class="fu">select</span>(clump_thickness, outcome) <span class="sc">|&gt;</span> </span>
+<span id="cb689-5"><a href="WS21_IntroductionClassification_Key.html#cb689-5" tabindex="-1"></a>  <span class="co"># Create another predicted variable based on clump_thickness &gt; 9</span></span>
+<span id="cb689-6"><a href="WS21_IntroductionClassification_Key.html#cb689-6" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">predicted =</span> <span class="fu">ifelse</span>(clump_thickness <span class="sc">&gt;</span> <span class="dv">5</span>, <span class="st">&quot;malignant&quot;</span>, <span class="st">&quot;benign&quot;</span>))</span></code></pre></div>
+<p>We will consider that a malignant case is a positive outcome and benign is a negative outcome (in medical contexts, a positive case usually means that a disease/condition was detected).</p>
+<div class="sourceCode" id="cb690"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb690-1"><a href="WS21_IntroductionClassification_Key.html#cb690-1" tabindex="-1"></a><span class="co"># Confusion matrix: compare the true outcomes to predicted values</span></span>
+<span id="cb690-2"><a href="WS21_IntroductionClassification_Key.html#cb690-2" tabindex="-1"></a><span class="fu">table</span>(<span class="at">outcome =</span> biopsy_pred<span class="sc">$</span>outcome, <span class="at">predicted =</span> biopsy_pred<span class="sc">$</span>predicted) <span class="sc">|&gt;</span> </span>
+<span id="cb690-3"><a href="WS21_IntroductionClassification_Key.html#cb690-3" tabindex="-1"></a>  <span class="co"># Add total cases for rows and columns </span></span>
+<span id="cb690-4"><a href="WS21_IntroductionClassification_Key.html#cb690-4" tabindex="-1"></a>  <span class="fu">addmargins</span>()</span></code></pre></div>
+<pre><code>##            predicted
+## outcome     benign malignant Sum
+##   benign       424        20 444
+##   malignant     76       163 239
+##   Sum          500       183 683</code></pre>
+<p>The <em>true positive</em> rate (TPR) is the number of truly predicted positive cases over the number of positive cases.</p>
+<p>The <em>false positive</em> rate (FPR) is the number of truly negative cases that were predicted to be positive over the number of negative cases.</p>
+<div id="try-it-based-on-the-table-and-definitions-above-what-is-the-value-of-tpr-what-is-the-value-of-fpr-what-shall-we-do-to-increase-the-value-of-tpr-how-would-it-affect-the-value-of-fpr" class="section level4 hasAnchor">
+<h4><strong>Try it! Based on the table and definitions above, what is the value of TPR? What is the value of FPR? What shall we do to increase the value of TPR? How would it affect the value of FPR?</strong><a href="WS21_IntroductionClassification_Key.html#try-it-based-on-the-table-and-definitions-above-what-is-the-value-of-tpr-what-is-the-value-of-fpr-what-shall-we-do-to-increase-the-value-of-tpr-how-would-it-affect-the-value-of-fpr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb692"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb692-1"><a href="WS21_IntroductionClassification_Key.html#cb692-1" tabindex="-1"></a><span class="co"># TPR: Number of malignant outcome predicted malignant over number of total malignant outcomes</span></span>
+<span id="cb692-2"><a href="WS21_IntroductionClassification_Key.html#cb692-2" tabindex="-1"></a><span class="dv">163</span><span class="sc">/</span><span class="dv">239</span></span></code></pre></div>
+<pre><code>## [1] 0.6820084</code></pre>
+<div class="sourceCode" id="cb694"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb694-1"><a href="WS21_IntroductionClassification_Key.html#cb694-1" tabindex="-1"></a><span class="co"># FPR: Number of benign outcome predicted malignant over number of total benign outcomes</span></span>
+<span id="cb694-2"><a href="WS21_IntroductionClassification_Key.html#cb694-2" tabindex="-1"></a><span class="dv">20</span><span class="sc">/</span><span class="dv">444</span></span></code></pre></div>
+<pre><code>## [1] 0.04504505</code></pre>
+<p><strong>The value of TPR indicates that about 68.2% of the malignant outcomes were truly identified while the value of FPR indicates that about 4.5% of the benign outcomes were falsely predicted as malignant. We could lower the value of clump thickness to predict more malignant cases but that also means we would have more false positive as well.</strong></p>
+<p>What if we wanted to do a better job at predicting malignant outcomes?</p>
+</div>
+</div>
+<div id="rocauc" class="section level2 hasAnchor">
+<h2>3. ROC/AUC<a href="WS21_IntroductionClassification_Key.html#rocauc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The trade-off between TPR and FPR can be represented by the ROC curve.</p>
+<div id="a.-receiver-operating-characteristics-roc-curve" class="section level3 hasAnchor">
+<h3>a. Receiver Operating Characteristics (ROC) curve<a href="WS21_IntroductionClassification_Key.html#a.-receiver-operating-characteristics-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A ROC curve usually represents the false positive rate (FPR) on the x-axis and the true positive rate (TPR) is represented on the y-axis:</p>
+<div class="sourceCode" id="cb696"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb696-1"><a href="WS21_IntroductionClassification_Key.html#cb696-1" tabindex="-1"></a><span class="co"># Plot ROC depending on values of clump_thickness to predict the outcome</span></span>
+<span id="cb696-2"><a href="WS21_IntroductionClassification_Key.html#cb696-2" tabindex="-1"></a>ROC <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(biopsy) <span class="sc">+</span> </span>
+<span id="cb696-3"><a href="WS21_IntroductionClassification_Key.html#cb696-3" tabindex="-1"></a>  <span class="co"># New geom!</span></span>
+<span id="cb696-4"><a href="WS21_IntroductionClassification_Key.html#cb696-4" tabindex="-1"></a>  <span class="fu">geom_roc</span>(<span class="fu">aes</span>(<span class="at">d =</span> outcome, <span class="at">m =</span> clump_thickness), <span class="at">n.cuts =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb696-5"><a href="WS21_IntroductionClassification_Key.html#cb696-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;ROC curve based on clump thickness (scale 1 to 10&quot;</span>)</span>
+<span id="cb696-6"><a href="WS21_IntroductionClassification_Key.html#cb696-6" tabindex="-1"></a>ROC</span></code></pre></div>
+<pre><code>## Warning in verify_d(data$d): D not labeled 0/1, assuming benign =
+## 0 and malignant = 1!</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-380-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><em>Note: R usually expects the outcome to be coded as 0 and 1, representing a negative and positive outcome, respectively. Since R assigns values in alphabetical order, here it made sense that the benign outcome is 0 and the malignant outcome is 1.</em></p>
+<p>When the cutoff value to predict a malignant outcome is based on a <code>clump_thickness</code> greater or equal to 1, we get a TPR value of 100% and a FPR value of 100% as well. Why?</p>
+<p><strong>When the cutoff is clump_thickness ≥ 1, the model predicts every case as malignant, leading to a TPR of 100% (capturing all malignant cases) but also an FPR of 100% (misclassifying all benign cases as malignant).</strong></p>
+<p>When the cutoff value to predict a malignant outcome is based on a <code>clump_thickness</code> greater or equal to 10, we get a TPR value of about 29% (see below or on the graph) and a FPR value of 0% as well. Why?</p>
+<p><strong>When the cutoff is clump_thickness ≥ 10, the model predicts only the most extreme cases as malignant, leading to a TPR of about 29% (correctly identifying some malignant cases) and a FPR of 0% (no benign cases are misclassified as malignant).</strong></p>
+<div class="sourceCode" id="cb698"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb698-1"><a href="WS21_IntroductionClassification_Key.html#cb698-1" tabindex="-1"></a><span class="co"># Number of predicted malignant values with a clump thickness of 10 out of all true malignant outcomes</span></span>
+<span id="cb698-2"><a href="WS21_IntroductionClassification_Key.html#cb698-2" tabindex="-1"></a><span class="fu">sum</span>((biopsy_pred <span class="sc">|&gt;</span> <span class="fu">filter</span>(clump_thickness <span class="sc">==</span> <span class="dv">10</span>))<span class="sc">$</span>predicted <span class="sc">==</span> <span class="st">&quot;malignant&quot;</span>) <span class="sc">/</span> <span class="fu">sum</span>(biopsy_pred<span class="sc">$</span>outcome <span class="sc">==</span> <span class="st">&quot;malignant&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] 0.2887029</code></pre>
+<div class="sourceCode" id="cb700"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb700-1"><a href="WS21_IntroductionClassification_Key.html#cb700-1" tabindex="-1"></a><span class="co"># Note: I asked ChatGPT for a better way to this calculation but it only provided incorrect alternatives...</span></span></code></pre></div>
+<p>What about the TPR and FPR values when the cutoff value to predict a malignant outcome is based on a <code>clump_thickness</code> greater or equal to 5?</p>
+<p><strong>When the cutoff is clump_thickness ≥ 5, the model leads to a TPR of about 87.5% and a FPR slighlty less than 25%.</strong></p>
+</div>
+<div id="b.-area-under-the-curve-auc" class="section level3 hasAnchor">
+<h3>b. Area under the curve (AUC)<a href="WS21_IntroductionClassification_Key.html#b.-area-under-the-curve-auc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The area under the curve (AUC) quantifies how well our classification is predicting the outcome.</p>
+<div class="sourceCode" id="cb701"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb701-1"><a href="WS21_IntroductionClassification_Key.html#cb701-1" tabindex="-1"></a><span class="co"># Calculate the area under the curve with function calc_auc()</span></span>
+<span id="cb701-2"><a href="WS21_IntroductionClassification_Key.html#cb701-2" tabindex="-1"></a><span class="fu">calc_auc</span>(ROC)</span></code></pre></div>
+<pre><code>## Warning in verify_d(data$d): D not labeled 0/1, assuming benign =
+## 0 and malignant = 1!</code></pre>
+<p>Let’s investigate what it means (this is a little bit difficult). If we randomly select 2 patients, one with a malignant tumor and one with a benign tumor, we will compare their clump thickness:</p>
+<ul>
+<li><p>if the clump thickness was higher for the patient with a malignant tumor, we assign a probability of 1 (that agrees with our model),</p></li>
+<li><p>if the clump thickness was the same for the two patients, we assign a probability of 0.5,</p></li>
+<li><p>if the clump thickness was lower for the patient with a malignant tumor, we assign a probability of 0 (that does not agree with our model).</p></li>
+</ul>
+<p>Then we replicate that process 1,000 times.</p>
+<div class="sourceCode" id="cb703"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb703-1"><a href="WS21_IntroductionClassification_Key.html#cb703-1" tabindex="-1"></a><span class="co"># Replicate the process 1000 times</span></span>
+<span id="cb703-2"><a href="WS21_IntroductionClassification_Key.html#cb703-2" tabindex="-1"></a>probs <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>,{</span>
+<span id="cb703-3"><a href="WS21_IntroductionClassification_Key.html#cb703-3" tabindex="-1"></a>  </span>
+<span id="cb703-4"><a href="WS21_IntroductionClassification_Key.html#cb703-4" tabindex="-1"></a>  <span class="co"># Sample 1 patient with a malignant outcome</span></span>
+<span id="cb703-5"><a href="WS21_IntroductionClassification_Key.html#cb703-5" tabindex="-1"></a>  rand_positive <span class="ot">&lt;-</span> biopsy <span class="sc">|&gt;</span></span>
+<span id="cb703-6"><a href="WS21_IntroductionClassification_Key.html#cb703-6" tabindex="-1"></a>    <span class="fu">filter</span>(outcome <span class="sc">==</span> <span class="st">&quot;malignant&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb703-7"><a href="WS21_IntroductionClassification_Key.html#cb703-7" tabindex="-1"></a>    <span class="fu">select</span>(clump_thickness) <span class="sc">|&gt;</span></span>
+<span id="cb703-8"><a href="WS21_IntroductionClassification_Key.html#cb703-8" tabindex="-1"></a>    <span class="fu">sample_n</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>()</span>
+<span id="cb703-9"><a href="WS21_IntroductionClassification_Key.html#cb703-9" tabindex="-1"></a>  </span>
+<span id="cb703-10"><a href="WS21_IntroductionClassification_Key.html#cb703-10" tabindex="-1"></a>  <span class="co"># Sample 1 patient with benign outcome</span></span>
+<span id="cb703-11"><a href="WS21_IntroductionClassification_Key.html#cb703-11" tabindex="-1"></a>  rand_negative <span class="ot">&lt;-</span> biopsy <span class="sc">|&gt;</span></span>
+<span id="cb703-12"><a href="WS21_IntroductionClassification_Key.html#cb703-12" tabindex="-1"></a>    <span class="fu">filter</span>(outcome <span class="sc">==</span> <span class="st">&quot;benign&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb703-13"><a href="WS21_IntroductionClassification_Key.html#cb703-13" tabindex="-1"></a>    <span class="fu">select</span>(clump_thickness) <span class="sc">|&gt;</span></span>
+<span id="cb703-14"><a href="WS21_IntroductionClassification_Key.html#cb703-14" tabindex="-1"></a>    <span class="fu">sample_n</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>()</span>
+<span id="cb703-15"><a href="WS21_IntroductionClassification_Key.html#cb703-15" tabindex="-1"></a>  </span>
+<span id="cb703-16"><a href="WS21_IntroductionClassification_Key.html#cb703-16" tabindex="-1"></a>  <span class="co"># Assign a probability value according to our model</span></span>
+<span id="cb703-17"><a href="WS21_IntroductionClassification_Key.html#cb703-17" tabindex="-1"></a>  <span class="fu">case_when</span>(rand_positive <span class="sc">&gt;</span> rand_negative <span class="sc">~</span> <span class="dv">1</span>, </span>
+<span id="cb703-18"><a href="WS21_IntroductionClassification_Key.html#cb703-18" tabindex="-1"></a>            rand_positive <span class="sc">==</span> rand_negative <span class="sc">~</span> .<span class="dv">5</span>, </span>
+<span id="cb703-19"><a href="WS21_IntroductionClassification_Key.html#cb703-19" tabindex="-1"></a>            rand_positive <span class="sc">&lt;</span> rand_negative <span class="sc">~</span> <span class="dv">0</span>)</span>
+<span id="cb703-20"><a href="WS21_IntroductionClassification_Key.html#cb703-20" tabindex="-1"></a>})</span>
+<span id="cb703-21"><a href="WS21_IntroductionClassification_Key.html#cb703-21" tabindex="-1"></a></span>
+<span id="cb703-22"><a href="WS21_IntroductionClassification_Key.html#cb703-22" tabindex="-1"></a><span class="co"># AUC</span></span>
+<span id="cb703-23"><a href="WS21_IntroductionClassification_Key.html#cb703-23" tabindex="-1"></a><span class="fu">mean</span>(probs)</span></code></pre></div>
+<pre><code>## [1] 0.902</code></pre>
+<p>You can interpret the AUC as the fact that a randomly selected patient with a malignant tumor has a higher predicted probability to have a malignant tumor than a randomly selected person with a benign tumor. On average, about 91% of the time, malignant tumors will have higher probabilities of being malignant compared to benign outcomes.</p>
+<p>In a nutshell: the higher the AUC, the better the classifier is!</p>
+<div id="try-it-pick-another-predictor-in-the-biopsy-dataset.-visualize-the-relationship-with-the-outcome.-could-this-new-predictor-help-us-classify-a-tumor-as-malignant-or-benign-build-the-roc-curve-and-find-the-corresponding-auc-value.-is-this-new-predictor-resulting-in-a-better-model-than-the-one-with-clump-thickness" class="section level4 hasAnchor">
+<h4><strong>Try it! Pick another predictor in the <code>biopsy</code> dataset. Visualize the relationship with the <code>outcome</code>. Could this new predictor help us classify a tumor as <code>malignant</code> or <code>benign</code>? Build the ROC curve and find the corresponding AUC value. Is this new predictor resulting in a better model than the one with clump thickness?</strong><a href="WS21_IntroductionClassification_Key.html#try-it-pick-another-predictor-in-the-biopsy-dataset.-visualize-the-relationship-with-the-outcome.-could-this-new-predictor-help-us-classify-a-tumor-as-malignant-or-benign-build-the-roc-curve-and-find-the-corresponding-auc-value.-is-this-new-predictor-resulting-in-a-better-model-than-the-one-with-clump-thickness" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Paste the visualization of the relationship, your ROC plot, and the value of AUC on the slide corresponding to the new predictor: <a href="https://docs.google.com/presentation/d/1tPd0MzCnx5TOIDOoMMEXbruT2I7ijQvBHq031op_uAk/edit?usp=sharing" class="uri">https://docs.google.com/presentation/d/1tPd0MzCnx5TOIDOoMMEXbruT2I7ijQvBHq031op_uAk/edit?usp=sharing</a></p>
+<div class="sourceCode" id="cb705"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb705-1"><a href="WS21_IntroductionClassification_Key.html#cb705-1" tabindex="-1"></a><span class="co"># Let&#39;s pick another predictor: uniform_cell_size</span></span>
+<span id="cb705-2"><a href="WS21_IntroductionClassification_Key.html#cb705-2" tabindex="-1"></a><span class="fu">ggplot</span>(biopsy, <span class="fu">aes</span>(<span class="at">x =</span> uniform_cell_size, <span class="at">fill =</span> outcome)) <span class="sc">+</span> </span>
+<span id="cb705-3"><a href="WS21_IntroductionClassification_Key.html#cb705-3" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb705-4"><a href="WS21_IntroductionClassification_Key.html#cb705-4" tabindex="-1"></a>  <span class="fu">scale_y_discrete</span>() <span class="sc">+</span></span>
+<span id="cb705-5"><a href="WS21_IntroductionClassification_Key.html#cb705-5" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x  =</span> <span class="st">&quot;Uniform cell size (scale 1-10)&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-384-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb706"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb706-1"><a href="WS21_IntroductionClassification_Key.html#cb706-1" tabindex="-1"></a><span class="co"># Plot ROC depending on values of uniform_cell_size to predict the outcome</span></span>
+<span id="cb706-2"><a href="WS21_IntroductionClassification_Key.html#cb706-2" tabindex="-1"></a>ROC <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(biopsy) <span class="sc">+</span> </span>
+<span id="cb706-3"><a href="WS21_IntroductionClassification_Key.html#cb706-3" tabindex="-1"></a>  <span class="co"># New geom!</span></span>
+<span id="cb706-4"><a href="WS21_IntroductionClassification_Key.html#cb706-4" tabindex="-1"></a>  <span class="fu">geom_roc</span>(<span class="fu">aes</span>(<span class="at">d =</span> outcome, <span class="at">m =</span> uniform_cell_size), <span class="at">n.cuts =</span> <span class="dv">10</span>)</span>
+<span id="cb706-5"><a href="WS21_IntroductionClassification_Key.html#cb706-5" tabindex="-1"></a>ROC</span></code></pre></div>
+<pre><code>## Warning in verify_d(data$d): D not labeled 0/1, assuming benign =
+## 0 and malignant = 1!</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-384-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb708"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb708-1"><a href="WS21_IntroductionClassification_Key.html#cb708-1" tabindex="-1"></a><span class="co"># Calculate the area under the curve</span></span>
+<span id="cb708-2"><a href="WS21_IntroductionClassification_Key.html#cb708-2" tabindex="-1"></a><span class="fu">calc_auc</span>(ROC)<span class="sc">$</span>AUC</span></code></pre></div>
+<pre><code>## Warning in verify_d(data$d): D not labeled 0/1, assuming benign =
+## 0 and malignant = 1!</code></pre>
+<pre><code>## [1] 0.9758236</code></pre>
+<p><strong>A high value of uniform cell size seems to be associated with a malignant outcome. The AUC value is about 98%, that’s higher than for the model with clump thickness: we have a better classification model with uniform cell size!</strong></p>
+<hr />
+</div>
+</div>
+</div>
+<div id="recommended-resources-21" class="section level2 hasAnchor">
+<h2>Recommended Resources<a href="WS21_IntroductionClassification_Key.html#recommended-resources-21" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Worksheet keys are posted at the end of the week on Canvas under <strong>Programming Tools</strong>.</li>
+<li>Recommended readings: <a href="https://rafalab.dfci.harvard.edu/dsbook/introduction-to-machine-learning.html#notation-1">Introduction to machine learning</a></li>
+<li>R documentation for <a href="https://www.rdocumentation.org/packages/plotROC/versions/2.3.1">plotROC</a></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="WS20_ModelSelection_Key.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="WS22_LogisticRegression_Key.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Other Models | Spring 2025 Semester</title>
+  <meta name="description" content="Other Models | Spring 2025 Semester" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Other Models | Spring 2025 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Other Models | Spring 2025 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr. Layla Guyot" />
+
+
+<meta name="date" content="2025-04-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="WS22_LogisticRegression_Key.html"/>
+<link rel="next" href="WS24_CrossValidation_Key.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 322E Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to SDS 322E</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html"><i class="fa fa-check"></i>getstaRted</a>
+<ul>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#learning-objectives"><i class="fa fa-check"></i>Learning Objectives:</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#recommended-resources"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html"><i class="fa fa-check"></i>RMarkdown</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#learning-objectives-1"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#basic-markdown-editing"><i class="fa fa-check"></i>1. Basic Markdown editing</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-headers"><i class="fa fa-check"></i>a. Headers</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-text-formatting"><i class="fa fa-check"></i>b. Text formatting</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-lists-and-bullet-points"><i class="fa fa-check"></i>c. Lists and bullet points</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#d.-html-hyperlinks-images-tables-etc."><i class="fa fa-check"></i>d. HTML hyperlinks, images, tables, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#embedded-r-code"><i class="fa fa-check"></i>2. Embedded R code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-code-chunks"><i class="fa fa-check"></i>a. Code chunks</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-more-base-r-built-in-datasets"><i class="fa fa-check"></i>b. More base R: built-in datasets</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-more-base-r-basic-plots"><i class="fa fa-check"></i>c. More base R: basic plots</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#packages"><i class="fa fa-check"></i>3. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#recommended-resources-1"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html"><i class="fa fa-check"></i>Datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#learning-objectives-2"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#set-up"><i class="fa fa-check"></i>1. Set up</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#a.-packages"><i class="fa fa-check"></i>a. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#b.-importing-datasets"><i class="fa fa-check"></i>b. Importing datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#city-of-austin-open-data-portal"><i class="fa fa-check"></i>2. City of Austin Open Data Portal</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#other-data-sources"><i class="fa fa-check"></i>3. Other data sources</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#recommended-resources-2"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html"><i class="fa fa-check"></i>Basic Data Manipulation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#learning-objectives-3"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#making-sense-of-a-dataset"><i class="fa fa-check"></i>1. Making sense of a dataset</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#setting-conditions"><i class="fa fa-check"></i>2. Setting conditions</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#a.-conditional-statements"><i class="fa fa-check"></i>a. Conditional statements</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#b.-connectors"><i class="fa fa-check"></i>b. Connectors</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#subsetting-data"><i class="fa fa-check"></i>3. Subsetting data</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#creating-new-variables"><i class="fa fa-check"></i>4. Creating new variables</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#recommended-resources-3"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html"><i class="fa fa-check"></i>Grammar Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#learning-objectives-4"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#the-pipe"><i class="fa fa-check"></i>1. The pipe</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#create-a-ggplot"><i class="fa fa-check"></i>2. Create a <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-define-a-plot"><i class="fa fa-check"></i>a. Define a plot</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-add-a-geometric-object"><i class="fa fa-check"></i>b. Add a geometric object</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-map-to-color-shape-size"><i class="fa fa-check"></i>c. Map to color, shape, size</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-map-variables-to-color-shape-size"><i class="fa fa-check"></i>d. Map variables to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#layering"><i class="fa fa-check"></i>3. Layering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-add-labels-and-controlling-scales"><i class="fa fa-check"></i>a. Add labels and controlling scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-control-scales"><i class="fa fa-check"></i>b. Control scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-facet"><i class="fa fa-check"></i>c. Facet</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-color-palettes-and-themes"><i class="fa fa-check"></i>d. Color palettes and themes</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#e.-themes"><i class="fa fa-check"></i>e. Themes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#recommended-resources-4"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html"><i class="fa fa-check"></i>Describing1Variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#learning-objectives-5"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-numeric-variable"><i class="fa fa-check"></i>1. Describing 1 numeric variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-histogram"><i class="fa fa-check"></i>a. Histogram</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-boxplot"><i class="fa fa-check"></i>b. Boxplot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#c.-density-and-violin-plots"><i class="fa fa-check"></i>c. Density and Violin plots</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#d.-reporting-summary-statistics"><i class="fa fa-check"></i>d. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-categorical-variable"><i class="fa fa-check"></i>2. Describing 1 categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-bar-plot"><i class="fa fa-check"></i>a. Bar plot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-reporting-summary-statistics"><i class="fa fa-check"></i>b. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#your-turn"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#recommended-resources-5"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html"><i class="fa fa-check"></i>Describing Relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#learning-objectives-6"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-numeric-variables"><i class="fa fa-check"></i>1. Comparing two numeric variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-scatterplot"><i class="fa fa-check"></i>a. Using a scatterplot</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-reporting-correlation"><i class="fa fa-check"></i>b. Reporting correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-a-numeric-variable-and-a-categorical-variable"><i class="fa fa-check"></i>2. Comparing a numeric variable and a categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-grouped-boxplots"><i class="fa fa-check"></i>a. Using grouped boxplots</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-grouped-histograms"><i class="fa fa-check"></i>b. Using grouped histograms</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-center-and-spread-for-each-category"><i class="fa fa-check"></i>c. Reporting center and spread for each category</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#d.-using-a-special-case-of-bar-graph"><i class="fa fa-check"></i>d. Using a special case of bar graph</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-categorical-variables"><i class="fa fa-check"></i>3. Comparing two categorical variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-stacked-plot-not-usually-recommended"><i class="fa fa-check"></i>a. Using a stacked plot (not usually recommended)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-a-segmented-bar-plot-usually-preferred"><i class="fa fa-check"></i>b. Using a segmented bar plot (usually preferred)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-frequencies-and-relative-frequencies"><i class="fa fa-check"></i>c. Reporting frequencies and relative frequencies</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#relationships-with-more-than-2-variables"><i class="fa fa-check"></i>4. Relationships with more than 2 variables</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#recommended-resources-6"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html"><i class="fa fa-check"></i>Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#learning-objectives-7"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#gather-some-background-information"><i class="fa fa-check"></i>1. Gather some background information</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-context"><i class="fa fa-check"></i>a. Context</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-structure"><i class="fa fa-check"></i>b. Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#formulate-some-research-questions"><i class="fa fa-check"></i>2. Formulate some research questions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#investigate-trends-and-relationships"><i class="fa fa-check"></i>3. Investigate trends and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-first-look-at-univariate-distributions"><i class="fa fa-check"></i>a. First look at univariate distributions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-then-look-at-relationships"><i class="fa fa-check"></i>b. Then look at relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#answer-the-questions-and-be-critical"><i class="fa fa-check"></i>4. Answer the questions and be critical</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#your-turn-1"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#recommended-resources-7"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html"><i class="fa fa-check"></i>Grammar Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#learning-objectives-8"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-rowsobservations"><i class="fa fa-check"></i>1. Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-filter"><i class="fa fa-check"></i>a. Filter</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-arrange"><i class="fa fa-check"></i>b. Arrange</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#c.-minimummaximum-values"><i class="fa fa-check"></i>c. Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-columns"><i class="fa fa-check"></i>2. Operations on columns</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-select"><i class="fa fa-check"></i>a. Select</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-mutate"><i class="fa fa-check"></i>b. Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#create-summaries"><i class="fa fa-check"></i>3. Create summaries</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-summarize"><i class="fa fa-check"></i>a. Summarize</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-group-by"><i class="fa fa-check"></i>b. Group by</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#recommended-resources-8"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html"><i class="fa fa-check"></i>Joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#learning-objectives-9"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#joining-datasets"><i class="fa fa-check"></i>1. Joining datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-inner-join"><i class="fa fa-check"></i>a. Inner join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-left-join"><i class="fa fa-check"></i>b. Left join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-right-join"><i class="fa fa-check"></i>c. Right join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-full-join"><i class="fa fa-check"></i>d. Full join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#e.-anti-join"><i class="fa fa-check"></i>e. Anti join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#f.-semi-join"><i class="fa fa-check"></i>f. Semi join</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#considering-other-options-when-joining"><i class="fa fa-check"></i>2. Considering other options when joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-no-matching-key"><i class="fa fa-check"></i>a. No matching key</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-auto-suffixing"><i class="fa fa-check"></i>b. Auto-suffixing</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-duplicates"><i class="fa fa-check"></i>c. Duplicates</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-several-key-variables"><i class="fa fa-check"></i>d. Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#recommended-resources-9"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html"><i class="fa fa-check"></i>Tidying</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#learning-objectives-10"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#pivoting"><i class="fa fa-check"></i>1. Pivoting</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-wide-to-long"><i class="fa fa-check"></i>a. Wide to long</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-long-to-wide"><i class="fa fa-check"></i>b. Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#separating-or-uniting-variables"><i class="fa fa-check"></i>2. Separating or uniting variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-separate"><i class="fa fa-check"></i>a. Separate</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-unite"><i class="fa fa-check"></i>b. Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#your-turn-2"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#recommended-resources-10"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html"><i class="fa fa-check"></i>Strings Reg Ex</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#learning-objectives-11"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#strings"><i class="fa fa-check"></i>1. Strings</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-calculating-length"><i class="fa fa-check"></i>a. Calculating length</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-combining-strings"><i class="fa fa-check"></i>b. Combining strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-changing-cases"><i class="fa fa-check"></i>c. Changing cases</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-subsetting-strings"><i class="fa fa-check"></i>d. Subsetting strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#e.-finding-exact-matches-in-strings"><i class="fa fa-check"></i>e. Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#regular-expressions-regex"><i class="fa fa-check"></i>2. Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-wildcards"><i class="fa fa-check"></i>a. Wildcards</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-anchors"><i class="fa fa-check"></i>b. Anchors</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-flexible-patterns"><i class="fa fa-check"></i>c. Flexible patterns</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-special-characters"><i class="fa fa-check"></i>d. Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#recommended-resources-11"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html"><i class="fa fa-check"></i>Dates Times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#learning-objectives-12"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#parsing-dates-and-times"><i class="fa fa-check"></i>1. Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-r-formats"><i class="fa fa-check"></i>a. R formats</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-combining-datetime-components"><i class="fa fa-check"></i>b. Combining date/time components</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-extracting-parts-of-the-date"><i class="fa fa-check"></i>c. Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#manipulating-dates-and-times"><i class="fa fa-check"></i>2. Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-finding-differences-between-dates-and-times"><i class="fa fa-check"></i>a. Finding differences between dates and times</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-summarizing-datetime-data"><i class="fa fa-check"></i>b. Summarizing date/time data</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-a-few-remarks"><i class="fa fa-check"></i>c. A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#recommended-resources-12"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html"><i class="fa fa-check"></i>Recoding</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#learning-objectives-13"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-numeric-variables-as-categorical-variables"><i class="fa fa-check"></i>1. Consider numeric variables as categorical variables</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-a-log-transformations-for-numeric-variables-that-are-highly-skewed"><i class="fa fa-check"></i>2. Consider a log-transformations for numeric variables that are highly skewed</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recoding-categories"><i class="fa fa-check"></i>3. Recoding categories</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#your-turn-3"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recommended-resources-13"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html"><i class="fa fa-check"></i>Missing Data Extreme</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#learning-objectives-14"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#missing-data"><i class="fa fa-check"></i>1. Missing data</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-r-messages"><i class="fa fa-check"></i>a. R messages</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-making-sense-of-the-structure"><i class="fa fa-check"></i>b. Making sense of the structure</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-missing-values"><i class="fa fa-check"></i>c. Handling missing values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#extreme-values"><i class="fa fa-check"></i>2. Extreme values</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-checking-extreme-values"><i class="fa fa-check"></i>a. Checking extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-representing-extreme-values"><i class="fa fa-check"></i>b. Representing extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-extreme-values"><i class="fa fa-check"></i>c. Handling extreme values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#recommended-resources-14"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html"><i class="fa fa-check"></i>Web Scraping</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#learning-objectives-15"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-data-with-code"><i class="fa fa-check"></i>1. Web scraping data with code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#a.-using-element-tags"><i class="fa fa-check"></i>a. Using element tags</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#b.-using-element-types"><i class="fa fa-check"></i>b. Using element types</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-and-ethics"><i class="fa fa-check"></i>2. Web scraping and ethics</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#recommended-resources-15"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html"><i class="fa fa-check"></i>Text Mining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#learning-objectives-16"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#text-data"><i class="fa fa-check"></i>1. Text data</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#stop-words"><i class="fa fa-check"></i>2. Stop words</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#word-clouds"><i class="fa fa-check"></i>3. Word Clouds</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#sentiment-analysis"><i class="fa fa-check"></i>4. Sentiment analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#a.-positivenegative-sentiments"><i class="fa fa-check"></i>a. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#b.-scoring-sentiments"><i class="fa fa-check"></i>b. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#c.-using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>c. Using a wide range of sentiments</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#recommended-resources-16"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html"><i class="fa fa-check"></i>Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#learning-objectives-17"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#positivenegative-sentiments"><i class="fa fa-check"></i>1. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#scoring-sentiments"><i class="fa fa-check"></i>2. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>3. Using a wide range of sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#recommended-resources-17"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html"><i class="fa fa-check"></i>Supervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#learning-objectives-18"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#defining-a-model"><i class="fa fa-check"></i>1. Defining a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#a.-a-model-with-no-predictor"><i class="fa fa-check"></i>a. A model with no predictor</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#b.-some-models-with-one-predictor"><i class="fa fa-check"></i>b. Some models with one predictor</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#comparing-models"><i class="fa fa-check"></i>2. Comparing models</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#recommended-resources-18"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html"><i class="fa fa-check"></i>Linear Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#learning-objectives-19"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#predicting-a-numeric-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a numeric response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#a.-visualizing-the-model"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#b.-fitting-a-model"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#c.-predicting-values"><i class="fa fa-check"></i>c. Predicting values</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#d.-residuals"><i class="fa fa-check"></i>d. Residuals</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#e.-performance"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-a-categorical-predictor"><i class="fa fa-check"></i>2. Using a categorical predictor</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-multiple-predictors"><i class="fa fa-check"></i>3. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#recommended-resources-19"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html"><i class="fa fa-check"></i>Model Selection</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#learning-objectives-20"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#choosing-predictors"><i class="fa fa-check"></i>1. Choosing predictors</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-predictors-that-do-not-make-sense"><i class="fa fa-check"></i>a. Predictors that do not make sense</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-exploring-relationships"><i class="fa fa-check"></i>b. Exploring relationships</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#c.-model-fit-and-predictions"><i class="fa fa-check"></i>c. Model fit and predictions</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#d.-performance"><i class="fa fa-check"></i>d. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#comparing-models-1"><i class="fa fa-check"></i>2. Comparing models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-using-multiple-predictors"><i class="fa fa-check"></i>a. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-testing-for-new-data"><i class="fa fa-check"></i>b. Testing for “new” data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#recommended-resources-20"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html"><i class="fa fa-check"></i>Introduction Classification</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#learning-objectives-21"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#basic-classifications"><i class="fa fa-check"></i>1. Basic classifications</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-random-classification"><i class="fa fa-check"></i>a. Random classification</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-classification-based-on-1-variable"><i class="fa fa-check"></i>b. Classification based on 1 variable</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#c.-classification-based-on-any-cutoff-value"><i class="fa fa-check"></i>c. Classification based on any cutoff value</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#metrics"><i class="fa fa-check"></i>2. Metrics</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#rocauc"><i class="fa fa-check"></i>3. ROC/AUC</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-receiver-operating-characteristics-roc-curve"><i class="fa fa-check"></i>a. Receiver Operating Characteristics (ROC) curve</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-area-under-the-curve-auc"><i class="fa fa-check"></i>b. Area under the curve (AUC)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#recommended-resources-21"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html"><i class="fa fa-check"></i>Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#learning-objectives-22"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#predicting-a-binary-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a binary response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#a.-visualizing-the-model-1"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#b.-fitting-a-model-1"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#c.-making-predictions"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#d.-error-in-predicted-values"><i class="fa fa-check"></i>d. Error in predicted values</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#e.-performance-1"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#using-multiple-predictors-1"><i class="fa fa-check"></i>2. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#recommended-resources-22"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html"><i class="fa fa-check"></i>Other Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#learning-objectives-23"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-numeric-outcome"><i class="fa fa-check"></i>1. Decision trees for a numeric outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-1"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-categorical-outcome"><i class="fa fa-check"></i>2. Decision trees for a categorical outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model-1"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model-1"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-2"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance-1"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#e.-predicting-more-than-2-outcomes"><i class="fa fa-check"></i>e. Predicting more than 2 outcomes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#recommended-resources-23"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html"><i class="fa fa-check"></i>Cross Validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#learning-objectives-24"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#fit-a-model-on-the-entire-dataset"><i class="fa fa-check"></i>1. Fit a model on the entire dataset</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#train-and-test-a-model"><i class="fa fa-check"></i>2. Train and Test a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-train-the-model-on-the-train-set"><i class="fa fa-check"></i>a. Train the model on the train set</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-test-the-model-on-the-test-set"><i class="fa fa-check"></i>b. Test the model on the test set</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#k-fold-cross-validation"><i class="fa fa-check"></i>3. k-fold cross-validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-define-algorithm"><i class="fa fa-check"></i>a. Define algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-create-folds"><i class="fa fa-check"></i>b. Create folds</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#c.-repeat-the-process"><i class="fa fa-check"></i>c. Repeat the process</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#d.-evaluate-average-performance"><i class="fa fa-check"></i>d. Evaluate average performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#recommended-resources-24"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html"><i class="fa fa-check"></i>Unsupervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#learning-objectives-25"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#distances"><i class="fa fa-check"></i>1. Distances</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-euclidean-distance"><i class="fa fa-check"></i>a. Euclidean distance</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-scaling"><i class="fa fa-check"></i>b. Scaling</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#correlation"><i class="fa fa-check"></i>2. Correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-correlation-coefficient"><i class="fa fa-check"></i>a. Correlation Coefficient</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-correlation-matrix"><i class="fa fa-check"></i>b. Correlation Matrix</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#c.-combining-variables"><i class="fa fa-check"></i>c. Combining variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#recommended-resources-25"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html"><i class="fa fa-check"></i>Dimension Reduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#learning-objectives-26"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#principal-component-analysis"><i class="fa fa-check"></i>1. Principal Component Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#a.-prepare-the-dataset-and-explore-correlations"><i class="fa fa-check"></i>a. Prepare the dataset and explore correlations</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#b.-perform-pca"><i class="fa fa-check"></i>b. Perform PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#c.-choose-the-number-of-principal-components"><i class="fa fa-check"></i>c. Choose the number of principal components</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#d.-interpret-componentsdimensions"><i class="fa fa-check"></i>d. Interpret components/dimensions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#some-considerations-for-using-pca"><i class="fa fa-check"></i>2. Some considerations for using PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#recommended-resources-26"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html"><i class="fa fa-check"></i>Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#learning-objectives-27"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#clustering-1"><i class="fa fa-check"></i>1. Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#a.-prepare-the-data"><i class="fa fa-check"></i>a. Prepare the data</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#b.-apply-the-algorithm"><i class="fa fa-check"></i>b. Apply the algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#c.-visualize-and-interpret-the-clusters"><i class="fa fa-check"></i>c. Visualize and interpret the clusters</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#d.-choose-the-number-of-clusters"><i class="fa fa-check"></i>d. Choose the number of clusters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#include-more-variables-in-clustering"><i class="fa fa-check"></i>2. Include more variables in clustering</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#your-turn-4"><i class="fa fa-check"></i><strong>Your turn!</strong></a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#recommended-resources-27"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Spring 2025 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="other-models" class="section level1 hasAnchor">
+<h1>Other Models<a href="WS23_OtherModels_Key.html#other-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="learning-objectives-23" class="section level2 hasAnchor">
+<h2>Learning objectives<a href="WS23_OtherModels_Key.html#learning-objectives-23" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Understand the structure and intuition of decision trees.</li>
+<li>Build decision tree models for a numeric outcome or a categorical outcome.</li>
+<li>Evaluate model performance using appropriate metrics.</li>
+</ol>
+<hr />
+<p>We will use many packages today! First, install <code>rpart</code> and <code>rpart.plot</code>:</p>
+<div class="sourceCode" id="cb737"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb737-1"><a href="WS23_OtherModels_Key.html#cb737-1" tabindex="-1"></a><span class="co"># Install new packages (only needed once!)</span></span>
+<span id="cb737-2"><a href="WS23_OtherModels_Key.html#cb737-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rpart&quot;</span>)</span>
+<span id="cb737-3"><a href="WS23_OtherModels_Key.html#cb737-3" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rpart.plot&quot;</span>)</span></code></pre></div>
+<p>Then load the packages:</p>
+<div class="sourceCode" id="cb738"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb738-1"><a href="WS23_OtherModels_Key.html#cb738-1" tabindex="-1"></a><span class="co"># Load packages</span></span>
+<span id="cb738-2"><a href="WS23_OtherModels_Key.html#cb738-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb738-3"><a href="WS23_OtherModels_Key.html#cb738-3" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
+<span id="cb738-4"><a href="WS23_OtherModels_Key.html#cb738-4" tabindex="-1"></a><span class="fu">library</span>(rpart.plot)</span>
+<span id="cb738-5"><a href="WS23_OtherModels_Key.html#cb738-5" tabindex="-1"></a><span class="fu">library</span>(plotROC)</span></code></pre></div>
+<p>We will explore a new dataset, <code>titanic_dataset</code>, which contains information about passengers of the Titanic, that sank on 15 April 1912 after colliding with an iceberg.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/1280px-RMS_Titanic_3.jpg" width="240" /></p>
+<div class="sourceCode" id="cb739"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb739-1"><a href="WS23_OtherModels_Key.html#cb739-1" tabindex="-1"></a><span class="co"># Upload the data from GitHub</span></span>
+<span id="cb739-2"><a href="WS23_OtherModels_Key.html#cb739-2" tabindex="-1"></a>titanic_dataset <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/laylaguyot/datasets/main//titanic_dataset.csv&quot;</span>)</span>
+<span id="cb739-3"><a href="WS23_OtherModels_Key.html#cb739-3" tabindex="-1"></a></span>
+<span id="cb739-4"><a href="WS23_OtherModels_Key.html#cb739-4" tabindex="-1"></a><span class="co"># Take a quick look</span></span>
+<span id="cb739-5"><a href="WS23_OtherModels_Key.html#cb739-5" tabindex="-1"></a><span class="fu">head</span>(titanic_dataset)</span></code></pre></div>
+<p>Here are some details about how some of the variables were coded:</p>
+<ul>
+<li><p>if a passenger <code>Survived</code> the sinking (Yes = <code>1</code>, No = <code>0</code>)</p></li>
+<li><p>the passenger class, <code>Pclass</code> (First Class = <code>1</code>, Second Class = <code>2</code>, Third Class = <code>3</code>)</p></li>
+<li><p>the number of siblings or spouses, <code>SibSp</code>, that a passenger had on board and the number of parents or children, <code>Parch</code>, the passenger had on board</p></li>
+<li><p>the port of embarkation for the passenger, <code>Embarked</code> (Cherbourg = <code>C</code>, Queenstown = <code>Q</code>, Southampton = <code>S</code>).</p></li>
+</ul>
+<p>If we wanted to predict the value of the fare that a passenger paid for the trip based on some predictors, which variable would be the outcome? Which modeling approach would be more appropriate: regression or classification?</p>
+<p><strong>The outcome would be <code>Fare</code> which is a numeric variable so regression is more appropriate.</strong></p>
+<p>If we wanted to predict if a passenger survived or not, which variable would be the outcome? Which modeling approach would be more appropriate: regression or classification?</p>
+<p><strong>The outcome would be <code>Survived</code> which is a categorical variable so classification is more appropriate.</strong>*</p>
+<p>Which variables in the <code>titanic_dataset</code> would not be appropriate to include in the models described above?</p>
+<p><strong>Any variable that is too specific to a passenger: <code>PassengerId</code>, <code>Name</code>, <code>Ticket</code>, or <code>Cabin</code>.</strong></p>
+<p>Let’s consider the algorithm of the decision tree. This model comes up with some rules to split our data into subsets.</p>
+</div>
+<div id="decision-trees-for-a-numeric-outcome" class="section level2 hasAnchor">
+<h2>1. Decision trees for a numeric outcome<a href="WS23_OtherModels_Key.html#decision-trees-for-a-numeric-outcome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For a numeric outcome, the prediction is done according to the average outcome among the subset.</p>
+<div id="a.-fitting-a-model" class="section level3 hasAnchor">
+<h3>a. Fitting a model<a href="WS23_OtherModels_Key.html#a.-fitting-a-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can use the function <code>rpart(outcome ~ predictor, data = ...)</code> from the `rpart`` package to fit this model:</p>
+<div class="sourceCode" id="cb740"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb740-1"><a href="WS23_OtherModels_Key.html#cb740-1" tabindex="-1"></a><span class="co"># Consider the decision tree model</span></span>
+<span id="cb740-2"><a href="WS23_OtherModels_Key.html#cb740-2" tabindex="-1"></a>fit_tree_reg <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Fare <span class="sc">~</span> Pclass,</span>
+<span id="cb740-3"><a href="WS23_OtherModels_Key.html#cb740-3" tabindex="-1"></a>                    <span class="at">data =</span> titanic_dataset)</span></code></pre></div>
+</div>
+<div id="b.-visualizing-the-model" class="section level3 hasAnchor">
+<h3>b. Visualizing the model<a href="WS23_OtherModels_Key.html#b.-visualizing-the-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can visualize our tree with its corresponding rules with the function <code>rpart.plot</code>:</p>
+<div class="sourceCode" id="cb741"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb741-1"><a href="WS23_OtherModels_Key.html#cb741-1" tabindex="-1"></a><span class="co"># Visualize the decision tree</span></span>
+<span id="cb741-2"><a href="WS23_OtherModels_Key.html#cb741-2" tabindex="-1"></a><span class="fu">rpart.plot</span>(fit_tree_reg)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-405-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="try-it-to-make-sense-of-the-decision-tree-above-1-calculate-the-mean-fare-across-all-classes-2-calculate-the-mean-fare-in-each-class-3-find-the-percentage-of-passengers-in-each-class." class="section level4 hasAnchor">
+<h4><strong>Try it! To make sense of the decision tree above, 1) calculate the mean <code>Fare</code> across all classes, 2) calculate the mean <code>Fare</code> in each class, 3) find the percentage of passengers in each class.</strong><a href="WS23_OtherModels_Key.html#try-it-to-make-sense-of-the-decision-tree-above-1-calculate-the-mean-fare-across-all-classes-2-calculate-the-mean-fare-in-each-class-3-find-the-percentage-of-passengers-in-each-class." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb742"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb742-1"><a href="WS23_OtherModels_Key.html#cb742-1" tabindex="-1"></a><span class="co"># The mean `Fare` is the number shown before the rule is applied</span></span>
+<span id="cb742-2"><a href="WS23_OtherModels_Key.html#cb742-2" tabindex="-1"></a>titanic_dataset <span class="sc">|&gt;</span> <span class="fu">summarize</span>(<span class="fu">mean</span>(Fare))</span>
+<span id="cb742-3"><a href="WS23_OtherModels_Key.html#cb742-3" tabindex="-1"></a></span>
+<span id="cb742-4"><a href="WS23_OtherModels_Key.html#cb742-4" tabindex="-1"></a><span class="co"># The mean `Fare` per subset is the number shown after the rule is applied</span></span>
+<span id="cb742-5"><a href="WS23_OtherModels_Key.html#cb742-5" tabindex="-1"></a>titanic_dataset <span class="sc">|&gt;</span> </span>
+<span id="cb742-6"><a href="WS23_OtherModels_Key.html#cb742-6" tabindex="-1"></a>  <span class="fu">group_by</span>(Pclass) <span class="sc">|&gt;</span> </span>
+<span id="cb742-7"><a href="WS23_OtherModels_Key.html#cb742-7" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(Fare), <span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb742-8"><a href="WS23_OtherModels_Key.html#cb742-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> n<span class="sc">/</span><span class="fu">sum</span>(n))</span></code></pre></div>
+<p><strong>The tree made a rule: compare the fare paid in 1st class versus 2nd/3rd class. The predicted value for the <code>Fare</code> is $16 if a passenger was in 2nd/3rd class while it is $84 if the passenger was in 1st class.</strong></p>
+</div>
+</div>
+<div id="c.-making-predictions-1" class="section level3 hasAnchor">
+<h3>c. Making predictions<a href="WS23_OtherModels_Key.html#c.-making-predictions-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s use the model to find the average fare for a passenger based on their class with the <code>predict(model, data)</code> function:</p>
+<div class="sourceCode" id="cb743"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb743-1"><a href="WS23_OtherModels_Key.html#cb743-1" tabindex="-1"></a><span class="co"># Find the average fare for each subgroup</span></span>
+<span id="cb743-2"><a href="WS23_OtherModels_Key.html#cb743-2" tabindex="-1"></a>titanic_dataset <span class="sc">|&gt;</span></span>
+<span id="cb743-3"><a href="WS23_OtherModels_Key.html#cb743-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">predicted =</span> <span class="fu">predict</span>(fit_tree_reg))</span></code></pre></div>
+<p>Note that we only have two possible predicted values since we only have two subsets (1st class vs 2nd/3rd class).</p>
+</div>
+<div id="d.-evaluating-performance" class="section level3 hasAnchor">
+<h3>d. Evaluating performance<a href="WS23_OtherModels_Key.html#d.-evaluating-performance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s evaluate the performance of this model with RMSE:</p>
+<div class="sourceCode" id="cb744"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb744-1"><a href="WS23_OtherModels_Key.html#cb744-1" tabindex="-1"></a><span class="co"># Evaluate performance with RMSE</span></span>
+<span id="cb744-2"><a href="WS23_OtherModels_Key.html#cb744-2" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">mean</span>((titanic_dataset<span class="sc">$</span>Fare <span class="sc">-</span> <span class="fu">predict</span>(fit_tree_reg, titanic_dataset))<span class="sc">^</span><span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## [1] 40.03789</code></pre>
+<p>The decision tree model has a typical prediction error of approximately $40.</p>
+<div id="try-it-add-another-predictor-to-predict-the-fare-using-a-decision-tree-model.-does-the-performance-of-the-model-improve" class="section level4 hasAnchor">
+<h4><strong>Try it! Add another predictor to predict the <code>Fare</code> using a decision tree model. Does the performance of the model improve?</strong><a href="WS23_OtherModels_Key.html#try-it-add-another-predictor-to-predict-the-fare-using-a-decision-tree-model.-does-the-performance-of-the-model-improve" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb746"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb746-1"><a href="WS23_OtherModels_Key.html#cb746-1" tabindex="-1"></a><span class="co"># Fit another decision tree model</span></span>
+<span id="cb746-2"><a href="WS23_OtherModels_Key.html#cb746-2" tabindex="-1"></a>fit_tree_reg <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Fare <span class="sc">~</span> Pclass <span class="sc">+</span> Embarked, <span class="at">data =</span> titanic_dataset)</span>
+<span id="cb746-3"><a href="WS23_OtherModels_Key.html#cb746-3" tabindex="-1"></a></span>
+<span id="cb746-4"><a href="WS23_OtherModels_Key.html#cb746-4" tabindex="-1"></a><span class="co"># Visualize the decision tree</span></span>
+<span id="cb746-5"><a href="WS23_OtherModels_Key.html#cb746-5" tabindex="-1"></a><span class="fu">rpart.plot</span>(fit_tree_reg)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-409-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb747"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb747-1"><a href="WS23_OtherModels_Key.html#cb747-1" tabindex="-1"></a><span class="co"># Evaluate performance with RMSE</span></span>
+<span id="cb747-2"><a href="WS23_OtherModels_Key.html#cb747-2" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">mean</span>((titanic_dataset<span class="sc">$</span>Fare <span class="sc">-</span> <span class="fu">predict</span>(fit_tree_reg, titanic_dataset))<span class="sc">^</span><span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## [1] 39.19377</code></pre>
+<p><strong>The performance has slightly improved with a lower RMSE.</strong></p>
+</div>
+</div>
+</div>
+<div id="decision-trees-for-a-categorical-outcome" class="section level2 hasAnchor">
+<h2>2. Decision trees for a categorical outcome<a href="WS23_OtherModels_Key.html#decision-trees-for-a-categorical-outcome" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For a categorical outcome, the prediction is done according to the majority outcome among the subsets.</p>
+<div id="a.-fitting-a-model-1" class="section level3 hasAnchor">
+<h3>a. Fitting a model<a href="WS23_OtherModels_Key.html#a.-fitting-a-model-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can still use the function <code>rpart(outcome ~ predictor, data = ...)</code> by adding <code>method = "class"</code>:</p>
+<div class="sourceCode" id="cb749"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb749-1"><a href="WS23_OtherModels_Key.html#cb749-1" tabindex="-1"></a><span class="co"># Consider the decision tree model</span></span>
+<span id="cb749-2"><a href="WS23_OtherModels_Key.html#cb749-2" tabindex="-1"></a>fit_tree_class <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Survived <span class="sc">~</span> Pclass,</span>
+<span id="cb749-3"><a href="WS23_OtherModels_Key.html#cb749-3" tabindex="-1"></a>                    <span class="at">data =</span> titanic_dataset,</span>
+<span id="cb749-4"><a href="WS23_OtherModels_Key.html#cb749-4" tabindex="-1"></a>                    <span class="at">method =</span> <span class="st">&quot;class&quot;</span>) <span class="co"># classification</span></span></code></pre></div>
+</div>
+<div id="b.-visualizing-the-model-1" class="section level3 hasAnchor">
+<h3>b. Visualizing the model<a href="WS23_OtherModels_Key.html#b.-visualizing-the-model-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can visualize our tree with its corresponding rules with the function <code>rpart.plot</code>:</p>
+<div class="sourceCode" id="cb750"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb750-1"><a href="WS23_OtherModels_Key.html#cb750-1" tabindex="-1"></a><span class="co"># Visualize the decision tree</span></span>
+<span id="cb750-2"><a href="WS23_OtherModels_Key.html#cb750-2" tabindex="-1"></a><span class="fu">rpart.plot</span>(fit_tree_class)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-411-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="try-it-to-make-sense-of-the-decision-tree-above-1-calculate-the-proportion-of-passengers-who-survived-across-all-classes-2-the-proportion-of-passengers-who-survived-in-each-class." class="section level4 hasAnchor">
+<h4><strong>Try it! To make sense of the decision tree above, 1) calculate the proportion of passengers who survived across all classes, 2) the proportion of passengers who survived in each class.</strong><a href="WS23_OtherModels_Key.html#try-it-to-make-sense-of-the-decision-tree-above-1-calculate-the-proportion-of-passengers-who-survived-across-all-classes-2-the-proportion-of-passengers-who-survived-in-each-class." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb751"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb751-1"><a href="WS23_OtherModels_Key.html#cb751-1" tabindex="-1"></a><span class="co"># The proportion of `Survived` is the number shown before the rules are applied</span></span>
+<span id="cb751-2"><a href="WS23_OtherModels_Key.html#cb751-2" tabindex="-1"></a>titanic_dataset <span class="sc">|&gt;</span> <span class="fu">summarize</span>(<span class="fu">mean</span>(Survived))</span>
+<span id="cb751-3"><a href="WS23_OtherModels_Key.html#cb751-3" tabindex="-1"></a></span>
+<span id="cb751-4"><a href="WS23_OtherModels_Key.html#cb751-4" tabindex="-1"></a><span class="co"># The propotion of `Survived` is the number shown after the rules are applied</span></span>
+<span id="cb751-5"><a href="WS23_OtherModels_Key.html#cb751-5" tabindex="-1"></a>titanic_dataset <span class="sc">|&gt;</span> </span>
+<span id="cb751-6"><a href="WS23_OtherModels_Key.html#cb751-6" tabindex="-1"></a>  <span class="fu">group_by</span>(Pclass) <span class="sc">|&gt;</span> </span>
+<span id="cb751-7"><a href="WS23_OtherModels_Key.html#cb751-7" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">percent_survived =</span> <span class="fu">mean</span>(Survived), <span class="at">nb_passengers =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb751-8"><a href="WS23_OtherModels_Key.html#cb751-8" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_class =</span> nb_passengers<span class="sc">/</span><span class="fu">sum</span>(nb_passengers))</span></code></pre></div>
+<p><strong>The tree made two rules: compare the survival of passengers in 3rd class versus 1st/2nd class then compare the survival of passengers in 2nd class versus 1st class. The proportion of survival was predicted to be 63% on 1st class, 47% in 2nd class, and 24% in 3rd class. The percentage under represents the amount of data: 24% of the passengers were in 1st class, 21% in 2nd class, 55% in 3rd class.</strong></p>
+</div>
+</div>
+<div id="c.-making-predictions-2" class="section level3 hasAnchor">
+<h3>c. Making predictions<a href="WS23_OtherModels_Key.html#c.-making-predictions-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can use the model to find the probability of a passenger to have survived based on their class with the <code>predict(model, data)</code> function:</p>
+<div class="sourceCode" id="cb752"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb752-1"><a href="WS23_OtherModels_Key.html#cb752-1" tabindex="-1"></a><span class="co"># Find the probability for each passenger to have survived</span></span>
+<span id="cb752-2"><a href="WS23_OtherModels_Key.html#cb752-2" tabindex="-1"></a><span class="fu">predict</span>(fit_tree_class, titanic_dataset)</span></code></pre></div>
+<pre><code>##             0         1
+## 1   0.7576375 0.2423625
+## 2   0.3703704 0.6296296
+## 3   0.7576375 0.2423625
+## 4   0.3703704 0.6296296
+## 5   0.7576375 0.2423625
+## 6   0.7576375 0.2423625
+## 7   0.3703704 0.6296296
+## 8   0.7576375 0.2423625
+## 9   0.7576375 0.2423625
+## 10  0.5271739 0.4728261
+## 11  0.7576375 0.2423625
+## 12  0.3703704 0.6296296
+## 13  0.7576375 0.2423625
+## 14  0.7576375 0.2423625
+## 15  0.7576375 0.2423625
+## 16  0.5271739 0.4728261
+## 17  0.7576375 0.2423625
+## 18  0.5271739 0.4728261
+## 19  0.7576375 0.2423625
+## 20  0.7576375 0.2423625
+## 21  0.5271739 0.4728261
+## 22  0.5271739 0.4728261
+## 23  0.7576375 0.2423625
+## 24  0.3703704 0.6296296
+## 25  0.7576375 0.2423625
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 866 rows ]</code></pre>
+<div class="sourceCode" id="cb754"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb754-1"><a href="WS23_OtherModels_Key.html#cb754-1" tabindex="-1"></a><span class="co"># or</span></span>
+<span id="cb754-2"><a href="WS23_OtherModels_Key.html#cb754-2" tabindex="-1"></a>titanic_dataset <span class="sc">|&gt;</span></span>
+<span id="cb754-3"><a href="WS23_OtherModels_Key.html#cb754-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">predicted =</span> <span class="fu">predict</span>(fit_tree_class)[,<span class="dv">2</span>])</span></code></pre></div>
+<p>The output shows two columns. Indeed, the <code>predict()</code> function provides the proportions of each “outcome” in each subset. In our context, we are interested in the second column which indicates the probability of surviving: the predictions can be calculated with <code>predict(model, data)[ ,2]</code>.</p>
+</div>
+<div id="d.-evaluating-performance-1" class="section level3 hasAnchor">
+<h3>d. Evaluating performance<a href="WS23_OtherModels_Key.html#d.-evaluating-performance-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can evaluate the performance of this model by visualizing the ROC curve:</p>
+<div class="sourceCode" id="cb755"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb755-1"><a href="WS23_OtherModels_Key.html#cb755-1" tabindex="-1"></a><span class="co"># ROC curve</span></span>
+<span id="cb755-2"><a href="WS23_OtherModels_Key.html#cb755-2" tabindex="-1"></a>ROC <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(titanic_dataset) <span class="sc">+</span> </span>
+<span id="cb755-3"><a href="WS23_OtherModels_Key.html#cb755-3" tabindex="-1"></a>    <span class="fu">geom_roc</span>(<span class="fu">aes</span>(</span>
+<span id="cb755-4"><a href="WS23_OtherModels_Key.html#cb755-4" tabindex="-1"></a>      <span class="co"># Outcome is Survived</span></span>
+<span id="cb755-5"><a href="WS23_OtherModels_Key.html#cb755-5" tabindex="-1"></a>      <span class="at">d =</span> Survived,</span>
+<span id="cb755-6"><a href="WS23_OtherModels_Key.html#cb755-6" tabindex="-1"></a>      <span class="co"># Probability of surviving based on the decision tree model</span></span>
+<span id="cb755-7"><a href="WS23_OtherModels_Key.html#cb755-7" tabindex="-1"></a>      <span class="at">m =</span> <span class="fu">predict</span>(fit_tree_class, titanic_dataset)[ ,<span class="dv">2</span>]))</span>
+<span id="cb755-8"><a href="WS23_OtherModels_Key.html#cb755-8" tabindex="-1"></a>ROC</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-414-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>And report the AUC:</p>
+<div class="sourceCode" id="cb756"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb756-1"><a href="WS23_OtherModels_Key.html#cb756-1" tabindex="-1"></a><span class="co"># Calculate the area under the curve</span></span>
+<span id="cb756-2"><a href="WS23_OtherModels_Key.html#cb756-2" tabindex="-1"></a><span class="fu">calc_auc</span>(ROC)<span class="sc">$</span>AUC</span></code></pre></div>
+<pre><code>## [1] 0.681417</code></pre>
+<p>This model is not great…</p>
+<div id="try-it-add-another-predictor-to-predict-if-a-passenger-survived-using-a-decision-tree-model.-does-the-performance-of-the-model-improve" class="section level4 hasAnchor">
+<h4><strong>Try it! Add another predictor to predict if a passenger <code>Survived</code> using a decision tree model. Does the performance of the model improve?</strong><a href="WS23_OtherModels_Key.html#try-it-add-another-predictor-to-predict-if-a-passenger-survived-using-a-decision-tree-model.-does-the-performance-of-the-model-improve" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb758"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb758-1"><a href="WS23_OtherModels_Key.html#cb758-1" tabindex="-1"></a><span class="co"># Fit another decision tree model</span></span>
+<span id="cb758-2"><a href="WS23_OtherModels_Key.html#cb758-2" tabindex="-1"></a>fit_tree_class <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Survived <span class="sc">~</span> Pclass <span class="sc">+</span> Sex,</span>
+<span id="cb758-3"><a href="WS23_OtherModels_Key.html#cb758-3" tabindex="-1"></a>                    <span class="at">data =</span> titanic_dataset,</span>
+<span id="cb758-4"><a href="WS23_OtherModels_Key.html#cb758-4" tabindex="-1"></a>                    <span class="at">method =</span> <span class="st">&quot;class&quot;</span>)</span>
+<span id="cb758-5"><a href="WS23_OtherModels_Key.html#cb758-5" tabindex="-1"></a></span>
+<span id="cb758-6"><a href="WS23_OtherModels_Key.html#cb758-6" tabindex="-1"></a><span class="co"># Visualize the decision tree</span></span>
+<span id="cb758-7"><a href="WS23_OtherModels_Key.html#cb758-7" tabindex="-1"></a><span class="fu">rpart.plot</span>(fit_tree_class)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-416-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb759"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb759-1"><a href="WS23_OtherModels_Key.html#cb759-1" tabindex="-1"></a><span class="co"># ROC curve</span></span>
+<span id="cb759-2"><a href="WS23_OtherModels_Key.html#cb759-2" tabindex="-1"></a>ROC <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(titanic_dataset) <span class="sc">+</span> </span>
+<span id="cb759-3"><a href="WS23_OtherModels_Key.html#cb759-3" tabindex="-1"></a>    <span class="fu">geom_roc</span>(<span class="fu">aes</span>(</span>
+<span id="cb759-4"><a href="WS23_OtherModels_Key.html#cb759-4" tabindex="-1"></a>      <span class="co"># Outcome is Survived</span></span>
+<span id="cb759-5"><a href="WS23_OtherModels_Key.html#cb759-5" tabindex="-1"></a>      <span class="at">d =</span> Survived,</span>
+<span id="cb759-6"><a href="WS23_OtherModels_Key.html#cb759-6" tabindex="-1"></a>      <span class="co"># Probability of surviving based on the decision tree model</span></span>
+<span id="cb759-7"><a href="WS23_OtherModels_Key.html#cb759-7" tabindex="-1"></a>      <span class="at">m =</span> <span class="fu">predict</span>(fit_tree_class, titanic_dataset)[ ,<span class="dv">2</span>]))</span>
+<span id="cb759-8"><a href="WS23_OtherModels_Key.html#cb759-8" tabindex="-1"></a>ROC</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-416-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb760"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb760-1"><a href="WS23_OtherModels_Key.html#cb760-1" tabindex="-1"></a><span class="co"># Calculate the area under the curve</span></span>
+<span id="cb760-2"><a href="WS23_OtherModels_Key.html#cb760-2" tabindex="-1"></a><span class="fu">calc_auc</span>(ROC)<span class="sc">$</span>AUC</span></code></pre></div>
+<pre><code>## [1] 0.7668728</code></pre>
+<p><strong>The performance has improved with a higher AUC value!</strong></p>
+</div>
+</div>
+<div id="e.-predicting-more-than-2-outcomes" class="section level3 hasAnchor">
+<h3>e. Predicting more than 2 outcomes<a href="WS23_OtherModels_Key.html#e.-predicting-more-than-2-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Decision trees can predict more than two outcomes. For example, instead of predicting binary outcomes (such as <code>Survived</code> or not), we might predict a categorical variable with more than two classes. Let’s consider predicting the passenger class (<code>Pclass</code>), which has three possible outcomes (1st class, 2nd class, and 3rd class) based on the <code>Fare</code> paid by a passenger.</p>
+<div class="sourceCode" id="cb762"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb762-1"><a href="WS23_OtherModels_Key.html#cb762-1" tabindex="-1"></a><span class="co"># Fit another decision tree model</span></span>
+<span id="cb762-2"><a href="WS23_OtherModels_Key.html#cb762-2" tabindex="-1"></a>fit_tree_class <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Pclass <span class="sc">~</span> Fare,</span>
+<span id="cb762-3"><a href="WS23_OtherModels_Key.html#cb762-3" tabindex="-1"></a>                    <span class="at">data =</span> titanic_dataset,</span>
+<span id="cb762-4"><a href="WS23_OtherModels_Key.html#cb762-4" tabindex="-1"></a>                    <span class="at">method =</span> <span class="st">&quot;class&quot;</span>)</span>
+<span id="cb762-5"><a href="WS23_OtherModels_Key.html#cb762-5" tabindex="-1"></a><span class="co"># Visualize the decision tree</span></span>
+<span id="cb762-6"><a href="WS23_OtherModels_Key.html#cb762-6" tabindex="-1"></a><span class="fu">rpart.plot</span>(fit_tree_class)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-417-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>After fitting the model, we can check the predicted probabilities for each class. By default, <code>predict()</code> gives the probabilities for each class:</p>
+<div class="sourceCode" id="cb763"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb763-1"><a href="WS23_OtherModels_Key.html#cb763-1" tabindex="-1"></a><span class="co"># Probability of each class</span></span>
+<span id="cb763-2"><a href="WS23_OtherModels_Key.html#cb763-2" tabindex="-1"></a><span class="fu">predict</span>(fit_tree_class, titanic_dataset)</span></code></pre></div>
+<pre><code>##              1          2         3
+## 1   0.01769912 0.01769912 0.9646018
+## 2   0.70588235 0.11418685 0.1799308
+## 3   0.01769912 0.01769912 0.9646018
+## 4   0.70588235 0.11418685 0.1799308
+## 5   0.01769912 0.01769912 0.9646018
+## 6   0.01769912 0.01769912 0.9646018
+## 7   0.70588235 0.11418685 0.1799308
+## 8   0.00000000 0.19354839 0.8064516
+## 9   0.00000000 0.87755102 0.1224490
+## 10  0.70588235 0.11418685 0.1799308
+## 11  0.00000000 0.19354839 0.8064516
+## 12  0.70588235 0.11418685 0.1799308
+## 13  0.01769912 0.01769912 0.9646018
+## 14  0.70588235 0.11418685 0.1799308
+## 15  0.01769912 0.01769912 0.9646018
+## 16  0.00000000 0.19354839 0.8064516
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 875 rows ]</code></pre>
+<p>We can also find the most likely class for each passenger based on the probabilities by using the <code>type = "class"</code> option in the <code>predict()</code> function:</p>
+<div class="sourceCode" id="cb765"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb765-1"><a href="WS23_OtherModels_Key.html#cb765-1" tabindex="-1"></a><span class="co"># Determine which class is more likely for each passenger</span></span>
+<span id="cb765-2"><a href="WS23_OtherModels_Key.html#cb765-2" tabindex="-1"></a><span class="fu">predict</span>(fit_tree_class, titanic_dataset, <span class="at">type =</span> <span class="st">&quot;class&quot;</span>)</span></code></pre></div>
+<pre><code>##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 
+##  3  1  3  1  3  3  1  3  2  1  3  1  3  1  3  3  1  2  3  3  2  2 
+## 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 
+##  3  1  3  1  3  1  3  3  1  1  3  2  1  1  3  3  3  2  3  3  3  1 
+## 45 46 47 48 49 50 
+##  3  3  3  3  3  3 
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 841 entries ]
+## Levels: 1 2 3</code></pre>
+<p>Since we are not just dealing with positive/negative cases, the ROC curve and AUC values cannot be used here. But we can report the accuracy: the proportion of cases that were truly predicted in each class:</p>
+<div class="sourceCode" id="cb767"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb767-1"><a href="WS23_OtherModels_Key.html#cb767-1" tabindex="-1"></a><span class="co"># Adding predicted class</span></span>
+<span id="cb767-2"><a href="WS23_OtherModels_Key.html#cb767-2" tabindex="-1"></a>titanic_pred <span class="ot">&lt;-</span> titanic_dataset <span class="sc">|&gt;</span></span>
+<span id="cb767-3"><a href="WS23_OtherModels_Key.html#cb767-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">predicted =</span> <span class="fu">predict</span>(fit_tree_class, titanic_dataset, <span class="at">type =</span> <span class="st">&quot;class&quot;</span>))</span>
+<span id="cb767-4"><a href="WS23_OtherModels_Key.html#cb767-4" tabindex="-1"></a></span>
+<span id="cb767-5"><a href="WS23_OtherModels_Key.html#cb767-5" tabindex="-1"></a><span class="co"># Confusion matrix</span></span>
+<span id="cb767-6"><a href="WS23_OtherModels_Key.html#cb767-6" tabindex="-1"></a><span class="fu">table</span>(<span class="at">Pclass =</span> titanic_pred<span class="sc">$</span>Pclass, <span class="at">predicted =</span> titanic_pred<span class="sc">$</span>predicted) <span class="sc">|&gt;</span> </span>
+<span id="cb767-7"><a href="WS23_OtherModels_Key.html#cb767-7" tabindex="-1"></a>  <span class="co"># Add total cases for rows and columns </span></span>
+<span id="cb767-8"><a href="WS23_OtherModels_Key.html#cb767-8" tabindex="-1"></a>  <span class="fu">addmargins</span>()</span></code></pre></div>
+<pre><code>##       predicted
+## Pclass   1   2   3 Sum
+##    1   204   6   6 216
+##    2    33 121  30 184
+##    3    52  12 427 491
+##    Sum 289 139 463 891</code></pre>
+<div class="sourceCode" id="cb769"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb769-1"><a href="WS23_OtherModels_Key.html#cb769-1" tabindex="-1"></a><span class="co"># Reporting accuracy</span></span>
+<span id="cb769-2"><a href="WS23_OtherModels_Key.html#cb769-2" tabindex="-1"></a><span class="fu">mean</span>(titanic_pred<span class="sc">$</span>Pclass <span class="sc">==</span> titanic_pred<span class="sc">$</span>predicted)</span></code></pre></div>
+<pre><code>## [1] 0.8439955</code></pre>
+<p>The model is producing a relatively high accuracy!</p>
+<hr />
+</div>
+</div>
+<div id="recommended-resources-23" class="section level2 hasAnchor">
+<h2>Recommended Resources<a href="WS23_OtherModels_Key.html#recommended-resources-23" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Worksheet keys are posted at the end of the week on Canvas under <strong>Programming Tools</strong>.</li>
+<li>Recommended readings for other models in <a href="https://rafalab.dfci.harvard.edu/dsbook/examples-of-algorithms.html">Examples of algorithms</a></li>
+<li>R documentation for <a href="https://www.rdocumentation.org/packages/rpart/versions/4.1.24/topics/rpart">rpart</a> and <a href="https://www.rdocumentation.org/packages/rpart.plot/versions/3.1.2/topics/rpart.plot">rpart.plot</a></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="WS22_LogisticRegression_Key.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="WS24_CrossValidation_Key.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

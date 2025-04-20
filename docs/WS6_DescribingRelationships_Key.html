@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Describing Relationships | Spring 2025 Semester</title>
+  <meta name="description" content="Describing Relationships | Spring 2025 Semester" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Describing Relationships | Spring 2025 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Describing Relationships | Spring 2025 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr. Layla Guyot" />
+
+
+<meta name="date" content="2025-04-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="WS5_Describing1Variable_Key.html"/>
+<link rel="next" href="WS7_ExploratoryDataAnalysis_Key.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 322E Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to SDS 322E</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html"><i class="fa fa-check"></i>getstaRted</a>
+<ul>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#learning-objectives"><i class="fa fa-check"></i>Learning Objectives:</a></li>
+<li class="chapter" data-level="" data-path="getstaRted_Key.html"><a href="getstaRted_Key.html#recommended-resources"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html"><i class="fa fa-check"></i>RMarkdown</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#learning-objectives-1"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#basic-markdown-editing"><i class="fa fa-check"></i>1. Basic Markdown editing</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-headers"><i class="fa fa-check"></i>a. Headers</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-text-formatting"><i class="fa fa-check"></i>b. Text formatting</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-lists-and-bullet-points"><i class="fa fa-check"></i>c. Lists and bullet points</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#d.-html-hyperlinks-images-tables-etc."><i class="fa fa-check"></i>d. HTML hyperlinks, images, tables, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#embedded-r-code"><i class="fa fa-check"></i>2. Embedded R code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#a.-code-chunks"><i class="fa fa-check"></i>a. Code chunks</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#b.-more-base-r-built-in-datasets"><i class="fa fa-check"></i>b. More base R: built-in datasets</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#c.-more-base-r-basic-plots"><i class="fa fa-check"></i>c. More base R: basic plots</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#packages"><i class="fa fa-check"></i>3. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS1_RMarkdown_Key.html"><a href="WS1_RMarkdown_Key.html#recommended-resources-1"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html"><i class="fa fa-check"></i>Datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#learning-objectives-2"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#set-up"><i class="fa fa-check"></i>1. Set up</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#a.-packages"><i class="fa fa-check"></i>a. Packages</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#b.-importing-datasets"><i class="fa fa-check"></i>b. Importing datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#city-of-austin-open-data-portal"><i class="fa fa-check"></i>2. City of Austin Open Data Portal</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#other-data-sources"><i class="fa fa-check"></i>3. Other data sources</a></li>
+<li class="chapter" data-level="" data-path="WS2_Datasets_Key.html"><a href="WS2_Datasets_Key.html#recommended-resources-2"><i class="fa fa-check"></i>Recommended Resources:</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html"><i class="fa fa-check"></i>Basic Data Manipulation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#learning-objectives-3"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#making-sense-of-a-dataset"><i class="fa fa-check"></i>1. Making sense of a dataset</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#setting-conditions"><i class="fa fa-check"></i>2. Setting conditions</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#a.-conditional-statements"><i class="fa fa-check"></i>a. Conditional statements</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#b.-connectors"><i class="fa fa-check"></i>b. Connectors</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#subsetting-data"><i class="fa fa-check"></i>3. Subsetting data</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#creating-new-variables"><i class="fa fa-check"></i>4. Creating new variables</a></li>
+<li class="chapter" data-level="" data-path="WS3_BasicDataManipulation_Key.html"><a href="WS3_BasicDataManipulation_Key.html#recommended-resources-3"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html"><i class="fa fa-check"></i>Grammar Graphics</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#learning-objectives-4"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#the-pipe"><i class="fa fa-check"></i>1. The pipe</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#create-a-ggplot"><i class="fa fa-check"></i>2. Create a <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-define-a-plot"><i class="fa fa-check"></i>a. Define a plot</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-add-a-geometric-object"><i class="fa fa-check"></i>b. Add a geometric object</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-map-to-color-shape-size"><i class="fa fa-check"></i>c. Map to color, shape, size</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-map-variables-to-color-shape-size"><i class="fa fa-check"></i>d. Map variables to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#layering"><i class="fa fa-check"></i>3. Layering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#a.-add-labels-and-controlling-scales"><i class="fa fa-check"></i>a. Add labels and controlling scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#b.-control-scales"><i class="fa fa-check"></i>b. Control scales</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#c.-facet"><i class="fa fa-check"></i>c. Facet</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#d.-color-palettes-and-themes"><i class="fa fa-check"></i>d. Color palettes and themes</a></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#e.-themes"><i class="fa fa-check"></i>e. Themes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS4_GrammarGraphics_Key.html"><a href="WS4_GrammarGraphics_Key.html#recommended-resources-4"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html"><i class="fa fa-check"></i>Describing1Variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#learning-objectives-5"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-numeric-variable"><i class="fa fa-check"></i>1. Describing 1 numeric variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-histogram"><i class="fa fa-check"></i>a. Histogram</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-boxplot"><i class="fa fa-check"></i>b. Boxplot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#c.-density-and-violin-plots"><i class="fa fa-check"></i>c. Density and Violin plots</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#d.-reporting-summary-statistics"><i class="fa fa-check"></i>d. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#describing-1-categorical-variable"><i class="fa fa-check"></i>2. Describing 1 categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#a.-bar-plot"><i class="fa fa-check"></i>a. Bar plot</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#b.-reporting-summary-statistics"><i class="fa fa-check"></i>b. Reporting summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#your-turn"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS5_Describing1Variable_Key.html"><a href="WS5_Describing1Variable_Key.html#recommended-resources-5"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html"><i class="fa fa-check"></i>Describing Relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#learning-objectives-6"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-numeric-variables"><i class="fa fa-check"></i>1. Comparing two numeric variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-scatterplot"><i class="fa fa-check"></i>a. Using a scatterplot</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-reporting-correlation"><i class="fa fa-check"></i>b. Reporting correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-a-numeric-variable-and-a-categorical-variable"><i class="fa fa-check"></i>2. Comparing a numeric variable and a categorical variable</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-grouped-boxplots"><i class="fa fa-check"></i>a. Using grouped boxplots</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-grouped-histograms"><i class="fa fa-check"></i>b. Using grouped histograms</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-center-and-spread-for-each-category"><i class="fa fa-check"></i>c. Reporting center and spread for each category</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#d.-using-a-special-case-of-bar-graph"><i class="fa fa-check"></i>d. Using a special case of bar graph</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#comparing-two-categorical-variables"><i class="fa fa-check"></i>3. Comparing two categorical variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#a.-using-a-stacked-plot-not-usually-recommended"><i class="fa fa-check"></i>a. Using a stacked plot (not usually recommended)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#b.-using-a-segmented-bar-plot-usually-preferred"><i class="fa fa-check"></i>b. Using a segmented bar plot (usually preferred)</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#c.-reporting-frequencies-and-relative-frequencies"><i class="fa fa-check"></i>c. Reporting frequencies and relative frequencies</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#relationships-with-more-than-2-variables"><i class="fa fa-check"></i>4. Relationships with more than 2 variables</a></li>
+<li class="chapter" data-level="" data-path="WS6_DescribingRelationships_Key.html"><a href="WS6_DescribingRelationships_Key.html#recommended-resources-6"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html"><i class="fa fa-check"></i>Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#learning-objectives-7"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#gather-some-background-information"><i class="fa fa-check"></i>1. Gather some background information</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-context"><i class="fa fa-check"></i>a. Context</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-structure"><i class="fa fa-check"></i>b. Structure</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#formulate-some-research-questions"><i class="fa fa-check"></i>2. Formulate some research questions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#investigate-trends-and-relationships"><i class="fa fa-check"></i>3. Investigate trends and relationships</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#a.-first-look-at-univariate-distributions"><i class="fa fa-check"></i>a. First look at univariate distributions</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#b.-then-look-at-relationships"><i class="fa fa-check"></i>b. Then look at relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#answer-the-questions-and-be-critical"><i class="fa fa-check"></i>4. Answer the questions and be critical</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#your-turn-1"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS7_ExploratoryDataAnalysis_Key.html"><a href="WS7_ExploratoryDataAnalysis_Key.html#recommended-resources-7"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html"><i class="fa fa-check"></i>Grammar Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#learning-objectives-8"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-rowsobservations"><i class="fa fa-check"></i>1. Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-filter"><i class="fa fa-check"></i>a. Filter</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-arrange"><i class="fa fa-check"></i>b. Arrange</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#c.-minimummaximum-values"><i class="fa fa-check"></i>c. Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#operations-on-columns"><i class="fa fa-check"></i>2. Operations on columns</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-select"><i class="fa fa-check"></i>a. Select</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-mutate"><i class="fa fa-check"></i>b. Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#create-summaries"><i class="fa fa-check"></i>3. Create summaries</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#a.-summarize"><i class="fa fa-check"></i>a. Summarize</a></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#b.-group-by"><i class="fa fa-check"></i>b. Group by</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS8_GrammarDataWrangling_Key.html"><a href="WS8_GrammarDataWrangling_Key.html#recommended-resources-8"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html"><i class="fa fa-check"></i>Joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#learning-objectives-9"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#joining-datasets"><i class="fa fa-check"></i>1. Joining datasets</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-inner-join"><i class="fa fa-check"></i>a. Inner join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-left-join"><i class="fa fa-check"></i>b. Left join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-right-join"><i class="fa fa-check"></i>c. Right join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-full-join"><i class="fa fa-check"></i>d. Full join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#e.-anti-join"><i class="fa fa-check"></i>e. Anti join</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#f.-semi-join"><i class="fa fa-check"></i>f. Semi join</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#considering-other-options-when-joining"><i class="fa fa-check"></i>2. Considering other options when joining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#a.-no-matching-key"><i class="fa fa-check"></i>a. No matching key</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#b.-auto-suffixing"><i class="fa fa-check"></i>b. Auto-suffixing</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#c.-duplicates"><i class="fa fa-check"></i>c. Duplicates</a></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#d.-several-key-variables"><i class="fa fa-check"></i>d. Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS9_Joining_Key.html"><a href="WS9_Joining_Key.html#recommended-resources-9"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html"><i class="fa fa-check"></i>Tidying</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#learning-objectives-10"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#pivoting"><i class="fa fa-check"></i>1. Pivoting</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-wide-to-long"><i class="fa fa-check"></i>a. Wide to long</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-long-to-wide"><i class="fa fa-check"></i>b. Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#separating-or-uniting-variables"><i class="fa fa-check"></i>2. Separating or uniting variables</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#a.-separate"><i class="fa fa-check"></i>a. Separate</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#b.-unite"><i class="fa fa-check"></i>b. Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#your-turn-2"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS10_Tidying_Key.html"><a href="WS10_Tidying_Key.html#recommended-resources-10"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html"><i class="fa fa-check"></i>Strings Reg Ex</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#learning-objectives-11"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#strings"><i class="fa fa-check"></i>1. Strings</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-calculating-length"><i class="fa fa-check"></i>a. Calculating length</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-combining-strings"><i class="fa fa-check"></i>b. Combining strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-changing-cases"><i class="fa fa-check"></i>c. Changing cases</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-subsetting-strings"><i class="fa fa-check"></i>d. Subsetting strings</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#e.-finding-exact-matches-in-strings"><i class="fa fa-check"></i>e. Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#regular-expressions-regex"><i class="fa fa-check"></i>2. Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#a.-wildcards"><i class="fa fa-check"></i>a. Wildcards</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#b.-anchors"><i class="fa fa-check"></i>b. Anchors</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#c.-flexible-patterns"><i class="fa fa-check"></i>c. Flexible patterns</a></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#d.-special-characters"><i class="fa fa-check"></i>d. Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS11_StringsRegEx_Key.html"><a href="WS11_StringsRegEx_Key.html#recommended-resources-11"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html"><i class="fa fa-check"></i>Dates Times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#learning-objectives-12"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#parsing-dates-and-times"><i class="fa fa-check"></i>1. Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-r-formats"><i class="fa fa-check"></i>a. R formats</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-combining-datetime-components"><i class="fa fa-check"></i>b. Combining date/time components</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-extracting-parts-of-the-date"><i class="fa fa-check"></i>c. Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#manipulating-dates-and-times"><i class="fa fa-check"></i>2. Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#a.-finding-differences-between-dates-and-times"><i class="fa fa-check"></i>a. Finding differences between dates and times</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#b.-summarizing-datetime-data"><i class="fa fa-check"></i>b. Summarizing date/time data</a></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#c.-a-few-remarks"><i class="fa fa-check"></i>c. A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS12_DatesTimes_Key.html"><a href="WS12_DatesTimes_Key.html#recommended-resources-12"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html"><i class="fa fa-check"></i>Recoding</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#learning-objectives-13"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-numeric-variables-as-categorical-variables"><i class="fa fa-check"></i>1. Consider numeric variables as categorical variables</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#consider-a-log-transformations-for-numeric-variables-that-are-highly-skewed"><i class="fa fa-check"></i>2. Consider a log-transformations for numeric variables that are highly skewed</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recoding-categories"><i class="fa fa-check"></i>3. Recoding categories</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#your-turn-3"><i class="fa fa-check"></i>Your turn!</a></li>
+<li class="chapter" data-level="" data-path="WS13_Recoding_Key.html"><a href="WS13_Recoding_Key.html#recommended-resources-13"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html"><i class="fa fa-check"></i>Missing Data Extreme</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#learning-objectives-14"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#missing-data"><i class="fa fa-check"></i>1. Missing data</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-r-messages"><i class="fa fa-check"></i>a. R messages</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-making-sense-of-the-structure"><i class="fa fa-check"></i>b. Making sense of the structure</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-missing-values"><i class="fa fa-check"></i>c. Handling missing values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#extreme-values"><i class="fa fa-check"></i>2. Extreme values</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#a.-checking-extreme-values"><i class="fa fa-check"></i>a. Checking extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#b.-representing-extreme-values"><i class="fa fa-check"></i>b. Representing extreme values</a></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#c.-handling-extreme-values"><i class="fa fa-check"></i>c. Handling extreme values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS14_MissingDataExtreme_Key.html"><a href="WS14_MissingDataExtreme_Key.html#recommended-resources-14"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html"><i class="fa fa-check"></i>Web Scraping</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#learning-objectives-15"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-data-with-code"><i class="fa fa-check"></i>1. Web scraping data with code</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#a.-using-element-tags"><i class="fa fa-check"></i>a. Using element tags</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#b.-using-element-types"><i class="fa fa-check"></i>b. Using element types</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#web-scraping-and-ethics"><i class="fa fa-check"></i>2. Web scraping and ethics</a></li>
+<li class="chapter" data-level="" data-path="WS15_WebScraping_Key.html"><a href="WS15_WebScraping_Key.html#recommended-resources-15"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html"><i class="fa fa-check"></i>Text Mining</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#learning-objectives-16"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#text-data"><i class="fa fa-check"></i>1. Text data</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#stop-words"><i class="fa fa-check"></i>2. Stop words</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#word-clouds"><i class="fa fa-check"></i>3. Word Clouds</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#sentiment-analysis"><i class="fa fa-check"></i>4. Sentiment analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#a.-positivenegative-sentiments"><i class="fa fa-check"></i>a. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#b.-scoring-sentiments"><i class="fa fa-check"></i>b. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#c.-using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>c. Using a wide range of sentiments</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS16_TextMining_Key.html"><a href="WS16_TextMining_Key.html#recommended-resources-16"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html"><i class="fa fa-check"></i>Sentiment Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#learning-objectives-17"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#positivenegative-sentiments"><i class="fa fa-check"></i>1. Positive/Negative sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#scoring-sentiments"><i class="fa fa-check"></i>2. Scoring sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#using-a-wide-range-of-sentiments"><i class="fa fa-check"></i>3. Using a wide range of sentiments</a></li>
+<li class="chapter" data-level="" data-path="WS17_SentimentAnalysis_Key.html"><a href="WS17_SentimentAnalysis_Key.html#recommended-resources-17"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html"><i class="fa fa-check"></i>Supervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#learning-objectives-18"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#defining-a-model"><i class="fa fa-check"></i>1. Defining a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#a.-a-model-with-no-predictor"><i class="fa fa-check"></i>a. A model with no predictor</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#b.-some-models-with-one-predictor"><i class="fa fa-check"></i>b. Some models with one predictor</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#comparing-models"><i class="fa fa-check"></i>2. Comparing models</a></li>
+<li class="chapter" data-level="" data-path="WS18_SupervisedLearning_Key.html"><a href="WS18_SupervisedLearning_Key.html#recommended-resources-18"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html"><i class="fa fa-check"></i>Linear Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#learning-objectives-19"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#predicting-a-numeric-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a numeric response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#a.-visualizing-the-model"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#b.-fitting-a-model"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#c.-predicting-values"><i class="fa fa-check"></i>c. Predicting values</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#d.-residuals"><i class="fa fa-check"></i>d. Residuals</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#e.-performance"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-a-categorical-predictor"><i class="fa fa-check"></i>2. Using a categorical predictor</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#using-multiple-predictors"><i class="fa fa-check"></i>3. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS19_LinearRegression_Key.html"><a href="WS19_LinearRegression_Key.html#recommended-resources-19"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html"><i class="fa fa-check"></i>Model Selection</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#learning-objectives-20"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#choosing-predictors"><i class="fa fa-check"></i>1. Choosing predictors</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-predictors-that-do-not-make-sense"><i class="fa fa-check"></i>a. Predictors that do not make sense</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-exploring-relationships"><i class="fa fa-check"></i>b. Exploring relationships</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#c.-model-fit-and-predictions"><i class="fa fa-check"></i>c. Model fit and predictions</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#d.-performance"><i class="fa fa-check"></i>d. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#comparing-models-1"><i class="fa fa-check"></i>2. Comparing models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#a.-using-multiple-predictors"><i class="fa fa-check"></i>a. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#b.-testing-for-new-data"><i class="fa fa-check"></i>b. Testing for “new” data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS20_ModelSelection_Key.html"><a href="WS20_ModelSelection_Key.html#recommended-resources-20"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html"><i class="fa fa-check"></i>Introduction Classification</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#learning-objectives-21"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#basic-classifications"><i class="fa fa-check"></i>1. Basic classifications</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-random-classification"><i class="fa fa-check"></i>a. Random classification</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-classification-based-on-1-variable"><i class="fa fa-check"></i>b. Classification based on 1 variable</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#c.-classification-based-on-any-cutoff-value"><i class="fa fa-check"></i>c. Classification based on any cutoff value</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#metrics"><i class="fa fa-check"></i>2. Metrics</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#rocauc"><i class="fa fa-check"></i>3. ROC/AUC</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#a.-receiver-operating-characteristics-roc-curve"><i class="fa fa-check"></i>a. Receiver Operating Characteristics (ROC) curve</a></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#b.-area-under-the-curve-auc"><i class="fa fa-check"></i>b. Area under the curve (AUC)</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS21_IntroductionClassification_Key.html"><a href="WS21_IntroductionClassification_Key.html#recommended-resources-21"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html"><i class="fa fa-check"></i>Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#learning-objectives-22"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#predicting-a-binary-response-with-a-numeric-predictor"><i class="fa fa-check"></i>1. Predicting a binary response with a numeric predictor</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#a.-visualizing-the-model-1"><i class="fa fa-check"></i>a. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#b.-fitting-a-model-1"><i class="fa fa-check"></i>b. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#c.-making-predictions"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#d.-error-in-predicted-values"><i class="fa fa-check"></i>d. Error in predicted values</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#e.-performance-1"><i class="fa fa-check"></i>e. Performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#using-multiple-predictors-1"><i class="fa fa-check"></i>2. Using multiple predictors</a></li>
+<li class="chapter" data-level="" data-path="WS22_LogisticRegression_Key.html"><a href="WS22_LogisticRegression_Key.html#recommended-resources-22"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html"><i class="fa fa-check"></i>Other Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#learning-objectives-23"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-numeric-outcome"><i class="fa fa-check"></i>1. Decision trees for a numeric outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-1"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#decision-trees-for-a-categorical-outcome"><i class="fa fa-check"></i>2. Decision trees for a categorical outcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#a.-fitting-a-model-1"><i class="fa fa-check"></i>a. Fitting a model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#b.-visualizing-the-model-1"><i class="fa fa-check"></i>b. Visualizing the model</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#c.-making-predictions-2"><i class="fa fa-check"></i>c. Making predictions</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#d.-evaluating-performance-1"><i class="fa fa-check"></i>d. Evaluating performance</a></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#e.-predicting-more-than-2-outcomes"><i class="fa fa-check"></i>e. Predicting more than 2 outcomes</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS23_OtherModels_Key.html"><a href="WS23_OtherModels_Key.html#recommended-resources-23"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html"><i class="fa fa-check"></i>Cross Validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#learning-objectives-24"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#fit-a-model-on-the-entire-dataset"><i class="fa fa-check"></i>1. Fit a model on the entire dataset</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#train-and-test-a-model"><i class="fa fa-check"></i>2. Train and Test a model</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-train-the-model-on-the-train-set"><i class="fa fa-check"></i>a. Train the model on the train set</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-test-the-model-on-the-test-set"><i class="fa fa-check"></i>b. Test the model on the test set</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#k-fold-cross-validation"><i class="fa fa-check"></i>3. k-fold cross-validation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#a.-define-algorithm"><i class="fa fa-check"></i>a. Define algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#b.-create-folds"><i class="fa fa-check"></i>b. Create folds</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#c.-repeat-the-process"><i class="fa fa-check"></i>c. Repeat the process</a></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#d.-evaluate-average-performance"><i class="fa fa-check"></i>d. Evaluate average performance</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS24_CrossValidation_Key.html"><a href="WS24_CrossValidation_Key.html#recommended-resources-24"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html"><i class="fa fa-check"></i>Unsupervised Learning</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#learning-objectives-25"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#distances"><i class="fa fa-check"></i>1. Distances</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-euclidean-distance"><i class="fa fa-check"></i>a. Euclidean distance</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-scaling"><i class="fa fa-check"></i>b. Scaling</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#correlation"><i class="fa fa-check"></i>2. Correlation</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#a.-correlation-coefficient"><i class="fa fa-check"></i>a. Correlation Coefficient</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#b.-correlation-matrix"><i class="fa fa-check"></i>b. Correlation Matrix</a></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#c.-combining-variables"><i class="fa fa-check"></i>c. Combining variables</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS25_UnsupervisedLearning_Key.html"><a href="WS25_UnsupervisedLearning_Key.html#recommended-resources-25"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html"><i class="fa fa-check"></i>Dimension Reduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#learning-objectives-26"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#principal-component-analysis"><i class="fa fa-check"></i>1. Principal Component Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#a.-prepare-the-dataset-and-explore-correlations"><i class="fa fa-check"></i>a. Prepare the dataset and explore correlations</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#b.-perform-pca"><i class="fa fa-check"></i>b. Perform PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#c.-choose-the-number-of-principal-components"><i class="fa fa-check"></i>c. Choose the number of principal components</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#d.-interpret-componentsdimensions"><i class="fa fa-check"></i>d. Interpret components/dimensions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#some-considerations-for-using-pca"><i class="fa fa-check"></i>2. Some considerations for using PCA</a></li>
+<li class="chapter" data-level="" data-path="WS26_DimensionReduction_Key.html"><a href="WS26_DimensionReduction_Key.html#recommended-resources-26"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html"><i class="fa fa-check"></i>Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#learning-objectives-27"><i class="fa fa-check"></i>Learning objectives</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#clustering-1"><i class="fa fa-check"></i>1. Clustering</a>
+<ul>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#a.-prepare-the-data"><i class="fa fa-check"></i>a. Prepare the data</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#b.-apply-the-algorithm"><i class="fa fa-check"></i>b. Apply the algorithm</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#c.-visualize-and-interpret-the-clusters"><i class="fa fa-check"></i>c. Visualize and interpret the clusters</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#d.-choose-the-number-of-clusters"><i class="fa fa-check"></i>d. Choose the number of clusters</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#include-more-variables-in-clustering"><i class="fa fa-check"></i>2. Include more variables in clustering</a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#your-turn-4"><i class="fa fa-check"></i><strong>Your turn!</strong></a></li>
+<li class="chapter" data-level="" data-path="WS27_Clustering_Key.html"><a href="WS27_Clustering_Key.html#recommended-resources-27"><i class="fa fa-check"></i>Recommended Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Spring 2025 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="describing-relationships" class="section level1 hasAnchor">
+<h1>Describing Relationships<a href="WS6_DescribingRelationships_Key.html#describing-relationships" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="learning-objectives-6" class="section level2 hasAnchor">
+<h2>Learning objectives<a href="WS6_DescribingRelationships_Key.html#learning-objectives-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Describe the relationship between two numeric variables, using the Pearson’s correlation coefficient.</li>
+<li>Describe the relationship between a numeric and a categorical variable, reporting measures of center and spread for each category. 3. Describe the relationship between two categorical variables, using frequencies and relative proportions/percentages.</li>
+<li>Discuss how to represent more than two variables on the same visualization.</li>
+</ol>
+<hr />
+<p>In this worksheet, we will use <code>ggplot</code> and some more <code>geom</code> functions to explore relationships: describing at least 2 variables.</p>
+<p>Start your workflow by uploading the <code>tidyverse</code> package which contains the <code>ggplot</code> functions:</p>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="WS6_DescribingRelationships_Key.html#cb182-1" tabindex="-1"></a><span class="co"># Upload package</span></span>
+<span id="cb182-2"><a href="WS6_DescribingRelationships_Key.html#cb182-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<p>We will consider the built-in dataset <code>quakes</code> again. It contains information about earthquakes occurring near Fiji islands since 1964. To refresh our memory, let’s take a look:</p>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="WS6_DescribingRelationships_Key.html#cb183-1" tabindex="-1"></a><span class="co"># Take a look at the dataset</span></span>
+<span id="cb183-2"><a href="WS6_DescribingRelationships_Key.html#cb183-2" tabindex="-1"></a><span class="fu">head</span>(quakes)</span></code></pre></div>
+<p>The type of plots we will use to explore relationships depends on the types of the variables involved.</p>
+</div>
+<div id="comparing-two-numeric-variables" class="section level2 hasAnchor">
+<h2>1. Comparing two numeric variables<a href="WS6_DescribingRelationships_Key.html#comparing-two-numeric-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When comparing two numeric variables, we may wonder if high values on one variable are associated with high/low values for another variable.</p>
+<div id="a.-using-a-scatterplot" class="section level3 hasAnchor">
+<h3>a. Using a scatterplot<a href="WS6_DescribingRelationships_Key.html#a.-using-a-scatterplot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The relationship between two numeric variables is typically displayed using a scatterplot with <code>geom_point()</code>. For example, we can investigate if the depth of an earthquake affects the magnitude of that earthquake. In this context, we are considering the <em>depth</em> of an earthquake as an explanatory variable for the <em>magnitude</em>, the response variable. By convention, the response variable is represented on the y-axis and the explanatory on the x-axis.</p>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="WS6_DescribingRelationships_Key.html#cb184-1" tabindex="-1"></a><span class="co"># Define the ggplot and the dataframe</span></span>
+<span id="cb184-2"><a href="WS6_DescribingRelationships_Key.html#cb184-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes) <span class="sc">+</span></span>
+<span id="cb184-3"><a href="WS6_DescribingRelationships_Key.html#cb184-3" tabindex="-1"></a>  <span class="co"># Use geom_point and define mapping aesthetics: x = explanatory, y = response</span></span>
+<span id="cb184-4"><a href="WS6_DescribingRelationships_Key.html#cb184-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth, <span class="at">y =</span> mag)) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-90-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>No matter how deep the earthquake is, the magnitude seems to vary greatly.</p>
+<div id="try-it-does-the-magnitude-of-an-earthquake-affects-how-many-stations-reported-that-earthquake-identify-what-the-explanatory-and-response-variables-are-in-this-context-and-make-an-appropriate-plot.-what-do-you-notice-in-this-plot" class="section level4 hasAnchor">
+<h4><strong>Try it! Does the magnitude of an earthquake affects how many stations reported that earthquake? Identify what the explanatory and response variables are in this context and make an appropriate plot. What do you notice in this plot?</strong><a href="WS6_DescribingRelationships_Key.html#try-it-does-the-magnitude-of-an-earthquake-affects-how-many-stations-reported-that-earthquake-identify-what-the-explanatory-and-response-variables-are-in-this-context-and-make-an-appropriate-plot.-what-do-you-notice-in-this-plot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="WS6_DescribingRelationships_Key.html#cb185-1" tabindex="-1"></a><span class="co"># Define the ggplot and the dataframe</span></span>
+<span id="cb185-2"><a href="WS6_DescribingRelationships_Key.html#cb185-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> quakes) <span class="sc">+</span></span>
+<span id="cb185-3"><a href="WS6_DescribingRelationships_Key.html#cb185-3" tabindex="-1"></a>  <span class="co"># Use geom_point and define mapping aesthetics </span></span>
+<span id="cb185-4"><a href="WS6_DescribingRelationships_Key.html#cb185-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag, <span class="at">y =</span> stations)) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-91-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>In this context, we are considering the magnitude of an earthquake as an explanatory variable for the number of stations that reported the earthquake, the response variable. It looks like the higher the magnitude is, the higher number of stations reported that earthquake.</strong></p>
+</div>
+</div>
+<div id="b.-reporting-correlation" class="section level3 hasAnchor">
+<h3>b. Reporting correlation<a href="WS6_DescribingRelationships_Key.html#b.-reporting-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Correlation describes the strength of a (linear) relationship between two variables. With the function <code>cor</code>, we refer by default to the Pearson correlation coefficient which takes values between -1 (strong negative correlation) and 1 (strong positive correlation) with 0 indicating that there is no correlation.</p>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="WS6_DescribingRelationships_Key.html#cb186-1" tabindex="-1"></a><span class="co"># Find the correlation between depth and magnitude</span></span>
+<span id="cb186-2"><a href="WS6_DescribingRelationships_Key.html#cb186-2" tabindex="-1"></a><span class="fu">cor</span>(quakes<span class="sc">$</span>depth, quakes<span class="sc">$</span>mag)</span></code></pre></div>
+<pre><code>## [1] -0.2306377</code></pre>
+<p>The correlation between the depth and magnitude of an earthquake is not strong (as shown in the scatterplot above).</p>
+<p>What about these perfect relationships:</p>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="WS6_DescribingRelationships_Key.html#cb188-1" tabindex="-1"></a><span class="co"># Find the correlation between one variable and itself</span></span>
+<span id="cb188-2"><a href="WS6_DescribingRelationships_Key.html#cb188-2" tabindex="-1"></a><span class="fu">cor</span>(quakes<span class="sc">$</span>depth, quakes<span class="sc">$</span>depth)</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="WS6_DescribingRelationships_Key.html#cb190-1" tabindex="-1"></a><span class="co"># quickly check how the relationship looks like</span></span>
+<span id="cb190-2"><a href="WS6_DescribingRelationships_Key.html#cb190-2" tabindex="-1"></a><span class="fu">plot</span>(quakes<span class="sc">$</span>depth, quakes<span class="sc">$</span>depth)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-93-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="WS6_DescribingRelationships_Key.html#cb191-1" tabindex="-1"></a><span class="co"># Find the correlation between one variable and its opposite</span></span>
+<span id="cb191-2"><a href="WS6_DescribingRelationships_Key.html#cb191-2" tabindex="-1"></a><span class="fu">cor</span>(quakes<span class="sc">$</span>depth, <span class="sc">-</span>quakes<span class="sc">$</span>depth)</span></code></pre></div>
+<pre><code>## [1] -1</code></pre>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="WS6_DescribingRelationships_Key.html#cb193-1" tabindex="-1"></a><span class="co"># quickly check how the relationship looks like</span></span>
+<span id="cb193-2"><a href="WS6_DescribingRelationships_Key.html#cb193-2" tabindex="-1"></a><span class="fu">plot</span>(quakes<span class="sc">$</span>depth, <span class="sc">-</span>quakes<span class="sc">$</span>depth)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-93-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="try-it-can-you-guess-the-correlation-between-the-magnitude-and-the-number-of-stations-that-reported-an-earthquake.-calculate-it" class="section level4 hasAnchor">
+<h4><strong>Try it! Can you guess the correlation between the magnitude and the number of stations that reported an earthquake. Calculate it!</strong><a href="WS6_DescribingRelationships_Key.html#try-it-can-you-guess-the-correlation-between-the-magnitude-and-the-number-of-stations-that-reported-an-earthquake.-calculate-it" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="WS6_DescribingRelationships_Key.html#cb194-1" tabindex="-1"></a><span class="co"># Find the correlation between magnitude and stations</span></span>
+<span id="cb194-2"><a href="WS6_DescribingRelationships_Key.html#cb194-2" tabindex="-1"></a><span class="fu">cor</span>(quakes<span class="sc">$</span>mag, quakes<span class="sc">$</span>stations)</span></code></pre></div>
+<pre><code>## [1] 0.8511824</code></pre>
+<p><strong>There is a strong correlation as we observed a pretty consistent pattern in the plot above.</strong></p>
+</div>
+</div>
+</div>
+<div id="comparing-a-numeric-variable-and-a-categorical-variable" class="section level2 hasAnchor">
+<h2>2. Comparing a numeric variable and a categorical variable<a href="WS6_DescribingRelationships_Key.html#comparing-a-numeric-variable-and-a-categorical-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When comparing a numeric variable across categories, we may wonder if the distribution of the numeric variable (center, spread, shape) is about the same across all categories or not.</p>
+<p>Let’s consider <code>depth</code> as a categorical variable:</p>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="WS6_DescribingRelationships_Key.html#cb196-1" tabindex="-1"></a><span class="co"># Create a new categorical variable in a new object</span></span>
+<span id="cb196-2"><a href="WS6_DescribingRelationships_Key.html#cb196-2" tabindex="-1"></a>new_quakes <span class="ot">&lt;-</span> quakes <span class="sc">|&gt;</span></span>
+<span id="cb196-3"><a href="WS6_DescribingRelationships_Key.html#cb196-3" tabindex="-1"></a>  <span class="co"># Create a variable</span></span>
+<span id="cb196-4"><a href="WS6_DescribingRelationships_Key.html#cb196-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">depth_cat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb196-5"><a href="WS6_DescribingRelationships_Key.html#cb196-5" tabindex="-1"></a>  depth <span class="sc">&lt;=</span> <span class="dv">70</span> <span class="sc">~</span> <span class="st">&quot;Shallow&quot;</span>,</span>
+<span id="cb196-6"><a href="WS6_DescribingRelationships_Key.html#cb196-6" tabindex="-1"></a>  depth <span class="sc">&gt;</span> <span class="dv">70</span> <span class="sc">&amp;</span> depth <span class="sc">&lt;=</span> <span class="dv">300</span> <span class="sc">~</span> <span class="st">&quot;Intermediate&quot;</span>,</span>
+<span id="cb196-7"><a href="WS6_DescribingRelationships_Key.html#cb196-7" tabindex="-1"></a>  depth <span class="sc">&gt;</span> <span class="dv">300</span> <span class="sc">~</span> <span class="st">&quot;Deep&quot;</span>))</span></code></pre></div>
+<p>We already compared the magnitude of an earthquake to the depth, but we can take a different perspective to compare magnitude on categories of depth.</p>
+<div id="a.-using-grouped-boxplots" class="section level3 hasAnchor">
+<h3>a. Using grouped boxplots<a href="WS6_DescribingRelationships_Key.html#a.-using-grouped-boxplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The most convenient way (using R) to compare the distribution of a numeric variable across categories is to use grouped boxplots.</p>
+<p>Let’s take a different approach to investigate if the depth affects the magnitude of an earthquake by considering depth at 3 different levels. In this context, the explanatory variable would be categorical (deep, intermediate, shallow) and the response variable would be numeric:</p>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="WS6_DescribingRelationships_Key.html#cb197-1" tabindex="-1"></a><span class="co"># Define the ggplot and the dataframe</span></span>
+<span id="cb197-2"><a href="WS6_DescribingRelationships_Key.html#cb197-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb197-3"><a href="WS6_DescribingRelationships_Key.html#cb197-3" tabindex="-1"></a>  <span class="co"># Use geom_boxplot and define mapping aesthetics: x = explanatory, y = response</span></span>
+<span id="cb197-4"><a href="WS6_DescribingRelationships_Key.html#cb197-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth_cat, <span class="at">y =</span> mag))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-96-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The magnitude seems to be slightly lower on average for the deep earthquakes and slightly higher compared to earthquakes that were in shallow depth. There is a lot of overlap between these three boxplots though.</p>
+<p>We discussed in the previous worksheet that a boxplot only represent 5 numbers about a distribution and we miss information about the frequency of each value. We can add the data on a boxplot with <code>geom_jitter</code>:</p>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="WS6_DescribingRelationships_Key.html#cb198-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb198-2"><a href="WS6_DescribingRelationships_Key.html#cb198-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth_cat, <span class="at">y =</span> mag)) <span class="sc">+</span></span>
+<span id="cb198-3"><a href="WS6_DescribingRelationships_Key.html#cb198-3" tabindex="-1"></a>  <span class="co"># Add the data</span></span>
+<span id="cb198-4"><a href="WS6_DescribingRelationships_Key.html#cb198-4" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth_cat, <span class="at">y =</span> mag))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-97-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>How does “seeing the data” affect or doesn not affect our comparison?</p>
+<p><strong>Seeing the data with <code>geom_jitter</code> adds more context with the distribution of individual points, helping us identify the number of earthquakes for each group, any gaps or extreme values that boxplots alone might hide.</strong></p>
+<div id="try-it-use-a-plot-to-compare-the-number-of-stations-that-reported-the-earthquakes-depending-on-the-magnitude-level-split-magnitude-into-light-4-4.9-moderate-5-5.9-strong-6-6.9.-improve-this-plot-with-1-representing-the-magnitude-levels-with-fill-colors-2-including-the-data-points-with-geom_jitter-with-20-transparency-3-adding-labels-to-the-axes-with-relevant-units.-how-does-the-number-of-stations-compare-across-the-3-categories-of-magnitude" class="section level4 hasAnchor">
+<h4><strong>Try it! Use a plot to compare the number of stations that reported the earthquakes depending on the magnitude level: split magnitude into light (4-4.9), moderate (5-5.9), strong (6-6.9). Improve this plot with 1) representing the magnitude levels with fill colors, 2) including the data points with <code>geom_jitter</code> with 20% transparency, 3) adding labels to the axes with relevant units. How does the number of stations compare across the 3 categories of magnitude?</strong><a href="WS6_DescribingRelationships_Key.html#try-it-use-a-plot-to-compare-the-number-of-stations-that-reported-the-earthquakes-depending-on-the-magnitude-level-split-magnitude-into-light-4-4.9-moderate-5-5.9-strong-6-6.9.-improve-this-plot-with-1-representing-the-magnitude-levels-with-fill-colors-2-including-the-data-points-with-geom_jitter-with-20-transparency-3-adding-labels-to-the-axes-with-relevant-units.-how-does-the-number-of-stations-compare-across-the-3-categories-of-magnitude" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="WS6_DescribingRelationships_Key.html#cb199-1" tabindex="-1"></a><span class="co"># Define the ggplot and the dataframe</span></span>
+<span id="cb199-2"><a href="WS6_DescribingRelationships_Key.html#cb199-2" tabindex="-1"></a>quakes <span class="sc">|&gt;</span></span>
+<span id="cb199-3"><a href="WS6_DescribingRelationships_Key.html#cb199-3" tabindex="-1"></a>  <span class="co"># Create a variable</span></span>
+<span id="cb199-4"><a href="WS6_DescribingRelationships_Key.html#cb199-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mag_cat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb199-5"><a href="WS6_DescribingRelationships_Key.html#cb199-5" tabindex="-1"></a>    mag <span class="sc">&gt;=</span> <span class="dv">4</span> <span class="sc">&amp;</span> mag <span class="sc">&lt;</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">&quot;Light&quot;</span>,</span>
+<span id="cb199-6"><a href="WS6_DescribingRelationships_Key.html#cb199-6" tabindex="-1"></a>    mag <span class="sc">&gt;=</span> <span class="dv">5</span> <span class="sc">&amp;</span> mag <span class="sc">&lt;</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">&quot;Moderate&quot;</span>,</span>
+<span id="cb199-7"><a href="WS6_DescribingRelationships_Key.html#cb199-7" tabindex="-1"></a>    mag <span class="sc">&gt;=</span> <span class="dv">6</span> <span class="sc">&amp;</span> mag <span class="sc">&lt;</span> <span class="dv">7</span> <span class="sc">~</span> <span class="st">&quot;Strong&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb199-8"><a href="WS6_DescribingRelationships_Key.html#cb199-8" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb199-9"><a href="WS6_DescribingRelationships_Key.html#cb199-9" tabindex="-1"></a>  <span class="co"># Use geom_boxplot and define mapping aesthetics </span></span>
+<span id="cb199-10"><a href="WS6_DescribingRelationships_Key.html#cb199-10" tabindex="-1"></a>  <span class="co"># x = explanatory, y = response</span></span>
+<span id="cb199-11"><a href="WS6_DescribingRelationships_Key.html#cb199-11" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag_cat, <span class="at">y =</span> stations, <span class="at">fill =</span> mag_cat)) <span class="sc">+</span></span>
+<span id="cb199-12"><a href="WS6_DescribingRelationships_Key.html#cb199-12" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;Light&quot;</span> <span class="ot">=</span> <span class="st">&quot;yellow&quot;</span>, </span>
+<span id="cb199-13"><a href="WS6_DescribingRelationships_Key.html#cb199-13" tabindex="-1"></a>                                <span class="st">&quot;Moderate&quot;</span> <span class="ot">=</span> <span class="st">&quot;orange&quot;</span>, </span>
+<span id="cb199-14"><a href="WS6_DescribingRelationships_Key.html#cb199-14" tabindex="-1"></a>                                <span class="st">&quot;Strong&quot;</span> <span class="ot">=</span> <span class="st">&quot;red&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb199-15"><a href="WS6_DescribingRelationships_Key.html#cb199-15" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag_cat, <span class="at">y =</span> stations), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb199-16"><a href="WS6_DescribingRelationships_Key.html#cb199-16" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Magnitude Level&quot;</span>,</span>
+<span id="cb199-17"><a href="WS6_DescribingRelationships_Key.html#cb199-17" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Number of stations reporting the earthquake&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-98-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>There seems to be some important differences between the 3 magnitude levels with a lot of stations reporting the strong earthquakes, however, there were not many strong earthquakes overall.</strong></p>
+</div>
+</div>
+<div id="b.-using-grouped-histograms" class="section level3 hasAnchor">
+<h3>b. Using grouped histograms<a href="WS6_DescribingRelationships_Key.html#b.-using-grouped-histograms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We need to be careful about grouped histograms. Let’s see why:</p>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="WS6_DescribingRelationships_Key.html#cb200-1" tabindex="-1"></a><span class="co"># Define the ggplot and the dataframe</span></span>
+<span id="cb200-2"><a href="WS6_DescribingRelationships_Key.html#cb200-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb200-3"><a href="WS6_DescribingRelationships_Key.html#cb200-3" tabindex="-1"></a>  <span class="co"># Use geom_histogram and define mapping aesthetics</span></span>
+<span id="cb200-4"><a href="WS6_DescribingRelationships_Key.html#cb200-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag, <span class="at">fill =</span> depth_cat),</span>
+<span id="cb200-5"><a href="WS6_DescribingRelationships_Key.html#cb200-5" tabindex="-1"></a>                 <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">center =</span> <span class="fl">0.05</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-99-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Ugly</strong>: don’t fill histograms per categories like that!</p>
+<p>What if we create one histogram for each level of depth instead? We can easily do that with faceting:</p>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="WS6_DescribingRelationships_Key.html#cb201-1" tabindex="-1"></a><span class="co"># Represent the brain weight on the x-axis</span></span>
+<span id="cb201-2"><a href="WS6_DescribingRelationships_Key.html#cb201-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb201-3"><a href="WS6_DescribingRelationships_Key.html#cb201-3" tabindex="-1"></a>  <span class="co"># Use geom_histogram and define mapping aesthetics, x = response</span></span>
+<span id="cb201-4"><a href="WS6_DescribingRelationships_Key.html#cb201-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">center =</span> <span class="fl">0.05</span>) <span class="sc">+</span></span>
+<span id="cb201-5"><a href="WS6_DescribingRelationships_Key.html#cb201-5" tabindex="-1"></a>  <span class="co"># Facet per category </span></span>
+<span id="cb201-6"><a href="WS6_DescribingRelationships_Key.html#cb201-6" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>depth_cat)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-100-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div id="try-it-how-could-we-improve-the-grouped-histograms-above" class="section level4 hasAnchor">
+<h4><strong>Try it! How could we improve the grouped histograms above?</strong><a href="WS6_DescribingRelationships_Key.html#try-it-how-could-we-improve-the-grouped-histograms-above" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="WS6_DescribingRelationships_Key.html#cb202-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb202-2"><a href="WS6_DescribingRelationships_Key.html#cb202-2" tabindex="-1"></a>  <span class="co"># Use geom_histogram and define mapping aesthetics, x = response, fill = categories</span></span>
+<span id="cb202-3"><a href="WS6_DescribingRelationships_Key.html#cb202-3" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag, <span class="at">fill =</span> depth_cat, </span>
+<span id="cb202-4"><a href="WS6_DescribingRelationships_Key.html#cb202-4" tabindex="-1"></a>                     <span class="co"># Show proportion</span></span>
+<span id="cb202-5"><a href="WS6_DescribingRelationships_Key.html#cb202-5" tabindex="-1"></a>                     <span class="at">y =</span> <span class="fu">after_stat</span>(count <span class="sc">/</span> <span class="fu">sum</span>(count))), </span>
+<span id="cb202-6"><a href="WS6_DescribingRelationships_Key.html#cb202-6" tabindex="-1"></a>                 <span class="co"># Different binwidth and center</span></span>
+<span id="cb202-7"><a href="WS6_DescribingRelationships_Key.html#cb202-7" tabindex="-1"></a>                 <span class="at">binwidth =</span> <span class="fl">0.2</span>, <span class="at">center =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb202-8"><a href="WS6_DescribingRelationships_Key.html#cb202-8" tabindex="-1"></a>  <span class="co"># Facet per category </span></span>
+<span id="cb202-9"><a href="WS6_DescribingRelationships_Key.html#cb202-9" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>depth_cat, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb202-10"><a href="WS6_DescribingRelationships_Key.html#cb202-10" tabindex="-1"></a>    <span class="co"># show all graphs in 1 column (easier to compare histograms vertically)</span></span>
+<span id="cb202-11"><a href="WS6_DescribingRelationships_Key.html#cb202-11" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Comparing the distribution of magnitude for each category of depth&quot;</span>,</span>
+<span id="cb202-12"><a href="WS6_DescribingRelationships_Key.html#cb202-12" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Magnitude (Richter scale)&quot;</span>,</span>
+<span id="cb202-13"><a href="WS6_DescribingRelationships_Key.html#cb202-13" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Proportion of earthquakes&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-101-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Few things to improve the plot: 1) adjust the <code>binwidth</code> and <code>center</code> to have at least 10 bins but not too many, 2) add colors per categories, 3) show proportions instead of counts (however, we lose the information about how many earthquakes were in each category, 4) align the histrograms vertically, 5) add labels.</strong></p>
+</div>
+</div>
+<div id="c.-reporting-center-and-spread-for-each-category" class="section level3 hasAnchor">
+<h3>c. Reporting center and spread for each category<a href="WS6_DescribingRelationships_Key.html#c.-reporting-center-and-spread-for-each-category" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We briefly introduced the <code>tidyverse</code> function called <code>group_by</code>: combined with the <code>summarize</code> function that allows us to find summaries by groups:</p>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="WS6_DescribingRelationships_Key.html#cb203-1" tabindex="-1"></a>new_quakes <span class="sc">|&gt;</span></span>
+<span id="cb203-2"><a href="WS6_DescribingRelationships_Key.html#cb203-2" tabindex="-1"></a>  <span class="co"># Split the data in groups </span></span>
+<span id="cb203-3"><a href="WS6_DescribingRelationships_Key.html#cb203-3" tabindex="-1"></a>  <span class="fu">group_by</span>(depth_cat) <span class="sc">|&gt;</span></span>
+<span id="cb203-4"><a href="WS6_DescribingRelationships_Key.html#cb203-4" tabindex="-1"></a>  <span class="co"># Summarize per group</span></span>
+<span id="cb203-5"><a href="WS6_DescribingRelationships_Key.html#cb203-5" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_mag =</span> <span class="fu">mean</span>(mag),</span>
+<span id="cb203-6"><a href="WS6_DescribingRelationships_Key.html#cb203-6" tabindex="-1"></a>            <span class="at">sd_mag =</span> <span class="fu">sd</span>(mag))</span></code></pre></div>
+<p>All in one table!</p>
+</div>
+<div id="d.-using-a-special-case-of-bar-graph" class="section level3 hasAnchor">
+<h3>d. Using a special case of bar graph<a href="WS6_DescribingRelationships_Key.html#d.-using-a-special-case-of-bar-graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can represent the mean value of a numeric variable for each category using a bar with a <code>stat</code> option:</p>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="WS6_DescribingRelationships_Key.html#cb204-1" tabindex="-1"></a><span class="co"># Define the ggplot, the dataframe, and mapping aesthetics</span></span>
+<span id="cb204-2"><a href="WS6_DescribingRelationships_Key.html#cb204-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes, <span class="fu">aes</span>(<span class="at">x =</span> depth_cat, <span class="at">y =</span> mag)) <span class="sc">+</span></span>
+<span id="cb204-3"><a href="WS6_DescribingRelationships_Key.html#cb204-3" tabindex="-1"></a>  <span class="co"># By default a bar represents a count but we can change what the height of a bar represents</span></span>
+<span id="cb204-4"><a href="WS6_DescribingRelationships_Key.html#cb204-4" tabindex="-1"></a>  <span class="co"># For example, represent a statistic using the mean function </span></span>
+<span id="cb204-5"><a href="WS6_DescribingRelationships_Key.html#cb204-5" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-103-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>But as we mentioned before, we should not only focus on a typical value for a numeric variable but also consider how spread out the values are. We can add error bars to our plot with <code>geom_errorbar()</code> (representing +/- 1 standard deviation from the mean):</p>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="WS6_DescribingRelationships_Key.html#cb205-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes, <span class="fu">aes</span>(<span class="at">x =</span> depth_cat, <span class="at">y =</span> mag)) <span class="sc">+</span></span>
+<span id="cb205-2"><a href="WS6_DescribingRelationships_Key.html#cb205-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>) <span class="sc">+</span></span>
+<span id="cb205-3"><a href="WS6_DescribingRelationships_Key.html#cb205-3" tabindex="-1"></a>  <span class="co"># Add error bars</span></span>
+<span id="cb205-4"><a href="WS6_DescribingRelationships_Key.html#cb205-4" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun.data =</span> <span class="st">&quot;mean_se&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-104-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The mean magnitude seems to be lower for the deep earthquakes and higher for the shallow depth. There does not seem to be a huge difference in the variation of magnitude across the categories of depth.</p>
+<div id="try-it-represent-the-mean-number-of-stations-reporting-an-earthquake-for-each-level-of-magnitude-light-moderate-strong.-which-level-of-magnitude-has-the-highest-number-of-stations-on-average-which-level-of-magnitude-has-the-highest-variation-in-the-number-of-stations" class="section level4 hasAnchor">
+<h4><strong>Try it! Represent the mean number of stations reporting an earthquake for each level of magnitude (light, moderate, strong). Which level of magnitude has the highest number of stations on average? Which level of magnitude has the highest variation in the number of stations?</strong><a href="WS6_DescribingRelationships_Key.html#try-it-represent-the-mean-number-of-stations-reporting-an-earthquake-for-each-level-of-magnitude-light-moderate-strong.-which-level-of-magnitude-has-the-highest-number-of-stations-on-average-which-level-of-magnitude-has-the-highest-variation-in-the-number-of-stations" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="WS6_DescribingRelationships_Key.html#cb206-1" tabindex="-1"></a>quakes <span class="sc">|&gt;</span></span>
+<span id="cb206-2"><a href="WS6_DescribingRelationships_Key.html#cb206-2" tabindex="-1"></a>  <span class="co"># Create a variable</span></span>
+<span id="cb206-3"><a href="WS6_DescribingRelationships_Key.html#cb206-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mag_cat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb206-4"><a href="WS6_DescribingRelationships_Key.html#cb206-4" tabindex="-1"></a>    mag <span class="sc">&gt;=</span> <span class="dv">4</span> <span class="sc">&amp;</span> mag <span class="sc">&lt;</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">&quot;Light&quot;</span>,</span>
+<span id="cb206-5"><a href="WS6_DescribingRelationships_Key.html#cb206-5" tabindex="-1"></a>    mag <span class="sc">&gt;=</span> <span class="dv">5</span> <span class="sc">&amp;</span> mag <span class="sc">&lt;</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">&quot;Moderate&quot;</span>,</span>
+<span id="cb206-6"><a href="WS6_DescribingRelationships_Key.html#cb206-6" tabindex="-1"></a>    mag <span class="sc">&gt;=</span> <span class="dv">6</span> <span class="sc">&amp;</span> mag <span class="sc">&lt;</span> <span class="dv">7</span> <span class="sc">~</span> <span class="st">&quot;Strong&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb206-7"><a href="WS6_DescribingRelationships_Key.html#cb206-7" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag_cat, <span class="at">y =</span> stations, <span class="at">fill =</span> mag_cat)) <span class="sc">+</span></span>
+<span id="cb206-8"><a href="WS6_DescribingRelationships_Key.html#cb206-8" tabindex="-1"></a>  <span class="co"># The height of a bar represents the mean </span></span>
+<span id="cb206-9"><a href="WS6_DescribingRelationships_Key.html#cb206-9" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>) <span class="sc">+</span></span>
+<span id="cb206-10"><a href="WS6_DescribingRelationships_Key.html#cb206-10" tabindex="-1"></a>  <span class="co"># Add error bars</span></span>
+<span id="cb206-11"><a href="WS6_DescribingRelationships_Key.html#cb206-11" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun.data =</span> <span class="st">&quot;mean_se&quot;</span>) <span class="sc">+</span></span>
+<span id="cb206-12"><a href="WS6_DescribingRelationships_Key.html#cb206-12" tabindex="-1"></a>  <span class="co"># Adjust the label of the y-axis accordingly</span></span>
+<span id="cb206-13"><a href="WS6_DescribingRelationships_Key.html#cb206-13" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Mean number of stations&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-105-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>The strong earthquakes had the highest number of stations reporting these earthquakes but also had the highest variation (certainly because there were not many cases of strong earthquakes: information we are missing in this graph).</strong></p>
+</div>
+</div>
+</div>
+<div id="comparing-two-categorical-variables" class="section level2 hasAnchor">
+<h2>3. Comparing two categorical variables<a href="WS6_DescribingRelationships_Key.html#comparing-two-categorical-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When comparing two categorical variables, we may wonder what are the most and least common categories of one variable for other categories of the other variable.</p>
+<p>Let’s consider both <code>depth</code> and <code>mag</code> as categorical variables:</p>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="WS6_DescribingRelationships_Key.html#cb207-1" tabindex="-1"></a><span class="co"># Create a new categorical variable in a new object</span></span>
+<span id="cb207-2"><a href="WS6_DescribingRelationships_Key.html#cb207-2" tabindex="-1"></a>new_quakes <span class="ot">&lt;-</span> quakes <span class="sc">|&gt;</span></span>
+<span id="cb207-3"><a href="WS6_DescribingRelationships_Key.html#cb207-3" tabindex="-1"></a>  <span class="co"># Create new variables</span></span>
+<span id="cb207-4"><a href="WS6_DescribingRelationships_Key.html#cb207-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">depth_cat =</span> <span class="fu">ifelse</span>(depth <span class="sc">&gt;</span> <span class="dv">300</span>, <span class="st">&quot;Deep&quot;</span>, <span class="st">&quot;Not Deep&quot;</span>),</span>
+<span id="cb207-5"><a href="WS6_DescribingRelationships_Key.html#cb207-5" tabindex="-1"></a>         <span class="at">mag_cat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb207-6"><a href="WS6_DescribingRelationships_Key.html#cb207-6" tabindex="-1"></a>           mag <span class="sc">&gt;=</span> <span class="dv">4</span> <span class="sc">&amp;</span> mag <span class="sc">&lt;</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">&quot;Light&quot;</span>,</span>
+<span id="cb207-7"><a href="WS6_DescribingRelationships_Key.html#cb207-7" tabindex="-1"></a>           mag <span class="sc">&gt;=</span> <span class="dv">5</span> <span class="sc">&amp;</span> mag <span class="sc">&lt;</span> <span class="dv">6</span> <span class="sc">~</span> <span class="st">&quot;Moderate&quot;</span>,</span>
+<span id="cb207-8"><a href="WS6_DescribingRelationships_Key.html#cb207-8" tabindex="-1"></a>           mag <span class="sc">&gt;=</span> <span class="dv">6</span> <span class="sc">&amp;</span> mag <span class="sc">&lt;</span> <span class="dv">7</span> <span class="sc">~</span> <span class="st">&quot;Strong&quot;</span>))</span></code></pre></div>
+<div id="a.-using-a-stacked-plot-not-usually-recommended" class="section level3 hasAnchor">
+<h3>a. Using a stacked plot (not usually recommended)<a href="WS6_DescribingRelationships_Key.html#a.-using-a-stacked-plot-not-usually-recommended" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can create stacked bar plots that compares the distribution of two categorical variables by stacking their counts:</p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="WS6_DescribingRelationships_Key.html#cb208-1" tabindex="-1"></a><span class="co"># Define the ggplot and the dataframe</span></span>
+<span id="cb208-2"><a href="WS6_DescribingRelationships_Key.html#cb208-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb208-3"><a href="WS6_DescribingRelationships_Key.html#cb208-3" tabindex="-1"></a>  <span class="co"># Use `fill =` to differentiate between categories of magnitude</span></span>
+<span id="cb208-4"><a href="WS6_DescribingRelationships_Key.html#cb208-4" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth_cat, <span class="at">fill =</span> mag_cat)) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-107-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>It looks like there are mostly light magnitude across both levels of depth. When the different groups do not have the same size though, it can be difficult to compare across categories. Let’s try the side-by-side bar plot with <code>position = "dodge"</code>:</p>
+</div>
+<div id="b.-using-a-segmented-bar-plot-usually-preferred" class="section level3 hasAnchor">
+<h3>b. Using a segmented bar plot (usually preferred)<a href="WS6_DescribingRelationships_Key.html#b.-using-a-segmented-bar-plot-usually-preferred" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can display the relative distribution at each level with a segmented bar plot with the option <code>position = "fill"</code>:</p>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="WS6_DescribingRelationships_Key.html#cb209-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb209-2"><a href="WS6_DescribingRelationships_Key.html#cb209-2" tabindex="-1"></a>  <span class="co"># Use `fill =` to differentiate between categories of magnitude</span></span>
+<span id="cb209-3"><a href="WS6_DescribingRelationships_Key.html#cb209-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth_cat, <span class="at">fill =</span> mag_cat), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-108-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Now we can see that the deep earthquakes has the highest proportion of light magnitude.</p>
+<div id="try-it-swap-the-variables-for-x-and-fill-.-does-the-graph-look-any-different-note-that-the-default-label-for-the-y-axis-is-count.-but-what-does-it-represent-adjust-the-label-for-the-y-axis-in-the-segmented-bar-plot." class="section level4 hasAnchor">
+<h4><strong>Try it! Swap the variables for <code>x =</code> and <code>fill =</code>. Does the graph look any different? Note that the default label for the y-axis is count. But what does it represent? Adjust the label for the y-axis in the segmented bar plot.</strong><a href="WS6_DescribingRelationships_Key.html#try-it-swap-the-variables-for-x-and-fill-.-does-the-graph-look-any-different-note-that-the-default-label-for-the-y-axis-is-count.-but-what-does-it-represent-adjust-the-label-for-the-y-axis-in-the-segmented-bar-plot." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="WS6_DescribingRelationships_Key.html#cb210-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb210-2"><a href="WS6_DescribingRelationships_Key.html#cb210-2" tabindex="-1"></a>  <span class="co"># Use `fill =` to differentiate between categories of depth</span></span>
+<span id="cb210-3"><a href="WS6_DescribingRelationships_Key.html#cb210-3" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag_cat, <span class="at">fill =</span> depth_cat), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="sc">+</span></span>
+<span id="cb210-4"><a href="WS6_DescribingRelationships_Key.html#cb210-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">&quot;Proportion of level of depth at each magnitude&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-109-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>This graph looks different. In this graph, we can see what all earthquakes of the strong magnitude occurred at a lower depth. However, remember that there weren’t many strong earthquakes in this dataset, so it is important to report frequencies along relative frequencies.</strong></p>
+</div>
+</div>
+<div id="c.-reporting-frequencies-and-relative-frequencies" class="section level3 hasAnchor">
+<h3>c. Reporting frequencies and relative frequencies<a href="WS6_DescribingRelationships_Key.html#c.-reporting-frequencies-and-relative-frequencies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When reporting statistics about two categorical variables, we often include counts (frequencies) or proportions (relative frequencies). We can use the function <code>table</code> to find counts:</p>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="WS6_DescribingRelationships_Key.html#cb211-1" tabindex="-1"></a><span class="co"># Find frequencies</span></span>
+<span id="cb211-2"><a href="WS6_DescribingRelationships_Key.html#cb211-2" tabindex="-1"></a><span class="fu">table</span>(new_quakes<span class="sc">$</span>depth_cat, new_quakes<span class="sc">$</span>mag_cat)</span></code></pre></div>
+<pre><code>##           
+##            Light Moderate Strong
+##   Deep       381       71      0
+##   Not Deep   421      122      5</code></pre>
+<p>For example, out of the strong earthquakes, 0 were at a deep depth and 5 were not at a deep depth.</p>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="WS6_DescribingRelationships_Key.html#cb213-1" tabindex="-1"></a><span class="co"># Find proportions (from frequency table)</span></span>
+<span id="cb213-2"><a href="WS6_DescribingRelationships_Key.html#cb213-2" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(new_quakes<span class="sc">$</span>depth_cat, new_quakes<span class="sc">$</span>mag_cat), <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>##           
+##                  Light    Moderate      Strong
+##   Deep     0.842920354 0.157079646 0.000000000
+##   Not Deep 0.768248175 0.222627737 0.009124088</code></pre>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="WS6_DescribingRelationships_Key.html#cb215-1" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(new_quakes<span class="sc">$</span>depth_cat, new_quakes<span class="sc">$</span>mag_cat), <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##           
+##                Light  Moderate    Strong
+##   Deep     0.4750623 0.3678756 0.0000000
+##   Not Deep 0.5249377 0.6321244 1.0000000</code></pre>
+<p>What’s the difference between these two tables? Can you associate each table with one of the two segmented bar plots above?</p>
+<p><strong>The first table shows proportions of the magnitude of earthquakes for each depth level: the proportions are calculated per row (first segmented bar plot). The second table shows proportions of the depth of earthquakes for each magnitude level: the proportions are calculated per column (second segmented bar plot).</strong></p>
+</div>
+</div>
+<div id="relationships-with-more-than-2-variables" class="section level2 hasAnchor">
+<h2>4. Relationships with more than 2 variables<a href="WS6_DescribingRelationships_Key.html#relationships-with-more-than-2-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Visualizing relationships between more than two variables can be challenging, but it’s possible by incorporating additional visual elements. Some common strategies include:</p>
+<ul>
+<li><p>Color: Differentiate categories or represent continuous variables through color gradients.</p></li>
+<li><p>Facet: Recreate the same plot for different categories of one variable.</p></li>
+<li><p>Size: Vary the size of points to indicate another numeric variable.</p></li>
+<li><p>Shape: Use different shapes to represent categories, though this works best with a limited number of categories.</p></li>
+<li><p>Alpha (Transparency): Adjust transparency to handle overlapping data points.</p></li>
+</ul>
+<div id="try-it-how-does-the-magnitude-and-depth-of-an-earthquakes-affects-the-number-of-stations-reporting-an-earthquake-create-an-appropriate-plot-including-these-3-variables." class="section level4 hasAnchor">
+<h4><strong>Try it! How does the magnitude and depth of an earthquakes affects the number of stations reporting an earthquake? Create an appropriate plot including these 3 variables.</strong><a href="WS6_DescribingRelationships_Key.html#try-it-how-does-the-magnitude-and-depth-of-an-earthquakes-affects-the-number-of-stations-reporting-an-earthquake-create-an-appropriate-plot-including-these-3-variables." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="WS6_DescribingRelationships_Key.html#cb217-1" tabindex="-1"></a><span class="co"># Example 1: 2 numeric (points) + 1 categorical (color)</span></span>
+<span id="cb217-2"><a href="WS6_DescribingRelationships_Key.html#cb217-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb217-3"><a href="WS6_DescribingRelationships_Key.html#cb217-3" tabindex="-1"></a>  <span class="co"># Color by category of depth</span></span>
+<span id="cb217-4"><a href="WS6_DescribingRelationships_Key.html#cb217-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag, <span class="at">y =</span> stations, <span class="at">color =</span> depth_cat), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb217-5"><a href="WS6_DescribingRelationships_Key.html#cb217-5" tabindex="-1"></a>  <span class="co"># Labels</span></span>
+<span id="cb217-6"><a href="WS6_DescribingRelationships_Key.html#cb217-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between magnitude, depth, and the number of stations reporting an earthquake&quot;</span>,</span>
+<span id="cb217-7"><a href="WS6_DescribingRelationships_Key.html#cb217-7" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;For 1,000 eathrquakes that occurred near the Fiji Islands since 1964&quot;</span>,</span>
+<span id="cb217-8"><a href="WS6_DescribingRelationships_Key.html#cb217-8" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Magnitude (Richter scale)&quot;</span>,</span>
+<span id="cb217-9"><a href="WS6_DescribingRelationships_Key.html#cb217-9" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Number of stations reporting&quot;</span>,</span>
+<span id="cb217-10"><a href="WS6_DescribingRelationships_Key.html#cb217-10" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Depth&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-112-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="WS6_DescribingRelationships_Key.html#cb218-1" tabindex="-1"></a><span class="co"># Example 2: 2 numeric (points) + 1 categorical (color + facet)</span></span>
+<span id="cb218-2"><a href="WS6_DescribingRelationships_Key.html#cb218-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb218-3"><a href="WS6_DescribingRelationships_Key.html#cb218-3" tabindex="-1"></a>  <span class="co"># Color by category of depth</span></span>
+<span id="cb218-4"><a href="WS6_DescribingRelationships_Key.html#cb218-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> mag, <span class="at">y =</span> stations, <span class="at">color =</span> depth_cat), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb218-5"><a href="WS6_DescribingRelationships_Key.html#cb218-5" tabindex="-1"></a>    <span class="co"># Facet by category of depth</span></span>
+<span id="cb218-6"><a href="WS6_DescribingRelationships_Key.html#cb218-6" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>depth_cat) <span class="sc">+</span></span>
+<span id="cb218-7"><a href="WS6_DescribingRelationships_Key.html#cb218-7" tabindex="-1"></a>  <span class="co"># Labels</span></span>
+<span id="cb218-8"><a href="WS6_DescribingRelationships_Key.html#cb218-8" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between magnitude, depth, and the number of stations reporting an earthquake&quot;</span>,</span>
+<span id="cb218-9"><a href="WS6_DescribingRelationships_Key.html#cb218-9" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;For 1,000 eathrquakes that occurred near the Fiji Islands since 1964&quot;</span>,</span>
+<span id="cb218-10"><a href="WS6_DescribingRelationships_Key.html#cb218-10" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Magnitude (Richter scale)&quot;</span>,</span>
+<span id="cb218-11"><a href="WS6_DescribingRelationships_Key.html#cb218-11" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Number of stations reporting&quot;</span>,</span>
+<span id="cb218-12"><a href="WS6_DescribingRelationships_Key.html#cb218-12" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Depth&quot;</span>) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-112-2.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="WS6_DescribingRelationships_Key.html#cb219-1" tabindex="-1"></a><span class="co"># Example 3: 2 numeric (points) + 1 categorical (shape)</span></span>
+<span id="cb219-2"><a href="WS6_DescribingRelationships_Key.html#cb219-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb219-3"><a href="WS6_DescribingRelationships_Key.html#cb219-3" tabindex="-1"></a>  <span class="co"># Shape by magnitude</span></span>
+<span id="cb219-4"><a href="WS6_DescribingRelationships_Key.html#cb219-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth, <span class="at">y =</span> stations, <span class="at">shape =</span> mag_cat), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb219-5"><a href="WS6_DescribingRelationships_Key.html#cb219-5" tabindex="-1"></a>  <span class="co"># Labels</span></span>
+<span id="cb219-6"><a href="WS6_DescribingRelationships_Key.html#cb219-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between magnitude, depth, and the number of stations reporting an earthquake&quot;</span>,</span>
+<span id="cb219-7"><a href="WS6_DescribingRelationships_Key.html#cb219-7" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;For 1,000 eathrquakes that occurred near the Fiji Islands since 1964&quot;</span>,</span>
+<span id="cb219-8"><a href="WS6_DescribingRelationships_Key.html#cb219-8" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Depth (km)&quot;</span>,</span>
+<span id="cb219-9"><a href="WS6_DescribingRelationships_Key.html#cb219-9" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Number of stations reporting&quot;</span>,</span>
+<span id="cb219-10"><a href="WS6_DescribingRelationships_Key.html#cb219-10" tabindex="-1"></a>       <span class="at">shape =</span> <span class="st">&quot;Magnitude&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-112-3.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="WS6_DescribingRelationships_Key.html#cb220-1" tabindex="-1"></a><span class="co"># Example 4: 2 numeric (points) + 1 numeric (size)</span></span>
+<span id="cb220-2"><a href="WS6_DescribingRelationships_Key.html#cb220-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb220-3"><a href="WS6_DescribingRelationships_Key.html#cb220-3" tabindex="-1"></a>  <span class="co"># Size by value of magnitude</span></span>
+<span id="cb220-4"><a href="WS6_DescribingRelationships_Key.html#cb220-4" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth, <span class="at">y =</span> stations, <span class="at">size =</span> mag), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb220-5"><a href="WS6_DescribingRelationships_Key.html#cb220-5" tabindex="-1"></a>  <span class="co"># Labels</span></span>
+<span id="cb220-6"><a href="WS6_DescribingRelationships_Key.html#cb220-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between magnitude, depth, and the number of stations reporting an earthquake&quot;</span>,</span>
+<span id="cb220-7"><a href="WS6_DescribingRelationships_Key.html#cb220-7" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;For 1,000 eathrquakes that occurred near the Fiji Islands since 1964&quot;</span>,</span>
+<span id="cb220-8"><a href="WS6_DescribingRelationships_Key.html#cb220-8" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Depth (km)&quot;</span>,</span>
+<span id="cb220-9"><a href="WS6_DescribingRelationships_Key.html#cb220-9" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Number of stations reporting&quot;</span>,</span>
+<span id="cb220-10"><a href="WS6_DescribingRelationships_Key.html#cb220-10" tabindex="-1"></a>       <span class="at">size =</span> <span class="st">&quot;Magnitude (Richter scale)&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-112-4.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="WS6_DescribingRelationships_Key.html#cb221-1" tabindex="-1"></a><span class="co"># Example 5: 1 numeric and 1 categorical (grouped boxplot) + 1 categorical (facet)</span></span>
+<span id="cb221-2"><a href="WS6_DescribingRelationships_Key.html#cb221-2" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> new_quakes) <span class="sc">+</span></span>
+<span id="cb221-3"><a href="WS6_DescribingRelationships_Key.html#cb221-3" tabindex="-1"></a>  <span class="co"># Use </span></span>
+<span id="cb221-4"><a href="WS6_DescribingRelationships_Key.html#cb221-4" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth_cat, <span class="at">y =</span> stations)) <span class="sc">+</span></span>
+<span id="cb221-5"><a href="WS6_DescribingRelationships_Key.html#cb221-5" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(<span class="at">x =</span> depth_cat, <span class="at">y =</span> stations), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb221-6"><a href="WS6_DescribingRelationships_Key.html#cb221-6" tabindex="-1"></a>  <span class="co"># Facet by category of magnitude</span></span>
+<span id="cb221-7"><a href="WS6_DescribingRelationships_Key.html#cb221-7" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>mag_cat) <span class="sc">+</span></span>
+<span id="cb221-8"><a href="WS6_DescribingRelationships_Key.html#cb221-8" tabindex="-1"></a>  <span class="co"># Labels</span></span>
+<span id="cb221-9"><a href="WS6_DescribingRelationships_Key.html#cb221-9" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between magnitude, depth, and the number of stations reporting an earthquake&quot;</span>,</span>
+<span id="cb221-10"><a href="WS6_DescribingRelationships_Key.html#cb221-10" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">&quot;For 1,000 eathrquakes that occurred near the Fiji Islands since 1964&quot;</span>,</span>
+<span id="cb221-11"><a href="WS6_DescribingRelationships_Key.html#cb221-11" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Magnitude Level&quot;</span>,</span>
+<span id="cb221-12"><a href="WS6_DescribingRelationships_Key.html#cb221-12" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Number of stations reporting the earthquake&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-112-5.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>These five examples represent the same data with different perspectives!</strong></p>
+<hr />
+</div>
+</div>
+<div id="recommended-resources-6" class="section level2 hasAnchor">
+<h2>Recommended Resources<a href="WS6_DescribingRelationships_Key.html#recommended-resources-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Worksheet keys are posted at the end of the week on Canvas under <strong>Programming Tools</strong>.</li>
+<li>Recommended readings: <a href="https://rafalab.dfci.harvard.edu/dsbook/gapminder.html">Data visualization in practice</a>, <a href="https://rafalab.dfci.harvard.edu/dsbook/data-visualization-principles.html">Data visualization principles</a></li>
+<li>R for Data Science, second edition <a href="https://r4ds.hadley.nz/data-visualize">Data visualisation</a></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="WS5_Describing1Variable_Key.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="WS7_ExploratoryDataAnalysis_Key.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
